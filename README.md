@@ -1,5 +1,233 @@
 # Ace Of Steaks
 
+## User Experience (UX)
+
+### Site Visitor Goals
+
+1. As a site visitor, I want the theme of the restaurant to be immediately clear.
+2. As a site visitor, I want booking a table to be a painless experience with as little input as possible to make my reservation.
+3. As a site visitor, I want some sort of confirmation of my booking.
+4. As a site visitor, I want access to my booking should I need to cancel/amend????? my table. With new confirmation????
+5. As a site visitor, I want to be able to contact the restaurant either via an email form or a telephone number.
+6. As a site visitor, I want to be able to check the location of the restaurant, especially if it is part of a chain.
+7. As a site visitor, I want the menu or sample menu to be easily available.
+
+### Admin User/Owner Goals
+
+1. As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
+
+### Design
+
+- #### Colour Scheme
+    - #CCA232 - Gold
+    - #C0C0C0 - Silver
+    - #000000 - Black
+
+
+- #### Typography
+    -   The striking Bebas Neue typeface works really well with conservative Montserrat; used for the main body of the website. The difference in style creates a clean modern look and feel. Both typefaces have a fallback of sans-serif incase of any import issues.
+- #### Imagery
+    -   The first thing you see is the background hero image and horizontal tag line, designed to stun the vistor's attention and draw them in to see what is on offer.
+    - The use of opacity and imagery increases the clean and concise theme of the website but still informing the user of the options available.
+
+![Design](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/start-game.PNG)
+
+### Wireframes
+
+- Figma Desktop Wireframe - [View](https://www.figma.com/file/JePmpqBjAyO6VrkuiHi4Fp/Ace-Of-Steaks---Desktop?node-id=0%3A1)
+
+![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lucid-flowchart.PNG)
+
+- Figma Mobile Wireframe - [View](https://www.figma.com/file/EtSRFMgeaP0ACLVRtgNXmQ/Rock%2C-Paper%2C-Scissors---Mobile?node-id=0%3A1)
+
+![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/mobile-wireframe.PNG)
+
+# TO COMPLETE WHEN/AFTER BUILD
+
+## Features
+Below is a brief overview showing the main features of the site.
+
+### Feature1
+
+- text
+
+## Future Features
+
+- text
+## Technologies
+
+### Created by using:
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- Django
+
+### Programs including:
+
+- [Heroku:](https://www.Heroku.com/)
+- Heroku was used to share the app online.
+- [Cloudinary](https://www.cloudinary.com/)
+- Cloudinary was used to store all imagery for the site.
+- [Google Fonts:](https://fonts.google.com/)
+- Google fonts were used to import the 'Bebas Neue' into the style.css file.
+- [GitPod:](https://gitpod.io/)
+- GitPod was used to create and update the website throughout via the terminal to push changes to GitHub.
+- [GitHub:](https://github.com/)
+- GitHub was used to commit changes during development and ensure no work was lost.
+- [Figma:](https://figma.com/)
+- Figma was used to create the wireframes during the design process.
+
+## Testing
+
+### Validation Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
+
+- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors%2F)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors)
+- [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
+    -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+    -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
+- [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
+On the first use my code produced over 45 warnings and/or errors including:
+- "blank line contains whitespace"
+- "indentation is not a multiple of four"
+- "line too long (93 > 79 characters)"
+
+These have now all be rectified and the link to the results text document is below.
+- [Final results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/pep8-results.txt)
+
+### Lighthouse Testing
+
+- text
+
+- Desktop Results
+
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-desktop.PNG)
+
+- Mobile Results
+
+![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-mobile.PNG)
+
+### Testing User Stories from User Experience (UX) Section
+
+- #### site Visitor Goals
+
+Q1. As a site visitor, I want a clear understanding of the interactive game on show.
+
+- A large majority of the world's population have played or understand how Rock, Paper Scissors is played. As soon as users enter the site, it is abundantly clear what the game is and how to play it. The default icons on show increase the clarity.
+
+Q2. As a site visitor, I want a brief description of the rules in order to win the game.
+
+- The rules are very clear to see, labelled up beneath the interactive buttons. "ROCK BEATS SCISSORS" etc.
+
+Q3. As a site visitor, I want to have live scoring round by round.
+
+- Round by round after the alert message of the outcome, the round number is updated along with the tally of rounds won, rounds drawn or rounds lost, all looking from the user's perspective.
+
+Q4. As a site visitor, I want to enjoy the game and come back again and again.
+
+- The way the game is run is so easy to play and understand. I have found myself saying "one more round" constantly, just to finish with a win and beat the computer.
+
+### Continued Testing
+
+- The Website was tested on Google Chrome, Internet Explorer (see glitches), Microsoft Edge and Safari browsers.
+- The website has been displayed on various devices such as Desktop PC, iMac, Laptop, iPhone X & iPad Pro
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Glitches
+#### Computers
+
+- Internet Explorer - The website doesn't display any images or button labels. This leads to no functionality.
+
+#### Mobile (iPhone X)
+- The hover pseudo has been removed on smaller devices (tablet-phone) to ensure the user the game has been reset, as the button were not returning to original style after selection.
+- The button images appear stretched. However, there were no issues via inspect mode in a browser.
+- The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
+
+## Deployment
+
+### Heroku
+
+Heroku was the program used to share the game, it was accomplished by using the following steps:
+
+1. Log in to Heroku. On your dashboard, click "New" and then click "Create new app".
+
+2. Fill in the field for App name - It must be a unique name to Heroku. 
+    -   Then select the region of Europe and click "Create app"
+
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-new-app.PNG)
+
+3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
+    -   Select "python" and click "Save changes"
+    -   Select "node.js" and click "Save changes"
+
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-add-buildpack.PNG)
+
+4. Scroll back and click the tab "Deploy"
+    - Choose "GitHub" as the Deployment method
+    - Enter the GitHub repository name and click "Search"
+    - The repository should appear below, then click "Connect"
+
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployment-method.PNG)
+
+5. Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
+
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-manual-deploy.PNG)
+
+6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
+
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployed-successfully.PNG)
+
+## References
+
+### Code
+
+- Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
+
+- Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
+
+- Pygame.rect - Draw rectangle [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
+
+- Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
+
+- Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
+
+### Content
+
+- All content was written by the developer.
+
+#### Import
+- Pygame Module - "a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language." [pygame.org](https://www.pygame.org/wiki/about)
+
+- Random Module - "The random module is a built-in module to generate the pseudo-random variables. It can be used to perform some action randomly such as to get a random number, selecting a random element from a list, shuffle elements randomly, etc." [Tutorials Teacher](https://www.tutorialsteacher.com/python/random-module)
+
+### Mentions
+
+- My Mentor for answering my questions throughout.
+
+- Slack users for constructive feedback, suggestions for improvements and video calls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
