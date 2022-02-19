@@ -1,20 +1,23 @@
 # Ace Of Steaks
 
+IMAGE OF INDEX PAGE
+
 ## User Experience (UX)
 
 ### Site Visitor Goals
 
-1. As a site visitor, I want the theme of the restaurant to be immediately clear.
+1. As a site visitor, I want the theme of the restaurant to be immediately clear, for example: Fast food, Thai, Sushi, Steakhouse etc.
 2. As a site visitor, I want booking a table to be a painless experience with as little input as possible to make my reservation.
 3. As a site visitor, I want some sort of confirmation of my booking.
-4. As a site visitor, I want access to my booking should I need to cancel/amend????? my table. With new confirmation????
+4. As a site visitor, I want access to my booking should I need to cancel my table.
 5. As a site visitor, I want to be able to contact the restaurant either via an email form or a telephone number.
-6. As a site visitor, I want to be able to check the location of the restaurant, especially if it is part of a chain.
+6. As a site visitor, I want to be able to use my location to find the restaurant closest to me, especially if it is part of a chain with hundreds of sites.
 7. As a site visitor, I want the menu or sample menu to be easily available.
 
 ### Admin User/Owner Goals
 
 1. As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
+2. Ensure a table can not be booked for the same time (double booked).
 
 ### Design
 
@@ -25,22 +28,27 @@
 
 
 - #### Typography
-    -   The striking Bebas Neue typeface works really well with conservative Montserrat; used for the main body of the website. The difference in style creates a clean modern look and feel. Both typefaces have a fallback of sans-serif incase of any import issues.
-- #### Imagery
-    -   The first thing you see is the background hero image and horizontal tag line, designed to stun the vistor's attention and draw them in to see what is on offer.
-    - The use of opacity and imagery increases the clean and concise theme of the website but still informing the user of the options available.
+    Bebas Neue 
+    Montserrat
 
-![Design](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/start-game.PNG)
+- #### Imagery
+    dark, detailed images
 
 ### Wireframes
 
 - Figma Desktop Wireframe - [View](https://www.figma.com/file/JePmpqBjAyO6VrkuiHi4Fp/Ace-Of-Steaks---Desktop?node-id=0%3A1)
 
-![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/lucid-flowchart.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/desktop-wireframe.PNG)
 
-- Figma Mobile Wireframe - [View](https://www.figma.com/file/EtSRFMgeaP0ACLVRtgNXmQ/Rock%2C-Paper%2C-Scissors---Mobile?node-id=0%3A1)
+- Figma Mobile Wireframe - [View](https://www.figma.com/file/tF92jalVcQwe1qMrQD85GQ/Ace-Of-Steaks---Mobile?node-id=0%3A1)
 
-![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/mobile-wireframe.PNG)
+![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/mobile-wireframe.PNG)
+
+### Flowchart
+
+- Lucidchart - [View](https://lucid.app/lucidchart/05f9c042-a9a0-4282-a11f-2fcfde94bfee/edit?invitationId=inv_335d6257-282e-4923-848d-2f21a828f50e)
+
+![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lucid-flowchart.PNG)
 
 # TO COMPLETE WHEN/AFTER BUILD
 
@@ -48,8 +56,14 @@
 Below is a brief overview showing the main features of the site.
 
 ### Feature1
+- Sign in model
+- manage booking - Cancel table.
+- book table - form (self populating when signed in)
+- menu sample
+- contact form
+- google map with pin markers for restuarant locations
+- show/hide menu button
 
-- text
 
 ## Future Features
 
@@ -85,8 +99,8 @@ Below is a brief overview showing the main features of the site.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Frock-paper-scissors)
+- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Face-of-steaks%2F)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Face-of-steaks)
 - [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
@@ -97,7 +111,7 @@ On the first use my code produced over 45 warnings and/or errors including:
 - "line too long (93 > 79 characters)"
 
 These have now all be rectified and the link to the results text document is below.
-- [Final results](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/pep8-results.txt)
+- [Final results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/pep8-results.txt)
 
 ### Lighthouse Testing
 
@@ -105,11 +119,11 @@ These have now all be rectified and the link to the results text document is bel
 
 - Desktop Results
 
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-desktop.PNG)
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lighthouse-desktop.PNG)
 
 - Mobile Results
 
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/rock-paper-scissors/main/assets/readme-images/lighthouse-mobile.PNG)
+![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lighthouse-mobile.PNG)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -158,28 +172,28 @@ Heroku was the program used to share the game, it was accomplished by using the 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app"
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-new-app.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-new-app.PNG)
 
 3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
     -   Select "python" and click "Save changes"
     -   Select "node.js" and click "Save changes"
 
-![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-add-buildpack.PNG)
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-add-buildpack.PNG)
 
 4. Scroll back and click the tab "Deploy"
     - Choose "GitHub" as the Deployment method
     - Enter the GitHub repository name and click "Search"
     - The repository should appear below, then click "Connect"
 
-![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployment-method.PNG)
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-deployment-method.PNG)
 
 5. Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
 
-![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-manual-deploy.PNG)
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-manual-deploy.PNG)
 
 6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/python-in-python/main/assets/readme-images/heroku-deployed-successfully.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-deployed-successfully.PNG)
 
 ## References
 
