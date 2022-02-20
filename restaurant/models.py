@@ -3,15 +3,15 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-class Bookings(models.Model):
-    booking_id = models.CharField(max_length=50, unique=True)
-    booking_date = models.DateTimeField(auto_now_add=True)
-    booking_fname = models.ForeignKey
-    booking_lname = models.ForeignKey
-    booking_email = models.EmailField
-    booking_mobile = models.IntegerField
-    booking_location = models.CharField(max_length=50)
-    booking_quantity = models.CharField(max_length=50)
+class Booking(models.Model):
+    booking_id = models.CharField('Booking ID', max_length=50, unique=True)
+    booking_date = models.DateTimeField('Date', auto_now_add=True)
+    booking_fname = models.CharField('First Name', max_length=50)
+    booking_lname = models.CharField('Last Name', max_length=50)
+    booking_email = models.EmailField('Email')
+    booking_mobile = models.CharField('Contact No', max_length=50)
+    booking_location = models.CharField('Restuarant Location', max_length=50)
+    booking_quantity = models.CharField('Quantity', max_length=50)
 
     class Meta:
         ordering = ["-booking_date"]
