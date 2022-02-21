@@ -1,48 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+.col-3 {
+  background-color: chocolate;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'montserrat', sans-serif;
+  font-weight: lighter;
+  color: #000000;
+}
+
+/* Logo */
+
 .logo {
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 10px;
+    font-size: 30px;
+    letter-spacing: 15px;
     color: #CCA232;
     text-align: center;
     position: relative;
-    margin-left: 200px;
-    top: 26%;
-}
 
-hr {
-    color: #C0C0C0;;
-    opacity: 100;
 }
 
 hr.logo-bar {
     border: 3px solid #C0C0C0;
+    width: 180px;
 }
 
+/* Logo */
 
+/* Links */
 
+a {
+  color: #000000;
+}
 
-.sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
+a:hover {
+  color: #000000;
+  border-bottom: 3px solid #C0C0C0;
+}
+
+/* Links */
+
+/* Navbar */
+
+.nav-item {
+  margin: 10px 0 10px 0;
+  text-decoration: none;
+}
+
+.opening-times-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  letter-spacing: 10px;
+  color: #CCA232;
+  text-align: center;
+  position: relative;
+}
+
+.opening-times {
+text-align: center;
+}
+/* Navbar */
