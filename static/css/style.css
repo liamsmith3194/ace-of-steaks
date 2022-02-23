@@ -1,28 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-.col-3 {
-  background-color: chocolate;
-}
 
 body {
-  font-size: 100%;
+  font-size: 16px;
   font-family: 'montserrat', sans-serif;
   font-weight: lighter;
   color: #000000;
 }
 
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  letter-spacing: 15px;
+  color: #CCA232;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-top: 5px solid #C0C0C0;
+  border-bottom: 5px solid #C0C0C0;
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 15px;
+  color: #CCA232;
+  text-align: center;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 1rem;
+  border-top: 5px solid #C0C0C0;
+  border-bottom: 5px solid #C0C0C0;
+}
+
+h3 {
+font-size: 25px;  
+
+}
+
 /* Logo */
 
-.logo {
+/* .logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 30px;
     letter-spacing: 15px;
     color: #CCA232;
     text-align: center;
     position: relative;
-
-}
+    padding: 0.5rem 1rem;
+    border-top: 5px solid #C0C0C0;
+    border-bottom: 5px solid #C0C0C0;
+    margin-top: 30px;
+} */
 
 hr.logo-bar {
     border: 3px solid #C0C0C0;
@@ -39,28 +71,150 @@ a {
 
 a:hover {
   color: #000000;
-  border-bottom: 3px solid #C0C0C0;
+  border-bottom: 5px solid #C0C0C0;
 }
 
 /* Links */
 
 /* Navbar */
 
+.navbar {
+  display: inline;
+  padding: 0;
+}
+
 .nav-item {
-  margin: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
   text-decoration: none;
+  text-align: center;
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+.opening-times {
+  margin-top: 10px;
+  
 }
 
 .opening-times-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 10px;
   color: #CCA232;
   text-align: center;
   position: relative;
+  
 }
 
-.opening-times {
+.opening-times-text {
 text-align: center;
+padding: 1rem 1rem;
 }
 /* Navbar */
+
+/* social media */
+
+.social ul {
+  padding-left: 0;
+  text-align: center;
+}
+
+
+.social li {
+  display: inline;
+  font-size: 250%;
+  align-content: center;
+  padding: 1rem;
+}
+
+.social li a:hover{
+  color: #CCA232;
+  border: none;
+}
+
+.jumbotron {
+  border-radius: 20px;
+  text-align: center;
+  background-color: #00000079;
+}
+
+.column-0 {
+  height: 100%;
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.column-1 {
+  background: url('../images/output-onlinepngtools.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 100%;
+  position: relative;
+  padding: 8rem 1rem;
+}
+
+.column-2 {
+  background: url('../images/output-onlinepngtools2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 100%;
+  position: relative;
+  padding: 8rem 1rem;
+}
+
+.column-3 {
+  background: url('../images/output-onlinepngtools3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 100%;
+  position: relative;
+  padding: 8rem 1rem;
+}
+
+
+/* buttons */
+.btn-success {
+  background-color: #CCA232;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.btn-success:hover {
+  background-color: #CCA232;
+  color: #C0C0C0;
+  border-color: #CCA232;
+}
+
+
+/* table, th, td {
+  border-bottom: 4px solid #C0C0C0;
+  border-collapse: collapse;
+} */
+
+tr {
+  border-bottom: 5px solid #C0C0C0;
+  border-collapse: collapse;
+}
+
+.price {
+  text-align: right;
+}
+
+.menu-description {
+  text-align: center;
+}
+
+/* stops scrolling */
+
+/* html,
+body{
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+} */
+
