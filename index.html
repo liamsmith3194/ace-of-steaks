@@ -54,7 +54,7 @@
 
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Sign in</a>
+                                    <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign in</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link current" href="index.html">Home</a>
@@ -116,23 +116,64 @@
 
 
             <div class="col-12 col-md-9 col-lg-9 hero-image">
+
                 <section class="column-2">
+                    <div class="modal" tabindex="-1" role="dialog" id="signInModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="modal-header">
+                                    <div class="modal-title">
+                                        <hr class="welcome-bar">
+                                        <h1>Sign in</h1>
+                                        <hr class="welcome-bar">
+                                    </div>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn btn-sign-in">Sign In</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-                    <section class="callout jumbotron text-center">
+                    <section class="callout text-center">
 
                         <hr class="welcome-bar">
                         <h1>Welcome to<br>Ace of Steaks</h1>
                         <hr class="welcome-bar">
+                        <h4>Ace of Steaks is known for exceptional steak located in only three cities in the
+                            UK.
+
+                        <p>Our premium meats are sourced daily from the finest local suppliers sold by weight rather
+                            than cut, ensuring a unique experience upon each visit.</p>
+
+                        Cooked over a charcoal grill for a distinctively rich and smoky flavour, our mouth-watering
+                        steaks are complimented with a seasonal selection of innovative dishes.
                         <br>
-                        <h4>Fresh locally source <strong>beef</strong> cooked the way you want it!</h4>
-                        <br>
-                        <button class="btn btn-lg btn-success">Book a Table!</button>
+                        <button class="btn btn-l mt-4 btn-book">Book a Table!</button></h4>
+
 
                     </section>
                 </section>
 
             </div>
+
 
     </article>
 
