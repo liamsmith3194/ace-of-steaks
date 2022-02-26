@@ -9,6 +9,10 @@ body {
   color: #000000;
 }
 
+.container-fluid {
+  padding-left: 0;
+}
+
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
@@ -103,7 +107,9 @@ a:hover {
 /* Navbar */
 
 .navbar-toggler {
-  border: 5px solid #000000;
+  color: #CCA232;
+  padding-bottom: 1rem;
+  font-size: 30px;
 }
 
 .navbar {
