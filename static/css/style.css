@@ -70,12 +70,17 @@ hr {
 
 hr.logo-bar {
     border: 3px solid #C0C0C0;
-    width: 100%;
+    width: 80%;
 }
 
 hr.times-bar {
   border: 3px solid #C0C0C0;
-  width: 100%;
+  width: 70%;
+}
+
+hr.welcome-bar {
+  border: 3px solid #C0C0C0;
+  width: 50%;
 }
 
 /* Logo */
@@ -96,6 +101,10 @@ a:hover {
 /* Links */
 
 /* Navbar */
+
+.navbar-toggler {
+  border: 5px solid #000000;
+}
 
 .navbar {
   display: inline;
@@ -241,3 +250,4 @@ body{
   align-content: center;
   background-color: chartreuse;
 }
+
