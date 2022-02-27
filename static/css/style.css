@@ -231,10 +231,19 @@ padding: 1rem 1rem;
   color: #000000;
 }
 
+table {
+  width: 100%;
+  margin-top: 2rem;
+}
 
-tr {
-  border-bottom: 5px solid #C0C0C0;
-  border-collapse: collapse;
+
+.menu-item {
+  text-align: left;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #CCA232;
+  padding: 0;
 }
 
 .price {
@@ -242,7 +251,22 @@ tr {
 }
 
 .menu-description {
+  text-align: left;
+  padding-bottom: 0.25rem;
+}
+
+
+
+.window {
+  width: 80%;
+  background: rgba(255, 255, 255);
+  height: auto;
   text-align: center;
+  border-radius: 20px;
+  left: 10%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* stops scrolling */
@@ -295,3 +319,4 @@ body{
 .btn-sign-in:hover {
   background-color: #CCA232;
   color: #000000;
+}
