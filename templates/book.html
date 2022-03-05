@@ -54,16 +54,16 @@
 
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign in</a>
+                                    <a class="nav-link" href="#">Sign in</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link current" href="index.html">Home</a>
+                                    <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="menu.html">Menu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="book.html">Book A Table</a>
+                                    <a class="nav-link current" href="#">Book A Table</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact</a>
@@ -113,68 +113,83 @@
                     </div>
             </div>
 
-
-
-            <div class="col-12 col-md-9 col-lg-9 hero-image">
-
+            <div class="col-12 col-md-9 col-lg-9">
                 <section class="column-2">
-                    <div class="modal" tabindex="-1" role="dialog" id="signInModal">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <div class="modal-header">
-                                    <div class="modal-title">
-                                        <hr class="welcome-bar">
-                                        <h1>Sign in</h1>
-                                        <hr class="welcome-bar">
-                                    </div>
+                    <h2>Book a table</h2>
+                    <div class="window">
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" data-toggle="pill" href="#when">Where
+                                    & When</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#who">Who</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="desserts">Confirmation</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="when" class="tab-pane fade in active show">
+                                <form>
+                                    <h3 class="booking-title">Location</h3>
+                                    <select id="location" name="location">
+                                        <option value="london">Ace Of Steaks - England<br>
+                                            Talavera Way
+                                            London SW1 8RN</option>
+                                        <option value="glasgow">Ace Of Steaks - Scotland
+                                            Burchard Crescent
+                                            Glasgow GS4 6HQ</option>
+                                        <option value="cardiff">Ace Of Steaks - Wales
+                                            Kenpas Highway
+                                            Cardiff CA 6PB</option>
 
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Password">
-                                        </div>
-                                        <button type="submit" class="btn btn-modal-sign-in">Sign In</button>
+                                    </select>
+
+                                    <h3 class="booking-title">Meal</h3>
+                                    <select id="location" name="location">
+                                        <option value="lunch">Lunch</option>
+                                        <option value="dinner">Dinner</option>
+                                    </select>
+
+                                    <h3 class="booking-title">Date & Time</h3>
+                                    <form action="/action_page.php">
+                                        <label for="bookingtime"></label>
+                                        <input type="datetime-local" id="bookingtime" name="bookingtime">
                                     </form>
-                                </div>
+
+
+                                    <button type="submit" class="btn btn-booking-table">Next</button>
+                                </form>
                             </div>
+
+                            <div id="who" class="tab-pane fade">
+                                <form>
+                                    <label for="fname" class="col-sm-2 col-form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname">
+
+                                    <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname">
+
+                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+
+                                    <label for="mobile" class="col-sm-2 col-form-label">Contact Number</label>
+                                    <input type="number" class="form-control" id="mobile">
+
+                                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                                    <input type="password" class="form-control" id="password">
+
+                                    <button type="submit" class="btn btn-booking-table">Next</button>
+
+                            </div>
+                            
+                            </form>
                         </div>
                     </div>
-
-
-                    <section class="callout text-center">
-
-                        <hr class="welcome-bar">
-                        <h1>Welcome to<br>Ace of Steaks</h1>
-                        <hr class="welcome-bar">
-                        <h4>Ace of Steaks is known for exceptional steak located in only three cities in the
-                            UK.
-
-                        <p>Our premium meats are sourced daily from the finest local suppliers sold by weight rather
-                            than cut, ensuring a unique experience upon each visit.</p>
-
-                        Cooked over a charcoal grill for a distinctively rich and smoky flavour, our mouth-watering
-                        steaks are complimented with a seasonal selection of innovative dishes.
-                        <br>
-                        <button class="btn btn-l mt-4 btn-book">Book a Table!</button></h4>
-
-
-                    </section>
-                </section>
-
             </div>
-
-
+            </section>
+        </div>
     </article>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

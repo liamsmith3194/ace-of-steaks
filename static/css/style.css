@@ -53,7 +53,7 @@ h3 {
 
 h4 {
   font-size: 15px;
-  padding: 2rem 2rem
+  padding: 2rem 2rem;
 }
 
 /* Logo */
@@ -236,6 +236,11 @@ table {
   margin-top: 2rem;
 }
 
+form {
+  width: 100%;
+  margin-top: 2rem;
+}
+
 
 .menu-item {
   text-align: left;
@@ -258,7 +263,7 @@ table {
 
 .nav-pills .nav-link.active {
   background-color: #CCA232;
-  color: #000000;
+  color: #C0C0C0;
   font-weight: 900;
 }
 
@@ -317,7 +322,7 @@ body{
 } */
 
 
-.btn-sign-in {
+.btn-modal-sign-in {
   background-color: #CCA232;
   color: #C0C0C0;
   border-radius: 20px;
@@ -331,9 +336,20 @@ body{
   left: 25%;
 }
 
-.btn-sign-in:hover {
+.btn-modal-sign-in:hover {
   background-color: #CCA232;
   color: #000000;
+}
+
+.btn-booking-table {
+  background-color: #CCA232;
+  color: #C0C0C0;
+  border-radius: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  width: 50%;
+  margin-top: 1rem;
 }
 
 
@@ -345,4 +361,12 @@ body{
 
 #booking1 {
   margin-right: 0.5rem;
+}
+
+.booking-title {
+padding: 1rem;
+}
+
+select {
+  width: 100%
 }
