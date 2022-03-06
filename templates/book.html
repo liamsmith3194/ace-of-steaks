@@ -19,6 +19,14 @@
     <!-- above not linking currently hence the below -->
     <link rel="stylesheet" href="/static/css/style.css">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_7sfb2Kx6So2zrBYpxlZXY");
+        })();
+    </script>
+
 
 </head>
 
@@ -78,19 +86,9 @@
                                 <hr class="times-bar">
                             </div>
                             <div class="opening-times-text">
-                                Mon 11.00am-10.30pm
+                                Mon - Sat - 11.00am - 11.00pm
                                 <br>
-                                Tues 11.00am-10.30pm
-                                <br>
-                                Wed 11.00am-10.30pm
-                                <br>
-                                Thur 11.00am-10.30pm
-                                <br>
-                                Fri 11.00am-10.30pm
-                                <br>
-                                Sat 11.00am-10.30pm
-                                <br>
-                                Sun 11.00am-10.30pm
+                                Sun - 12.00am - 8.00pm
                             </div>
                         </section>
                         <section class="social">
@@ -105,10 +103,7 @@
                                         aria-label="Visit our Instagram page (opens in new tab)"><i
                                             class="fab fa-instagram"></i></a>
                                 </li>
-
                             </ul>
-
-
                         </section>
                     </div>
             </div>
@@ -119,79 +114,64 @@
                     <div class="window">
                         <ul class="nav nav-pills nav-fill">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" data-toggle="pill" href="#when">Where
-                                    & When</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#who">Who</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="desserts">Confirmation</a>
+                                <a class="nav-link active" aria-current="page" data-toggle="pill"
+                                    href="#details">Details</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div id="when" class="tab-pane fade in active show">
-                                <form>
-                                    <h3 class="booking-title">Location</h3>
-                                    <select id="location" name="location">
-                                        <option value="london">Ace Of Steaks - England<br>
+                            <div id="details" class="tab-pane fade in active show">
+                                <form id="booking-form" onsubmit="return sendMail(this);">
+
+                                    <label for="location" class="form-label">Location:</label>
+                                    <select id="location" class="form-input" name="location" required>
+                                        <option disabled selected value> -- Please select -- </option>
+                                        <option value="London">Ace Of Steaks - England
                                             Talavera Way
                                             London SW1 8RN</option>
-                                        <option value="glasgow">Ace Of Steaks - Scotland
+                                        <option value="Glasgow">Ace Of Steaks - Scotland
                                             Burchard Crescent
                                             Glasgow GS4 6HQ</option>
-                                        <option value="cardiff">Ace Of Steaks - Wales
+                                        <option value="Cardiff">Ace Of Steaks - Wales
                                             Kenpas Highway
                                             Cardiff CA 6PB</option>
-
                                     </select>
 
-                                    <h3 class="booking-title">Meal</h3>
-                                    <select id="location" name="location">
-                                        <option value="lunch">Lunch</option>
-                                        <option value="dinner">Dinner</option>
+                                    <label for="date_time" class="form-label">Date & Time:</label>
+                                    <input type="datetime-local" class="form-input" id="date_time" name="date_time" required>
+                                    <!-- min="2022-03-31T11:00" max="2022-03-31T22:00"> -->
+
+                                    <label for="guests" class="form-label">Number of guests:</label>
+                                    <select id="guests" class="form-input" name="guests" required>
+                                        <option disabled selected value> -- Please select -- </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
                                     </select>
 
-                                    <h3 class="booking-title">Date & Time</h3>
-                                    <form action="/action_page.php">
-                                        <label for="bookingtime"></label>
-                                        <input type="datetime-local" id="bookingtime" name="bookingtime">
-                                    </form>
+                                    <label for="fname" class="form-label">First Name:</label>
+                                    <input type="text" class="form-input" id="fname" name="fname" required>
 
+                                    <label for="lname" class="form-label">Last Name:</label>
+                                    <input type="text" class="form-input" id="lname" name="lname" required>
 
-                                    <button type="submit" class="btn btn-booking-table">Next</button>
+                                    <label for="email" class="form-label">Email Address:</label>
+                                    <input type="email" class="form-input" id="email" name="email" required>
+
+                                    <button type="submit" class="btn btn-booking-table" onclick="submit()" value="Reset form">Submit</button>
                                 </form>
                             </div>
 
-                            <div id="who" class="tab-pane fade">
-                                <form>
-                                    <label for="fname" class="col-sm-2 col-form-label">First Name</label>
-                                    <input type="text" class="form-control" id="fname">
 
-                                    <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lname">
-
-                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="email">
-
-                                    <label for="mobile" class="col-sm-2 col-form-label">Contact Number</label>
-                                    <input type="number" class="form-control" id="mobile">
-
-                                    <label for="password" class="col-sm-2 col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="password">
-
-                                    <button type="submit" class="btn btn-booking-table">Next</button>
-
-                            </div>
-                            
-                            </form>
                         </div>
                     </div>
+                </section>
             </div>
-            </section>
         </div>
     </article>
-
+    <script src="/assets/scripts/SendEmail.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
