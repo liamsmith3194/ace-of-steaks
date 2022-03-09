@@ -5,17 +5,17 @@
 <h2>Manage Bookings</h2>
 
 <div class="window">
-    {% for booking in booking_list %}
+    {% for booking in bookings %}
     <div class="booking-data">
 
         <p><input type="checkbox" id="booking1" name="booking1" value="booking1">
-            <label for="booking1">{{ booking.booking_date}} | {{ booking.booking_fname }} {{ booking.booking_lname }} |
-                {{ booking.booking_location }} | Table for {{ booking.booking_quantity }}</label>
+            <label for="booking1">{{ booking.date}} | {{ booking.fname }} {{ booking.lname }} |
+                {{ booking.location }} | Table for {{ booking.quantity }}</label>
         </p>
 
         {% endfor %}
     </div>
-    <button type="submit" class="btn btn-sign-in">Cancel</button>
+    <button type="submit" class="btn btn-window-button">Cancel</button>
 </div>
 
 {%endblock%}

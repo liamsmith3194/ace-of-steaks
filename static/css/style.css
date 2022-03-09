@@ -224,9 +224,28 @@ padding: 1rem 1rem;
   width: 50%;
   bottom: 25%;
   left: 25%;
+  position: absolute;
 }
 
 .btn-book:hover {
+  background-color: #CCA232;
+  color: #000000;
+}
+
+.btn-window-button {
+  background-color: #CCA232;
+  color: #C0C0C0;
+  border-radius: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 5px;
+  width: 50%;
+  bottom: 25%;
+  left: 25%;
+  position: relative;
+}
+
+.btn-window-button:hover {
   background-color: #CCA232;
   color: #000000;
 }

@@ -1,15 +1,25 @@
 from django.contrib import admin
+from .models import Booking
 
-# Register your models here.
-# from django.contrib import admin
-# from .models import Booking
 
-# # admin.site.register(Booking)
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
 
-# @admin.register(Booking)
+    list_display = ('reference', 'date', 'lname', 'location', 'quantity' )
+    prepopulated_fields = {'reference': ('fname', 'lname','location')}
+    list_filter = ('location', 'date')
+    search_fields = ['fname', 'lname']
 
-# class BookingAdmin(admin.ModelAdmin):
-#     list_display = ('booking_id', 'booking_date', 'booking_lname', 'booking_location', 'booking_quantity' )
-#     prepopulated_fields = {'booking_id': ('booking_lname',)}
-#     list_filter = ('booking_location', 'booking_date')
-#     search_fields = ['booking_fname', 'booking_lname']
+    # fields = ['fname', 'lname']
+
+    # fieldsets = (
+    #     ('Details', {
+    #         'fields': ('fname', 'lname',)
+    #     }),
+    # )
+
+    # creates dropdown action
+    # actions = ['approve_comments']
+
+    # def approve_comments(self, request, queryset):
+    #     queryset.update(approved=True)

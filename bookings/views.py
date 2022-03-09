@@ -1,6 +1,11 @@
 from django.shortcuts import render
+from . models import Booking
 
 # Create your views here.
 
 def manage_bookings(request):
-    return render(request, 'bookings/manage-bookings.html')
+    bookings = Booking.objects.all()
+    return render(request,'bookings/manage-bookings.html', { 'bookings':bookings })
+
+def book_table(request):
+    return render(request, 'bookings/book.html')

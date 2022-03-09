@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Book a table</h2>
+<div class="window">
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" data-toggle="pill" href="#details">Details</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="details" class="tab-pane fade in active show">
+            <form id="booking-form" onsubmit="return sendMail(this);">
+
+                <label for="location" class="form-label">Location:</label>
+                <select id="location" class="form-input" name="location" required>
+                    <option disabled selected value> -- Please select -- </option>
+                    <option value="London">Ace Of Steaks - England
+                        Talavera Way
+                        London SW1 8RN</option>
+                    <option value="Glasgow">Ace Of Steaks - Scotland
+                        Burchard Crescent
+                        Glasgow GS4 6HQ</option>
+                    <option value="Cardiff">Ace Of Steaks - Wales
+                        Kenpas Highway
+                        Cardiff CA 6PB</option>
+                </select>
+
+                <label for="date_time" class="form-label">Date & Time:</label>
+                <input type="datetime-local" class="form-input" id="date_time" name="date_time" required>
+                <!-- min="2022-03-31T11:00" max="2022-03-31T22:00"> -->
+
+                <label for="guests" class="form-label">Number of guests:</label>
+                <select id="guests" class="form-input" name="guests" required>
+                    <option disabled selected value> -- Please select -- </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <label for="fname" class="form-label">First Name:</label>
+                <input type="text" class="form-input" id="fname" name="fname" required>
+
+                <label for="lname" class="form-label">Last Name:</label>
+                <input type="text" class="form-input" id="lname" name="lname" required>
+
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" class="form-input" id="email" name="email" required>
+
+                <button type="submit" class="btn btn-booking-table" onclick="submit()"
+                    value="Reset form">Submit</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+{%endblock%}

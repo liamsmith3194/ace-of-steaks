@@ -3,6 +3,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.manage_bookings),
+    url(r'^manage', views.manage_bookings),
+    url(r'^add', views.book_table),
 ]
