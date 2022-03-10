@@ -6,7 +6,6 @@ function sendMail(bookingForm) {
         "to_fname": bookingForm.fname.value,
         "to_lname": bookingForm.lname.value,
         "to_email": bookingForm.email.value,
-        "company_email": "bookings@aceofsteaks.co.uk"
     })
     .then(
         function(response) {
@@ -18,3 +17,4 @@ function sendMail(bookingForm) {
     );
     return false;  // To block from loading a new page
 }
+
