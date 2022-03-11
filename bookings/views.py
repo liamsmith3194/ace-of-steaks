@@ -5,6 +5,7 @@ from . models import Booking
 
 def manage_bookings(request):
     bookings = Booking.objects.all()
+    page_title = 'Sport'
     return render(request,'bookings/manage-bookings.html', { 'bookings':bookings })
 
 def book_table(request):

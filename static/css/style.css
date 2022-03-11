@@ -182,10 +182,6 @@ padding: 1rem 1rem;
 }
 
 .column-1 {
-  background: url('../images/output-onlinepngtools.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
   height: 100%;
   position: relative;
   padding: 6rem 1rem 1rem 1rem;
@@ -193,7 +189,7 @@ padding: 1rem 1rem;
 }
 
 .column-2 {
-  background: url('../images/output-onlinepngtools2.png');
+  background: url('/static/images/output-onlinepngtools2.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -203,10 +199,6 @@ padding: 1rem 1rem;
 }
 
 .column-3 {
-  background: url('../images/output-onlinepngtools3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
   height: 100%;
   position: relative;
   padding: 6rem 1rem 1rem 1rem;
@@ -223,8 +215,7 @@ padding: 1rem 1rem;
   letter-spacing: 5px;
   width: 50%;
   bottom: 25%;
-  left: 25%;
-  position: absolute;
+  position: relative;
 }
 
 .btn-book:hover {
@@ -237,7 +228,7 @@ padding: 1rem 1rem;
   color: #C0C0C0;
   border-radius: 20px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   letter-spacing: 5px;
   width: 50%;
   bottom: 25%;
@@ -353,7 +344,6 @@ body{
   font-size: 18px;
   letter-spacing: 5px;
   position: relative;
-  height: 1%;
   width: 50%;
   bottom: 25%;
   left: 25%;

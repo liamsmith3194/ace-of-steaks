@@ -3,9 +3,9 @@ function sendMail(bookingForm) {
         "location": bookingForm.location.value,
         "date": bookingForm.date_time.value,
         "guests": bookingForm.guests.value,
-        "to_fname": bookingForm.fname.value,
-        "to_lname": bookingForm.lname.value,
-        "to_email": bookingForm.email.value,
+        "fname": bookingForm.fname.value,
+        "lname": bookingForm.lname.value,
+        "email": bookingForm.email.value,
     })
     .then(
         function(response) {

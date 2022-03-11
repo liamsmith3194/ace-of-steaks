@@ -16,8 +16,9 @@ Including another URLconf
 # from django.contrib import admin
 # from django.urls import path, include
 
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.contrib import admin
+from django.urls import path, include
 from . import views
 
 # urlpatterns = [
@@ -31,5 +32,7 @@ urlpatterns = [
     url(r'^bookings/', include('bookings.urls')),
     url(r'^$', views.index),
     url(r'^menu/', views.menu),
+    # url(r'^register/', views.register),
+    path('accounts/', include('allauth.urls')),
 
 ]
