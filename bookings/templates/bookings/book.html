@@ -4,14 +4,10 @@
 
 <h2>Book a table</h2>
 <div class="window">
-    <ul class="nav nav-pills nav-fill">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" data-toggle="pill" href="#details">Details</a>
-        </li>
-    </ul>
     <div class="tab-content">
         <div id="details" class="tab-pane fade in active show">
             <form id="booking-form" onsubmit="return sendMail(this);">
+                {% csrf_token %}
 
                 <label for="location" class="form-label">Location:</label>
                 <select id="location" class="form-input" name="location" required>

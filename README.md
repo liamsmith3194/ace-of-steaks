@@ -199,15 +199,9 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 ### Code
 
-- Title in Pygame window. [Stack Overflow](https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window)
+- Extending and customizing django-allauth [GeeksforGeeks](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
 
-- Chessboard grid [Stack Overflow](https://stackoverflow.com/questions/38083788/turn-grid-into-a-checkerboard-pattern-in-python)
 
-- Pygame.rect - Draw rectangle [pygame.org](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
-
-- Blit - Show score on grid [Stack Overflow](https://stackoverflow.com/questions/19733226/python-pygame-how-to-make-my-score-text-update-itself-forever)
-
-- Increasing snake length [CodeWithHarry](https://www.codewithharry.com/videos/python-game-development-17/)
 
 ### Content
 

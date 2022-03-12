@@ -32,7 +32,5 @@ urlpatterns = [
     url(r'^bookings/', include('bookings.urls')),
     url(r'^$', views.index),
     url(r'^menu/', views.menu),
-    # url(r'^register/', views.register),
     path('accounts/', include('allauth.urls')),
-
 ]

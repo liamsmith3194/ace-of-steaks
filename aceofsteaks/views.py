@@ -21,5 +21,5 @@ def index(request):
 def menu(request):
     return render(request, 'menu.html')
 
-def register(request):
-    return render(request, 'register.html')
+# def register(request):
+#     return render(request, 'register.html')
