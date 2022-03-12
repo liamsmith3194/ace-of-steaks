@@ -4,9 +4,8 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^manage', views.manage_bookings),
-    url(r'^add', views.book_table),
+    url(r'^manage', views.ManageBookings),
+    url(r'^add', views.BookTable),
 ]
-
 
 urlpatterns += staticfiles_urlpatterns()

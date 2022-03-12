@@ -13,6 +13,10 @@
                 {{ booking.location }} | Table for {{ booking.quantity }}</label>
         </p>
 
+        <p>{{ booking.date}} | {{ booking.fname }} {{ booking.lname }} |
+                {{ booking.location }} | Table for {{ booking.quantity }} <button type="button" class="btn btn-dark">Update</button><button type="button" class="btn btn-danger">Delete</button>
+        </p>
+
         {% endfor %}
     </div>
     <button type="submit" class="btn btn-window-button">Cancel</button>
