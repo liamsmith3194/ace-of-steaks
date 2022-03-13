@@ -17,7 +17,7 @@ def BookTable(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/manage/')
+            return redirect('/bookings/manage/')
 
 
     context = {'form':form}

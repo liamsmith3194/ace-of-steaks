@@ -201,7 +201,7 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - Extending and customizing django-allauth [GeeksforGeeks](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
 
-
+- How To Add Database Forms To A Web Page [Youtube - Codemy.com](https://www.youtube.com/watch?v=CVEKe39VFu8&t=357s)
 
 ### Content
 

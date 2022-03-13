@@ -251,6 +251,17 @@ form {
   margin-top: 1rem;
 }
 
+input, select {
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+input:focus {
+  width: 100%;
+  border: none;
+  text-align: center;
+}
 
 .menu-item {
   text-align: left;
@@ -380,7 +391,7 @@ body{
 padding: 1rem;
 }
 
-.form-label {
+label {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
