@@ -7,10 +7,27 @@
 <div class="window">
     {% for booking in bookings %}
     <div class="booking-data">
+            <table>
+                   
+                    <tr>
+                        <td>
+                                {{ booking.id }} {{ booking.date}} | {{ booking.fname }} {{ booking.lname }} | {{ booking.location }} | Table for {{ booking.quantity }}
+                                <a button type="button" class="btn btn-dark" href="{% url 'update_booking' booking.id %}">Update</button></a>
+                                <a button type="button" class="btn btn-danger" href="#">Delete</button></a></p>
+                        </td>  
 
-        <p>{{ booking.date}} | {{ booking.fname }} {{ booking.lname }} |
-                {{ booking.location }} | Table for {{ booking.quantity }} <button type="button" class="btn btn-dark">Update</button><button type="button" class="btn btn-danger">Delete</button>
-        </p>
+                </tr>
+                <tr>
+                        <td>
+                                
+                        </td>
+                </tr>
+                            
+                    
+            </table>
+
+                
+        
 
         {% endfor %}
 

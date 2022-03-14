@@ -4,12 +4,7 @@ from .forms import BookingForm
 
 # Create your views here.
 
-def ManageBookings(request):
-    bookings = Booking.objects.all()
-    return render(request,'bookings/manage-bookings.html', { 'bookings':bookings })
-
-
-def BookTable(request):
+def make_booking(request):
 
     form = BookingForm
     if request.method == 'POST':
@@ -20,5 +15,25 @@ def BookTable(request):
             return redirect('/bookings/manage/')
 
 
+    context = {'form':form}
+    return render(request, 'bookings/book.html', context)
+
+
+def manage_booking(request):
+    bookings = Booking.objects.all()
+    return render(request,'bookings/manage-bookings.html', { 'bookings':bookings })
+
+
+def update_booking(request, pk):
+    booking = Booking.objects.get(id=pk)
+    form = BookingForm(instance=booking)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('/bookings/manage/')
+
+    
     context = {'form':form}
     return render(request, 'bookings/book.html', context)

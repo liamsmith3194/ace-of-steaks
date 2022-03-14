@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h2>Delete Booking</h2>
+
+<div class="window">
+  <p>{% trans 'Are you sure you want to delete your booking?' %}</p>
+
+  <!-- <div class="tab-content">
+    <div id="details" class="tab-pane fade in active show">
+      <form id="register-form" method="post" action="{% url 'delete_booking' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button type="submit" class="btn btn-dark">No, Cancel</button>
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+
+      </form>
+    </div>
+  </div> -->
+</div>
+
+{%endblock%}

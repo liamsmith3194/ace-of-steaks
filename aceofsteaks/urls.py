@@ -19,15 +19,10 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('', include('restaurant.urls'), name='home'),
-#     path('bookings/', include('restaurant.urls'), name='bookings'),
-# ]
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^bookings/', include('bookings.urls')),
+    path('bookings/', include('bookings.urls')),
     url(r'^$', views.index),
     url(r'^menu/$', views.menu),
     path('accounts/', include('allauth.urls')),
