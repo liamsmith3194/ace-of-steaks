@@ -13,7 +13,7 @@
                         <td>
                                 {{ booking.id }} {{ booking.date}} | {{ booking.fname }} {{ booking.lname }} | {{ booking.location }} | Table for {{ booking.quantity }}
                                 <a button type="button" class="btn btn-dark" href="{% url 'update_booking' booking.id %}">Update</button></a>
-                                <a button type="button" class="btn btn-danger" href="#">Delete</button></a></p>
+                                <a button type="button" class="btn btn-danger" href="{% url 'delete_booking' booking.id %}">Delete</button></a></p>
                         </td>  
 
                 </tr>

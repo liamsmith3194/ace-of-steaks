@@ -37,3 +37,13 @@ def update_booking(request, pk):
     
     context = {'form':form}
     return render(request, 'bookings/book.html', context)
+
+
+def delete_booking(request, pk):
+    booking = Booking.objects.get(id=pk)
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('/bookings/manage/')
+
+    context = {'booking':booking}
+    return render(request, 'bookings/delete-booking.html', context)

@@ -8,9 +8,10 @@
 <div class="window">
   <p>{% trans 'Are you sure you want to delete your booking?' %}</p>
 
-  <!-- <div class="tab-content">
+  <div class="tab-content">
     <div id="details" class="tab-pane fade in active show">
-      <form id="register-form" method="post" action="{% url 'delete_booking' %}">
+      <form id="register-form" method="post">
+        <!-- action removed causing error -->
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
@@ -20,7 +21,7 @@
 
       </form>
     </div>
-  </div> -->
+  </div>
 </div>
 
 {%endblock%}
