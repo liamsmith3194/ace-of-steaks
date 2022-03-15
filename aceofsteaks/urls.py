@@ -23,8 +23,8 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path('bookings/', include('bookings.urls')),
-    url(r'^$', views.index),
-    url(r'^menu/$', views.menu),
+    path('', views.index, name="home"),
+    path('menu/', views.menu, name="menu"),
     path('accounts/', include('allauth.urls')),
 
 ]
