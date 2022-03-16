@@ -4,6 +4,7 @@ from .forms import BookingForm
 
 # Create your views here.
 
+
 def make_booking(request):
 
     form = BookingForm
@@ -14,14 +15,14 @@ def make_booking(request):
             form.save()
             return redirect('/bookings/manage/')
 
-
-    context = {'form':form}
+    context = {'form': form}
     return render(request, 'bookings/book.html', context)
 
 
 def manage_booking(request):
     bookings = Booking.objects.all()
-    return render(request,'bookings/manage-bookings.html', { 'bookings':bookings })
+    return render(request, 'bookings/manage-bookings.html',
+    {'bookings': bookings})
 
 
 def update_booking(request, pk):
@@ -34,8 +35,7 @@ def update_booking(request, pk):
             form.save()
             return redirect('/bookings/manage/')
 
-    
-    context = {'form':form}
+    context = {'form': form}
     return render(request, 'bookings/book.html', context)
 
 
@@ -45,5 +45,5 @@ def delete_booking(request, pk):
         booking.delete()
         return redirect('/bookings/manage/')
 
-    context = {'booking':booking}
+    context = {'booking': booking}
     return render(request, 'bookings/delete-booking.html', context)

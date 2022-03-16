@@ -39,27 +39,31 @@
 
             <div class="col-12 col-md-3 col-lg-3">
                 <section class="column-0">
-
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                    </div>
+                    {% endfor %}
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="fa-solid fa-bars d-md-none"></span></button>
 
-
-                    <div>
-                        <hr class="logo-bar">
-                        <a href="index.html">
-                            <h1>Ace of<br>Steaks</h1>
-                        </a>
-                        <hr class="logo-bar">
-                    </div>
-
                     <div class="collapse nav-collapse d-md-block" id="navbarNavDropdown">
+                        <div>
+                            <hr class="logo-bar">
+                            <a href="index.html">
+                                <h1>Ace of<br>Steaks</h1>
+                            </a>
+                            <hr class="logo-bar">
+                        </div>
+
+
                         <!--collapsable Nav-->
                         <div class="navbar navbar-light navbar-expand-sm">
 
                             <ul class="nav flex-column">
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link current" aria-current="page" href="/">Home</a>
                                 </li>
@@ -75,7 +79,8 @@
                                 </li>
                                 {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                                    <a class="nav-link" aria-current="page"
+                                        href="{% url 'account_signup' %}">Register</a>
                                 </li>
                                 <li class="nav-item">
                                     <!-- <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign In</a> -->
@@ -84,13 +89,9 @@
                                 </li>
                                 {% endif %}
                                 <li class="nav-item">
-                                    <a class="nav-link"
-                                        href="/menu/">Menu</a>  
+                                    <a class="nav-link" href="/menu/">Menu</a>
                                 </li>
-                                
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li> -->
+
                             </ul>
                         </div>
 
@@ -129,39 +130,6 @@
 
             <div class="col-12 col-md-9 col-lg-9">
                 <section class="column-2">
-                    <div class="modal" tabindex="-1" role="dialog" id="signInModal">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <div class="modal-header">
-                                    <div class="modal-title">
-                                        <hr class="welcome-bar">
-                                        <h1>Sign In</h1>
-                                        <hr class="welcome-bar">
-                                    </div>
-
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Password">
-                                        </div>
-                                        <button type="submit" class="btn btn-modal-sign-in">Sign In</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     {% block content %}
                     <!-- Content Goes here -->
                     {% endblock content %}
@@ -172,7 +140,15 @@
 
         <script src="{% static "scripts/SendEmail.js" %}">
         </script>
-        
+
+        <script>
+            setTimeout(function () {
+                let messages = document.getElementById('msg');
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }, 2500);
+        </script>
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

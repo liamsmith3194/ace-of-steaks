@@ -46,13 +46,13 @@
   background-position-x: center;
   height: 100%;
   position: relative;
-  padding: 6rem 1rem 1rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
 }
 
 .column-3 {
   height: 100%;
   position: relative;
-  padding: 6rem 1rem 1rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
 }
 
 /* Generic headings */
@@ -193,12 +193,17 @@ padding: 1rem 1rem;
   border: none;
 }
 
-/* .jumbotron {
-  border-radius: 20px;
+/* alerts */
+
+.alert{
+  color: #CCA232;
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
   text-align: center;
-  background-color: transparent;
-  margin-bottom: 0;
-} */
+  padding: 12px;
+}
 
 /* buttons */
 
@@ -271,7 +276,7 @@ th {
 
 form {
   width: 100%;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 label {
@@ -362,50 +367,11 @@ body{
    overflow: hidden;
 } */
 
-/* Modal
-
-.modal {
-  position: absolute;
-  height: auto;
-  
-}
-
-.modal-header {
-  display: block;
-}
-
-.modal-content {
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-
-}
-
-.modal-dialog {
-  max-width: 90%;
-  height: auto;
-}
-
-
-.btn-modal-sign-in {
-  background-color: #CCA232;
-  color: #C0C0C0;
-  border-radius: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: 5px;
-  position: relative;
-  width: 50%;
-  bottom: 25%;
-  left: 25%;
-}
-
-.btn-modal-sign-in:hover {
-  background-color: #CCA232;
-  color: #000000;
-} */
-
-
 /* booking */
+
+.booking-list{
+  padding-left: 0;
+}
 
 /* .booking-data {
   text-align: left;
