@@ -30,4 +30,16 @@
                 {% endfor %}
         </table>
 
+        <table class="table table-md">
+                <tr>
+                        <th>Date & Time</th>
+                </tr>
+                {% for booking in bookings %}
+                <tr>
+                        <td>{{ booking.date|date:'D-d-M-y' }}</td>
+<!-- formats the date on display -->
+                </tr>
+                {% endfor %}
+        </table>
+
         {%endblock%}

@@ -203,6 +203,8 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - How To Add Database Forms To A Web Page [Youtube - Codemy.com](https://www.youtube.com/watch?v=CVEKe39VFu8&t=357s)
 
+- Create a datepicker [stackoverflow]https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django/35968816#35968816
+
 ### Content
 
 - All content was written by the developer.
