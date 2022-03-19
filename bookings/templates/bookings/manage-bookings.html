@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<h2>Manage Bookings</h2>
+<h2>Manage Booking</h2>
 
 <!-- <p>Your Username is : {{user}} </p>
 <p>Your User Id is  : {{user.id}} </p> -->
 
 <div class="window">
-        <table class="table table-md">
+        <!-- original table-->
+        <!-- <table class="table table-md">
                 <tr>
                         <th>Date & Time</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                        <th>Full Name</th>
                         <th>Location</th>
                         <th>Quantity</th>
                         <th>Amend</th>
@@ -21,8 +21,7 @@
                 {% for booking in bookings %}
                 <tr>
                         <td>{{ booking.date}}</td>
-                        <td>{{ booking.fname}}</td>
-                        <td>{{ booking.lname}}</td>
+                        <td>{{ booking.fname}} {{ booking.lname}}</td>
                         <td>{{ booking.location}}</td>
                         <td>Table for {{ booking.quantity}}</td>
                         <td><a button type="button" class="btn btn-dark"
@@ -30,6 +29,44 @@
                         <td><a button type="button" class="btn btn-danger"
                                         href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
                 </tr>
+        </table> -->
+
+        <table class="table table-md">
+                <tr>
+                        <th>Date & Time</th>
+                </tr>
+                <tr>
+                        <td>{{ booking.date}}</td>
+                </tr>
+                <tr>
+                        <th>Full Name</th>
+                </tr>
+                        <td>{{ booking.fname}} {{ booking.lname}}</td>
+                </tr>
+                <tr>
+                        <th>Location</th>
+                </tr>
+                        <td>{{ booking.location}}</td>
+                </tr>
+                <tr>
+                        <th>Quantity</th>
+                </tr>
+                        <td>Table for {{ booking.quantity}}</td>
+                </tr>
+        </table>
+        <table class="table table-md">
+                <tr>
+                        <th>Amend</th>
+                        <th>Remove</th>
+                </tr>   
+                <tr>
+                        <td><a button type="button" class="btn btn-dark"
+                                href="{% url 'update_booking' booking.id %}">Update</button></a>
+                        </td> 
+                        <td><a button type="button" class="btn btn-danger"
+                                href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
+                </tr>
+                        
                 {% endfor %}
         </table>
 
