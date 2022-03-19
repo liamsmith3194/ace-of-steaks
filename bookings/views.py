@@ -18,16 +18,8 @@ def make_booking(request):
     context = {'form': form}
     return render(request, 'bookings/book.html', context)
 
-    # bookings = Booking.objects.filter(username='6')
-    # user_posts=Post.objects.filter(user=request.user)
-    # user_posts=Post.objects.filter(user_id=pk)
 
-
-
-# def manage_booking(request):
-#     bookings = Booking.objects.filter(username='6')
-#     return render(request, 'bookings/manage-bookings.html',
-#     {'bookings': bookings})
+# original#
 
 # def manage_booking(request):
 #     bookings = Booking.objects.all()

@@ -10,9 +10,7 @@
                 {% csrf_token %}
                 <ul class="booking-list">
 
-                    <li id="location" class="form-input">{{ form.username }}</li>
-                    <!-- <li id="location" class="form-input">{{ form.reference }}</li> -->
-
+                    {{ form.username }}
 
                     <label for="location" class="form-label">Location:</label>
                     <li id="location" class="form-input">{{ form.location }}</li>
@@ -42,39 +40,9 @@
     </div>
 </div>
 
+<script>
+    var username = "{{ user.id }}";
+    document.getElementById("user_id").value = username;
+</script>
+
 {%endblock%}
-
-
-
-
-
-<form id="booking-form" action="" method="POST">
-    <!-- onsubmit="return sendMail(this);"> -->
-    {% csrf_token %}
-    <ul class="contactList">
-
-        <li id="location" class="form-input">{{ form.username }}</li>
-        <li id="location" class="form-input">{{ form.reference }}</li>
-
-
-        <label for="location" class="form-label">Location:</label>
-        <li id="location" class="form-input">{{ form.location }}</li>
-
-        <label for="date_time" class="form-label">Date & Time:</label>
-        <li id="date_time" class="form-input">{{ form.date }}</li>
-
-        <label for="guests" class="form-label">Number of guests:</label>
-        <li id="guests" class="form-input">{{ form.quantity }}</li>
-
-        <label for="fname" class="form-label">First Name:</label>
-        <li id="fname" class="form-input">{{ form.fname }}</li>
-
-        <label for="lname" class="form-label">Last Name:</label>
-        <li id="lname" class="form-input">{{ form.lname }}</li>
-
-        <label for="email" class="form-label">Email Address:</label>
-        <li id="email" class="form-input">{{ form.email }}</li>
-
-    </ul>
-    <button type="submit" class="btn btn-booking-table" value="submit">Submit Booking</button>
-</form>
