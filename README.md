@@ -162,6 +162,8 @@ Q4. As a site visitor, I want to enjoy the game and come back again and again.
 - The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
 
 ## Deployment
+Whitenoise
+https://devcenter.heroku.com/articles/django-assets
 
 ### Heroku
 

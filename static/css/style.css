@@ -10,8 +10,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background: lime; /* Just to visualize the extent */
-  
+  background: lime; /* Just to visualize the extent
 } */
 
 .container-fluid {
@@ -41,6 +40,7 @@
 .column-0 {
   height: 100%;
   position: relative;
+  /* position: fixed; */
   padding: 1rem;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .column-2 {
-  background: url('/static/images/output-onlinepngtools2.png');
+  background: url('/static/images/Wholesale-Steak-Wagyu-Black-Angus-Miami-Beef.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -116,6 +116,7 @@ h3 {
 h4 {
   font-size: 15px;
   padding: 2rem 2rem;
+  color: white;
 }
 
 /* Horizontal Rules */
@@ -166,6 +167,7 @@ a:hover {
 }
 
 .nav-item {
+  padding-bottom: 1%;
   text-decoration: none;
   text-align: center;
 }
@@ -225,7 +227,7 @@ padding: 1rem 1rem;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
   letter-spacing: 5px;
-  width: 50%;
+  width: auto;
   bottom: 25%;
   position: relative;
 }
@@ -260,7 +262,7 @@ padding: 1rem 1rem;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 18px;
   letter-spacing: 5px;
-  width: 50%;
+  width: auto;
   margin-top: 1rem;
 }
 

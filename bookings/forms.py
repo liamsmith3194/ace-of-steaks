@@ -16,3 +16,8 @@ class BookingForm(forms.ModelForm):
             'date': DateTimeInput(),
             'username': forms.TextInput(attrs={'value': '', 'id': 'user_id', 'type': 'hidden'})
         }
+
+            # options={
+            #         'enabledHours': [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+            #     }
+            # ),

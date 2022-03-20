@@ -26,11 +26,19 @@ def make_booking(request):
 #     return render(request, 'bookings/manage-bookings.html',
 #     {'bookings': bookings})
 
+def admin_manage_booking(request):
+    bookings = Booking.objects.all()
+    return render(request, 'bookings/admin-manage-bookings.html',
+    {'bookings': bookings})
+
 def manage_booking(request):
     bookings = Booking.objects.filter(username=request.user)
     return render(request, 'bookings/manage-bookings.html',
     {'bookings': bookings})
 
+
+
+  
 
 def update_booking(request, pk):
     booking = Booking.objects.get(id=pk)
