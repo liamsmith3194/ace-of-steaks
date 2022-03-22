@@ -13,7 +13,7 @@ class BookingForm(forms.ModelForm):
         # fields = '__all__'
         fields = ['username', 'date', 'fname', 'lname', 'email', 'location', 'quantity']
         widgets = {
-            'date': DateTimeInput(),
+            'date': DateTimeInput(attrs={'min': '08.00', 'max': '17.00'}),
             'username': forms.TextInput(attrs={'value': '', 'id': 'user_id', 'type': 'hidden'})
         }
 

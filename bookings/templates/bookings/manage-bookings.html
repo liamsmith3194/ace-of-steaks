@@ -8,28 +8,7 @@
 <p>Your User Id is  : {{user.id}} </p> -->
 
 <div class="window">
-        <!-- original table-->
-        <!-- <table class="table table-md">
-                <tr>
-                        <th>Date & Time</th>
-                        <th>Full Name</th>
-                        <th>Location</th>
-                        <th>Quantity</th>
-                        <th>Amend</th>
-                        <th>Remove</th>
-                </tr>
-                {% for booking in bookings %}
-                <tr>
-                        <td>{{ booking.date}}</td>
-                        <td>{{ booking.fname}} {{ booking.lname}}</td>
-                        <td>{{ booking.location}}</td>
-                        <td>Table for {{ booking.quantity}}</td>
-                        <td><a button type="button" class="btn btn-dark"
-                                        href="{% url 'update_booking' booking.id %}">Update</button></a></td>
-                        <td><a button type="button" class="btn btn-danger"
-                                        href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
-                </tr>
-        </table> -->
+        <p>There are {{ booking_count }} booking currently in the database</p>
 
         <table class="table table-md">
                 <tr>
@@ -41,32 +20,32 @@
                 <tr>
                         <th>Full Name</th>
                 </tr>
-                        <td>{{ booking.fname}} {{ booking.lname}}</td>
+                <td>{{ booking.fname}} {{ booking.lname}}</td>
                 </tr>
                 <tr>
                         <th>Location</th>
                 </tr>
-                        <td>{{ booking.location}}</td>
+                <td>{{ booking.location}}</td>
                 </tr>
                 <tr>
                         <th>Quantity</th>
                 </tr>
-                        <td>Table for {{ booking.quantity}}</td>
+                <td>Table for {{ booking.quantity}}</td>
                 </tr>
         </table>
         <table class="table table-md">
                 <tr>
                         <th>Amend</th>
                         <th>Remove</th>
-                </tr>   
+                </tr>
                 <tr>
                         <td><a button type="button" class="btn btn-dark"
-                                href="{% url 'update_booking' booking.id %}">Update</button></a>
-                        </td> 
+                                        href="{% url 'update_booking' booking.id %}">Update</button></a>
+                        </td>
                         <td><a button type="button" class="btn btn-danger"
-                                href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
+                                        href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
                 </tr>
-                        
+
                 {% endfor %}
         </table>
 

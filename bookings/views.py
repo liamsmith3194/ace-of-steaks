@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm
+from django.db.models import Count
+
 
 # Create your views here.
 
@@ -19,24 +21,27 @@ def make_booking(request):
     return render(request, 'bookings/book.html', context)
 
 
-# original#
-
-# def manage_booking(request):
-#     bookings = Booking.objects.all()
-#     return render(request, 'bookings/manage-bookings.html',
-#     {'bookings': bookings})
-
 def admin_manage_booking(request):
     bookings = Booking.objects.all()
     return render(request, 'bookings/admin-manage-bookings.html',
     {'bookings': bookings})
 
 def manage_booking(request):
+    booking_count = Booking.objects.filter(username=request.user).count()
     bookings = Booking.objects.filter(username=request.user)
     return render(request, 'bookings/manage-bookings.html',
-    {'bookings': bookings})
+    {'bookings': bookings,
+    'booking_count': booking_count})
 
 
+# def restrict_booking(request):
+#     restrict_booking = Booking.objects.filter(username=request.user).count()
+#     return render(request, 'bookings/book.html',
+#     {'bookings': restrict_booking})
+
+
+
+# def remove_old_booking(request):
 
   
 
