@@ -11,6 +11,7 @@
         <p>There are {{ booking_count }} booking currently in the database</p>
 
         <table class="table table-md">
+                {% for booking in bookings %}
                 <tr>
                         <th>Date & Time</th>
                 </tr>
@@ -46,8 +47,9 @@
                                         href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
                 </tr>
 
-                {% endfor %}
+
         </table>
+                {% endfor %}
 
         <!-- formats the date on display -->
 
@@ -62,4 +64,4 @@
                 {% endfor %}
         </table> -->
 
-        {%endblock%}
+{%endblock%}

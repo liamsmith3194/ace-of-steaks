@@ -211,6 +211,8 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - Bring through user id automatically [Youtube - Codemy.com](https://www.youtube.com/watch?v=TAH01Iy5AuE)
 
+- Count post by user [stackoverflow](https://stackoverflow.com/questions/50393455/count-the-number-of-posts-by-a-user-django)
+
 ### Content
 
 - All content was written by the developer.
