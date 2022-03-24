@@ -10,7 +10,7 @@
 <div class="window">
         <p>There are {{ booking_count }} booking currently in the database</p>
 
-        <table class="table table-md">
+        <table id="vertical-table" class="table table-md">
                 {% for booking in bookings %}
                 <tr>
                         <th>Date & Time</th>
@@ -34,7 +34,7 @@
                 <td>Table for {{ booking.quantity}}</td>
                 </tr>
         </table>
-        <table class="table table-md">
+        <table id="vertical-table-buttons" class="table table-md">
                 <tr>
                         <th>Amend</th>
                         <th>Remove</th>
@@ -48,6 +48,27 @@
                 </tr>
 
 
+        </table>
+        <table id="horizontal-table" class="table table-md">
+                <tr>
+                        <th>Date & Time</th>
+                        <th>Full Name</th>
+                        <th>Location</th>
+                        <th>Quantity</th>
+                        <th>Amend</th>
+                        <th>Remove</th>
+                </tr>
+                
+                <tr>
+                        <td>{{ booking.date}}</td>
+                        <td>{{ booking.fname}} {{ booking.lname}}</td>
+                        <td>{{ booking.location}}</td>
+                        <td>Table for {{ booking.quantity}}</td>
+                        <td><a button type="button" class="btn btn-dark"
+                                        href="{% url 'update_booking' booking.id %}">Update</button></a></td>
+                        <td><a button type="button" class="btn btn-danger"
+                                        href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
+                </tr>
         </table>
                 {% endfor %}
 

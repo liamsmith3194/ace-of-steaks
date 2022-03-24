@@ -20,13 +20,6 @@ def make_booking(request):
     context = {'form': form}
     return render(request, 'bookings/book.html', context)
 
-
-def admin_manage_booking(request):
-    bookings = Booking.objects.all()
-    return render(request, 'bookings/admin-manage-bookings.html',
-                  {'bookings': bookings})
-
-
 def manage_booking(request):
     booking_count = Booking.objects.filter(username=request.user).count()
     bookings = Booking.objects.filter(username=request.user)
@@ -34,6 +27,11 @@ def manage_booking(request):
     return render(request, 'bookings/manage-bookings.html',
                   {'bookings': bookings,
                    'booking_count': booking_count})
+
+def count_bookings(request):
+    booking_count = Booking.objects.filter(username=request.user).count()
+    return render(request, 'bookings/book.html',
+    {'booking_count': booking_count})
 
 
 # def manage_booking(request):
