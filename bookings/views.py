@@ -1,11 +1,25 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Booking
-from .forms import BookingForm
+from .forms import BookingForm, DateTimeInput
+from datetime import datetime
+
+
 
 
 # Create your views here.
 
+
+
+# def duplicate(self):
+#     for instance in Booking.objects.all():
+#         if instance.fname == fname:
+#             raise forms.ValidationError(str(fname) + 'is already created')
+#             return redirect('/menu/')
+#             print('this is yesterday...')
+
+# def test2(request):
+#     Booking.objects.filter(fname).exists()
+# print('working')
 
 def make_booking(request):
 
@@ -20,6 +34,7 @@ def make_booking(request):
     context = {'form': form}
     return render(request, 'bookings/book.html', context)
 
+
 def manage_booking(request):
     booking_count = Booking.objects.filter(username=request.user).count()
     bookings = Booking.objects.filter(username=request.user)
@@ -28,78 +43,40 @@ def manage_booking(request):
                   {'bookings': bookings,
                    'booking_count': booking_count})
 
-def count_bookings(request):
-    booking_count = Booking.objects.filter(username=request.user).count()
-    return render(request, 'bookings/book.html',
-    {'booking_count': booking_count})
-
-
-# def manage_booking(request):
-#     booking_count = Booking.objects.filter(username=request.user).count()
-#     bookings = Booking.objects.filter(username=request.user)
-    
-#     if Booking.objects.filter(id=request.user.id).exists():
-#         return HttpResponse('booking exists')
-#         # return render(request, 'bookings/manage-bookings.html')
-#     else:
-#         return render(request, 'menu.html')
-
-
-# def restrict_booking(request):
-#     restrict_booking = Booking.objects.filter(username=request.user).count()
-#     return render(request, 'bookings/book.html',
-#     {'bookings': restrict_booking})
-
-
-def test_func(self):
-    yesterday = datetime.now() - timedelta(day=1)
-    # print to see which time is correct.
-    print('this is yesterday...', yesterday)
-    print('this is timezone.now()...', timezone.now())
-    print('this is daytime.now()...', datetime.now())
-    if Post.objects.filter(poster=self.request.user, post_date__gt=yesterday).exists():
-        raise PermissionDenied("You have made your post today, Please come back later")
-        return False
-    else:
-        return True
-
-
-
-
-def restrict(self, request):
-    if Booking.objects.filter(id=request.user.id).exists():
-        return HttpResponse('booking exists')
-        # return render(request, 'bookings/manage-bookings.html')
-    else:
-        return HttpResponse('booking DOESNT exists')
-
-        # return render(request, 'menu.html')
-
-
-# class PostLike(View):
-
-#     def post(self, request, slug, *args, **kwargs):
-#         post = get_object_or_404(Post, slug=slug)
-#         if post.likes.filter(id=request.user.id).exists():
-#             post.likes.remove(request.user)
-#         else:
-#             post.likes.add(request.user)
-
-#         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
-# is this needed?
-# def form_valid(self, form):
-#     form.instance.poster = self.request.user
-#     return super(AddPostView, self).form_valid(form)
-
 
 # def remove_old_booking(request):
+#     start_date=datetime(2009, 12, 30)
+#     end_date=datetime(2020,12,30)
+#     Booking().objects.filter(date__range=[start_date,end_date])
+#     return render(request, 'bookings/manage-bookings.html')
+
+
+# def test_func(self):
+#     yesterday = datetime.now() - timedelta(day=1)
+#     # print to see which time is correct.
+#     print('this is yesterday...', yesterday)
+#     print('this is timezone.now()...', timezone.now())
+#     print('this is daytime.now()...', datetime.now())
+#     if Post.objects.filter(poster=self.request.user, post_date__gt=yesterday).exists():
+#         raise PermissionDenied("You have made your post today, Please come back later")
+#         return False
+#     else:
+#         return True
+
+
+# def restrict(self, request):
+#     if Booking.objects.filter(id=request.user.id).exists():
+#         return HttpResponse('booking exists')
+#         return render(request, 'bookings/manage-bookings.html')
+#     else:
+#         return HttpResponse('booking DOESNT exists')
 
 
 def update_booking(request, pk):
     booking = Booking.objects.get(id=pk)
     form = BookingForm(instance=booking)
+    date = DateTimeInput()
+
 
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
@@ -107,7 +84,7 @@ def update_booking(request, pk):
             form.save()
             return redirect('/bookings/manage/')
 
-    context = {'form': form}
+    context = {'form': form, 'date': date}
     return render(request, 'bookings/book.html', context)
 
 

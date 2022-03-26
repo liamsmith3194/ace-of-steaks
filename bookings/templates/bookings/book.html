@@ -3,16 +3,16 @@
 {% block content %}
 <h2>Book a table</h2>
 
+
 <div class="window">
     <div class="tab-content">
         <div id="details" class="tab-pane fade in active show">
             <form id="booking-form" action="" method="POST">
                 <!-- onsubmit="return sendMail(this);"> -->
                 {% csrf_token %}
-                <ul class="booking-list">
+                <ul class="booking-list">                    
 
                     {{ form.username }}
-                    <p>There are {{ booking_count }} booking currently in the database</p>
 
                     <label for="location" class="form-label">Location:</label>
                     <li id="location" class="form-input">{{ form.location }}</li>
@@ -26,6 +26,9 @@
                     <label for="fname" class="form-label">First Name:</label>
                     <li id="fname" class="form-input">{{ form.fname }}</li>
 
+                    {% for error in form.fname.errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
                     <label for="lname" class="form-label">Last Name:</label>
                     <li id="lname" class="form-input">{{ form.lname }}</li>
 
@@ -36,12 +39,12 @@
                 <button type="submit" class="btn btn-booking-table" value="submit">Submit Booking</button>
             </form>
 
-
         </div>
 
 
     </div>
 </div>
+
 
 <script>
     var username = "{{ user.id }}";
