@@ -24,12 +24,12 @@ class BookingForm(forms.ModelForm):
                 ),
             }
     
-    def clean_fname(self):
-        fname = self.cleaned_data.get('fname')
-        if (fname == ""):
-            raise forms.ValidationError("blank")
+    def clean_date(self):
+        date = self.cleaned_data.get('date')
+        if (date == ""):
+            raise forms.ValidationError("This field can not be left blank")
         
         for instance in Booking.objects.all():
-            if instance.fname == fname:
-                raise forms.ValidationError("exists")
-        return fname
+            if instance.date == date:
+                raise forms.ValidationError("Date and/or time not available, please try again.")
+        return date

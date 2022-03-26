@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm, DateTimeInput
-from datetime import datetime
+import datetime
+from django.utils import timezone
+
 
 
 
@@ -36,8 +38,12 @@ def make_booking(request):
 
 
 def manage_booking(request):
-    booking_count = Booking.objects.filter(username=request.user).count()
-    bookings = Booking.objects.filter(username=request.user)
+    booking_count = Booking.objects.filter(username=request.user, date__gte=timezone.now()).count()
+    # bookings = Booking.objects.filter(username=request.user, date__contains=datetime.date(2022, 4, 3))
+    # bookings = Booking.objects.filter(date__contains=datetime.date(2022, 3, 19))
+    # bookings = Booking.objects.filter(date__contains=datetime.date(2022, 4, 3))
+    bookings = Booking.objects.filter(username=request.user, date__gte=timezone.now())
+
 
     return render(request, 'bookings/manage-bookings.html',
                   {'bookings': bookings,

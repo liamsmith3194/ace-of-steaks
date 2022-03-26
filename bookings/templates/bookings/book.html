@@ -20,15 +20,16 @@
                     <label for="date_time" class="form-label">Date & Time:</label>
                     <li id="date_time" class="form-input">{{ form.date }}</li>
 
+                    {% for error in form.date.errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
+                    
                     <label for="guests" class="form-label">Number of guests:</label>
                     <li id="guests" class="form-input">{{ form.quantity }}</li>
 
                     <label for="fname" class="form-label">First Name:</label>
                     <li id="fname" class="form-input">{{ form.fname }}</li>
 
-                    {% for error in form.fname.errors %}
-                    <p>{{ error }}</p>
-                    {% endfor %}
                     <label for="lname" class="form-label">Last Name:</label>
                     <li id="lname" class="form-input">{{ form.lname }}</li>
 

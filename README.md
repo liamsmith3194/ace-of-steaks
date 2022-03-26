@@ -213,6 +213,11 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - Count post by user [stackoverflow](https://stackoverflow.com/questions/50393455/count-the-number-of-posts-by-a-user-django)
 
+- Avoid duplicate records [poopcode.com](https://poopcode.com/python-code-snippet-how-to-avoid-inserting-duplicate-records-in-orm-django/)
+
+
+- Filter on date and time today [stackoverflow](https://stackoverflow.com/questions/11245483/django-filter-events-occurring-today)
+
 ### Content
 
 - All content was written by the developer.
