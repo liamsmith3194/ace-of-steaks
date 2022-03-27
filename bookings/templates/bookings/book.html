@@ -5,45 +5,42 @@
 
 
 <div class="window">
-    <div class="tab-content">
-        <div id="details" class="tab-pane fade in active show">
-            <form id="booking-form" action="" method="POST">
-                <!-- onsubmit="return sendMail(this);"> -->
-                {% csrf_token %}
-                <ul class="booking-list">                    
+    <form id="booking-form" action="" method="POST">
+        <!-- onsubmit="return sendMail(this);"> -->
+        {% csrf_token %}
+        <ul class="booking-list">
 
-                    {{ form.username }}
+            {{ form.username }}
 
-                    <label for="location" class="form-label">Location:</label>
-                    <li id="location" class="form-input">{{ form.location }}</li>
+            <label for="location" class="form-label">Location:</label>
+            <li id="location" class="form-input">{{ form.location }}</li>
 
-                    <label for="date_time" class="form-label">Date & Time:</label>
-                    <li id="date_time" class="form-input">{{ form.date }}</li>
+            <label for="date_time" class="form-label">Date & Time:</label>
+            <li id="date_time" class="form-input">{{ form.date }}</li>
 
-                    {% for error in form.date.errors %}
-                    <p>{{ error }}</p>
-                    {% endfor %}
-                    
-                    <label for="guests" class="form-label">Number of guests:</label>
-                    <li id="guests" class="form-input">{{ form.quantity }}</li>
+            {% for error in form.date.errors %}
+            <p>{{ error }}</p>
+            {% endfor %}
 
-                    <label for="fname" class="form-label">First Name:</label>
-                    <li id="fname" class="form-input">{{ form.fname }}</li>
+            <label for="guests" class="form-label">Number of guests:</label>
+            <li id="guests" class="form-input">{{ form.quantity }}</li>
 
-                    <label for="lname" class="form-label">Last Name:</label>
-                    <li id="lname" class="form-input">{{ form.lname }}</li>
+            <label for="fname" class="form-label">First Name:</label>
+            <li id="fname" class="form-input">{{ form.fname }}</li>
 
-                    <label for="email" class="form-label">Email Address:</label>
-                    <li id="email" class="form-input">{{ form.email }}</li>
+            <label for="lname" class="form-label">Last Name:</label>
+            <li id="lname" class="form-input">{{ form.lname }}</li>
 
-                </ul>
-                <button type="submit" class="btn btn-booking-table" value="submit">Submit Booking</button>
-            </form>
+            <label for="email" class="form-label">Email Address:</label>
+            <li id="email" class="form-input">{{ form.email }}</li>
 
-        </div>
+        </ul>
+        <button type="submit" class="btn btn-booking-table" value="submit">Submit Booking</button>
+    </form>
 
 
-    </div>
+
+
 </div>
 
 

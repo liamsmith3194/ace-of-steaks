@@ -4,10 +4,9 @@
 
 <h2>Manage Booking</h2>
 
-<!-- <p>Your Username is : {{user}} </p>
-<p>Your User Id is  : {{user.id}} </p> -->
 
 <div class="window">
+
         <p>There are {{ booking_count }} bookings currently in the database</p>
 
         
@@ -78,8 +77,11 @@
                 </tr>
         {% endfor %}
         </table>
+</div>
 
        
+
+{%endblock%}
 
         <!-- formats the date on display -->
 
@@ -93,5 +95,3 @@
                 </tr>
                 {% endfor %}
         </table> -->
-
-{%endblock%}
