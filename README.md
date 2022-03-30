@@ -218,6 +218,8 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 - Filter on date and time today [stackoverflow](https://stackoverflow.com/questions/11245483/django-filter-events-occurring-today)
 
+- Remove username from allauth [stackoverflow](https://stackoverflow.com/questions/19683179/remove-username-field-from-django-allauth)
+
 ### Content
 
 - All content was written by the developer.

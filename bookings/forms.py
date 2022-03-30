@@ -11,10 +11,12 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
 
-        # fields = '__all__'
         fields = ['username', 'date', 'fname', 'lname', 'email', 'location', 'quantity']
         widgets = {
-            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id', 'type': 'hidden'}),
+            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id'}),
+            # , 'type': 'hidden'
+            'email': forms.EmailInput(attrs={'value': '', 'id': 'user_email'}),
+
             'date': DateTimeInput(
                 {
                     'minDate': (datetime.datetime.today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00'),

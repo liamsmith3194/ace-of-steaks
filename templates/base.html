@@ -75,7 +75,7 @@
                                     <a class="nav-link {% if url_name == 'add_booking' %} nav-link current {% endif %}" href="{% url 'add_booking' %}">Book A Table</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'manage_bookings' %} nav-link current {% endif %}" href="{% url 'manage_bookings' %}">Manage Bookings</a>
+                                    <a class="nav-link {% if url_name == 'manage_bookings' %} nav-link current {% endif %}" href="{% url 'manage_bookings' %}">Manage Booking</a>
                                 </li>
                                 {% else %}
                                 <li class="nav-item">
@@ -97,9 +97,9 @@
 
                         <section class="opening-times">
                             <div class="opening-times-title">
-                                <hr class="times-bar">
+                                <!-- <hr class="times-bar"> -->
                                 <h3>Opening Times</h3>
-                                <hr class="times-bar">
+                                <!-- <hr class="times-bar"> -->
                             </div>
                             <div class="opening-times-text">
                                 Mon - Sat - 11.00am - 11.00pm

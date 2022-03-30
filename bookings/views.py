@@ -5,11 +5,7 @@ import datetime
 from django.utils import timezone
 
 
-
-
-
 # Create your views here.
-
 
 
 # def duplicate(self):
@@ -19,9 +15,7 @@ from django.utils import timezone
 #             return redirect('/menu/')
 #             print('this is yesterday...')
 
-# def test2(request):
-#     Booking.objects.filter(fname).exists()
-# print('working')
+
 
 def make_booking(request):
 

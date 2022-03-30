@@ -31,7 +31,7 @@
 
 .window {
   /* width: 80%; */
-  background: rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.85);
   height: auto;
   text-align: center;
   border-radius: 20px;
@@ -69,12 +69,9 @@
 }
 
 .column-2 {
-  /* background: url('/static/images/Wholesale-Steak-Wagyu-Black-Angus-Miami-Beef.jpg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   position: relative;
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 4rem;
 }
 
 .column-3 {
@@ -114,8 +111,8 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5rem 0.5rem;
-  border-top: 5px solid #C0C0C0;
-  border-bottom: 5px solid #C0C0C0;
+  /* border-top: 5px solid #C0C0C0;
+  border-bottom: 5px solid #C0C0C0; */
 }
 
 h3 {
@@ -133,7 +130,7 @@ h3 {
 h4 {
   font-size: 15px;
   padding: 2rem 2rem;
-  color: white;
+  color: black;
 }
 
 /* Horizontal Rules */
@@ -168,6 +165,14 @@ a:hover {
   color: #CCA232;
   font-weight: 900;
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
 }
 
 /* Navbar */
@@ -237,7 +242,7 @@ padding: 1rem 1rem;
 
 /* buttons */
 
-.btn-book {
+.btn-action {
   background-color: #CCA232;
   color: #C0C0C0;
   border-radius: 20px;
@@ -247,40 +252,12 @@ padding: 1rem 1rem;
   width: auto;
   bottom: 25%;
   position: relative;
+  padding: 1% 4%;
 }
 
-.btn-book:hover {
+.btn-action:hover {
   background-color: #CCA232;
   color: #000000;
-}
-
-.btn-window-button {
-  background-color: #CCA232;
-  color: #C0C0C0;
-  border-radius: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: 5px;
-  width: 50%;
-  bottom: 25%;
-  left: 25%;
-  position: relative;
-}
-
-.btn-window-button:hover {
-  background-color: #CCA232;
-  color: #000000;
-}
-
-.btn-booking-table {
-  background-color: #CCA232;
-  color: #C0C0C0;
-  border-radius: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: 5px;
-  width: auto;
-  margin-top: 1rem;
 }
 
 .btn-dark, .btn-danger{
@@ -289,10 +266,13 @@ padding: 1rem 1rem;
 
 /* Table */
 
-.vertical-table, .vertical-table-buttons {
+/* .vertical-table, .vertical-table-buttons {
   display: none;
-}
+} */
 
+/* .navbar-toggler[aria-expanded="true"] {
+    background-color: red;
+} */
 
 
 .table {
@@ -301,11 +281,16 @@ padding: 1rem 1rem;
 
 }
 
+.table th, .table td {
+  padding: 1%;
+}
+
 th {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 2px;
+  padding: 1%;
   color: #CCA232;
 }
 
@@ -404,17 +389,17 @@ body{
    overflow: hidden;
 } */
 
-/* booking */
+/* actioning */
 
-.booking-list{
+.actioning-list{
   padding-left: 0;
 }
 
-/* .booking-data {
+/* .actioning-data {
   text-align: left;
 } */
 
-/* .booking-title {
+/* .actioning-title {
 padding: 1rem;
 }
 
@@ -427,7 +412,7 @@ padding: 1rem;
 @media screen and (max-width: 767px) {
   .navbar-column {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: relative;
     padding: 1rem;
   }
@@ -438,12 +423,33 @@ padding: 1rem;
 
   @media screen and (max-width: 600px) {
 
-      .horizontal-table {
+      /* .horizontal-table {
         display: none;
       }
 
       .vertical-table, .vertical-table-buttons {
         display: table;
+      } */
+
+      .column-2 {
+        padding: 2rem;
+      }
+
+      h2 {
+        top: 5%;
+      }
+
+      .window {
+        top: 10%
       }
 
 	}
+
+
+  @media screen and (max-width: 600px) {
+
+  h2 {
+    position: relative;
+  }
+
+}

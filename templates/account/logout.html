@@ -3,10 +3,10 @@
 {% load i18n %}
 
 {% block content %}
-<h2>Sign Out</h2>
+<h2>Log Out</h2>
 
 <div class="window">
-  <p>{% trans 'Are you sure you want to sign out?' %}</p>
+  <p>{% trans 'Are you sure you want to log out?' %}</p>
 
   <div class="tab-content">
     <div id="details" class="tab-pane fade in active show">
@@ -15,7 +15,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-booking-table" onclick="submit()" value="Reset form">Log out</button>
+        <button type="submit" class="btn btn-action" onclick="submit()" value="Reset form">Log out</button>
       </form>
     </div>
   </div>

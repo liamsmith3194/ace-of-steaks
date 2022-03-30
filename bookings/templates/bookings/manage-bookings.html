@@ -7,33 +7,10 @@
 
 <div class="window">
 
-        <p>There are {{ booking_count }} bookings currently in the database</p>
+        <p>There is {{ booking_count }} booking currently in the database</p>
 
         
-        <table class="table table-md horizontal-table">
-                <tr>
-                        <th>Date & Time</th>
-                        <!-- <th>Full Name</th> -->
-                        <th>Location</th>
-                        <th>Quantity</th>
-                        <th>Amend</th>
-                        <th>Remove</th>
-                </tr>
 
-        {% for booking in bookings %}
-
-                <tr>
-                        <td>{{ booking.date}}</td>
-                        <!-- <td>{{ booking.fname}} {{ booking.lname}}</td> -->
-                        <td>{{ booking.location}}</td>
-                        <td>Table for {{ booking.quantity}}</td>
-                        <td><a button type="button" class="btn btn-dark"
-                                        href="{% url 'update_booking' booking.id %}">Update</button></a></td>
-                        <td><a button type="button" class="btn btn-danger"
-                                        href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
-                </tr>
-        {% endfor %}
-        </table>
 
         <table class="table table-md vertical-table">
         {% for booking in bookings %}
@@ -82,6 +59,29 @@
        
 
 {%endblock%}
+
+<!-- <table class="table table-md horizontal-table">
+        <tr>
+                <th>Date & Time</th>
+                <th>Location</th>
+                <th>Quantity</th>
+                <th>Amend</th>
+                <th>Remove</th>
+        </tr>
+
+{% for booking in bookings %}
+
+        <tr>
+                <td>{{ booking.date}}</td>
+                <td>{{ booking.location}}</td>
+                <td>Table for {{ booking.quantity}}</td>
+                <td><a button type="button" class="btn btn-dark"
+                                href="{% url 'update_booking' booking.id %}">Update</button></a></td>
+                <td><a button type="button" class="btn btn-danger"
+                                href="{% url 'delete_booking' booking.id %}">Delete</button></a></td>
+        </tr>
+{% endfor %}
+</table> -->
 
         <!-- formats the date on display -->
 

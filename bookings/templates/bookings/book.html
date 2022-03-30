@@ -35,7 +35,7 @@
             <li id="email" class="form-input">{{ form.email }}</li>
 
         </ul>
-        <button type="submit" class="btn btn-booking-table" value="submit">Submit Booking</button>
+        <button type="submit" class="btn btn-action" value="submit">Submit Booking</button>
     </form>
 
 
@@ -47,6 +47,9 @@
 <script>
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
+
+    var email = "{{ user.email }}";
+    document.getElementById("user_email").value = email;
 </script>
 
 {%endblock%}
