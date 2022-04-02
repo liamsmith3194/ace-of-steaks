@@ -8,15 +8,6 @@ from django.utils import timezone
 # Create your views here.
 
 
-# def duplicate(self):
-#     for instance in Booking.objects.all():
-#         if instance.fname == fname:
-#             raise forms.ValidationError(str(fname) + 'is already created')
-#             return redirect('/menu/')
-#             print('this is yesterday...')
-
-
-
 def make_booking(request):
 
     form = BookingForm
@@ -32,23 +23,14 @@ def make_booking(request):
 
 
 def manage_booking(request):
-    booking_count = Booking.objects.filter(username=request.user, date__gte=timezone.now()).count()
-    # bookings = Booking.objects.filter(username=request.user, date__contains=datetime.date(2022, 4, 3))
-    # bookings = Booking.objects.filter(date__contains=datetime.date(2022, 3, 19))
-    # bookings = Booking.objects.filter(date__contains=datetime.date(2022, 4, 3))
-    bookings = Booking.objects.filter(username=request.user, date__gte=timezone.now())
-
+    booking_count = Booking.objects.filter(
+        username=request.user, date__gte=timezone.now()).count()
+    bookings = Booking.objects.filter(
+        username=request.user, date__gte=timezone.now())
 
     return render(request, 'bookings/manage-bookings.html',
                   {'bookings': bookings,
                    'booking_count': booking_count})
-
-
-# def remove_old_booking(request):
-#     start_date=datetime(2009, 12, 30)
-#     end_date=datetime(2020,12,30)
-#     Booking().objects.filter(date__range=[start_date,end_date])
-#     return render(request, 'bookings/manage-bookings.html')
 
 
 # def test_func(self):
@@ -65,8 +47,8 @@ def manage_booking(request):
 
 
 # def restrict(self, request):
-#     if Booking.objects.filter(id=request.user.id).exists():
-#         return HttpResponse('booking exists')
+#     if Booking.objects.filter(id=request.user.id, date> current fate).count() == 1:
+#         return HttpResponse('booking exists, please delete or edit previously made booking')
 #         return render(request, 'bookings/manage-bookings.html')
 #     else:
 #         return HttpResponse('booking DOESNT exists')
@@ -76,7 +58,6 @@ def update_booking(request, pk):
     booking = Booking.objects.get(id=pk)
     form = BookingForm(instance=booking)
     date = DateTimeInput()
-
 
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)

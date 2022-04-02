@@ -30,9 +30,9 @@
 
 <body>
     <div class="container-fluid">
-      
 
-    <!--Nav-->
+
+        <!--Nav-->
 
         <div class="row">
 
@@ -65,31 +65,37 @@
                             <ul class="nav flex-column">
                                 {% with url_name=request.resolver_match.url_name %}
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'home' %} nav-link current {% endif %}" aria-current="page" href="/">Home</a>
+                                    <a class="nav-link {% if url_name == 'home' %} nav-link current {% endif %}"
+                                        aria-current="page" href="/">Home</a>
                                 </li>
                                 {% if user.is_authenticated %}
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'account_logout' %} nav-link current {% endif %}" href="{% url 'account_logout' %}">Log Out</a>
+                                    <a class="nav-link {% if url_name == 'account_logout' %} nav-link current {% endif %}"
+                                        href="{% url 'account_logout' %}">Log Out</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'add_booking' %} nav-link current {% endif %}" href="{% url 'add_booking' %}">Book A Table</a>
+                                    <a class="nav-link {% if url_name == 'add_booking' %} nav-link current {% endif %}"
+                                        href="{% url 'add_booking' %}">Book A Table</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'manage_bookings' %} nav-link current {% endif %}" href="{% url 'manage_bookings' %}">Manage Booking</a>
+                                    <a class="nav-link {% if url_name == 'manage_bookings' %} nav-link current {% endif %}"
+                                        href="{% url 'manage_bookings' %}">Manage Booking</a>
                                 </li>
                                 {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'account_signup' %} nav-link current {% endif %}" aria-current="page"
-                                        href="{% url 'account_signup' %}">Register</a>
+                                    <a class="nav-link {% if url_name == 'account_signup' %} nav-link current {% endif %}"
+                                        aria-current="page" href="{% url 'account_signup' %}">Register</a>
                                 </li>
                                 <li class="nav-item">
                                     <!-- <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign In</a> -->
-                                    <a class="nav-link {% if url_name == 'account_login' %} nav-link current {% endif %}" href="{% url 'account_login' %}">Sign In</a>
+                                    <a class="nav-link {% if url_name == 'account_login' %} nav-link current {% endif %}"
+                                        href="{% url 'account_login' %}">Sign In</a>
 
                                 </li>
                                 {% endif %}
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'menu' %} nav-link current {% endif %}" href="{% url 'menu' %}">Menu</a>
+                                    <a class="nav-link {% if url_name == 'menu' %} nav-link current {% endif %}"
+                                        href="{% url 'menu' %}">Menu</a>
                                 </li>
                                 {% endwith %}
                             </ul>
@@ -159,7 +165,7 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         </script>
 
-    </article>
+        </article>
     </div>
 </body>
 

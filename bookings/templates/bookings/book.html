@@ -5,6 +5,10 @@
 
 
 <div class="window">
+
+    <p>There is {{ booking_count }} booking currently in the database</p>
+
+
     <form id="booking-form" action="" method="POST">
         <!-- onsubmit="return sendMail(this);"> -->
         {% csrf_token %}
@@ -38,11 +42,7 @@
         <button type="submit" class="btn btn-action" value="submit">Submit Booking</button>
     </form>
 
-
-
-
 </div>
-
 
 <script>
     var username = "{{ user.id }}";
