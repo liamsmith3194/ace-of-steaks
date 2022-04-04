@@ -2,6 +2,24 @@ from .models import Booking
 from django import forms
 from django.forms import ModelForm
 import datetime
+from allauth.account.forms import SignupForm
+
+
+class CustomSignupForm(SignupForm):
+    first_name = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "Enter your first name"}))
+    last_name = forms.CharField(widget=forms.TextInput(
+        attrs={"placeholder": "Enter your last name"}))
+    # id_email = forms.EmailField(label='Email', widget=forms.TextInput(
+    #     attrs={"placeholder": "Enter your email address"}))
+
+    def save(self, request):
+        user = super(CustomSignupForm, self).save(request)
+        user.first_name = self.cleaned_data['first_name']
+        user.last_name = self.cleaned_data['last_name']
+        # user.email = self.cleaned_data['id_email']
+        user.save()
+        return user
 
 
 class DateTimeInput(forms.DateTimeInput):
@@ -9,8 +27,8 @@ class DateTimeInput(forms.DateTimeInput):
 
 
 today = datetime.datetime.today()
-min_date = (today + datetime.timedelta(days=1)).strftime("%Y-%m-%dT08:00:00")
-max_date = (today + datetime.timedelta(days=30)).strftime("%Y-%m-%dT22:00:00")
+min_date = (today + datetime.timedelta(days=1)).strftime("%d/%m/%Y T11:00")
+max_date = (today + datetime.timedelta(days=30)).strftime("%d/%m/%Y T23:00")
 
 
 class BookingForm(forms.ModelForm):
@@ -19,11 +37,13 @@ class BookingForm(forms.ModelForm):
         fields = ['username', 'date', 'fname',
                   'lname', 'email', 'location', 'quantity']
         widgets = {
-            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id'}),
-            # , 'type': 'hidden'
+            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id', 'type': 'hidden'}),
             'email': forms.EmailInput(attrs={'value': '', 'id': 'user_email'}),
+            'fname': forms.TextInput(attrs={'value': '', 'id': 'user_first_name'}),
+            'lname': forms.TextInput(attrs={'value': '', 'id': 'user_last_name'}),
 
             'date': DateTimeInput(
+                format=('%d/%m/%Y %H:%M'),
                 attrs={
                     "id": "date_id",
                     "value": min_date,

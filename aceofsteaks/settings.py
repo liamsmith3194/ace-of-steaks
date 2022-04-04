@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'crispy_forms',
     'bookings',
 ]
 
@@ -57,13 +56,6 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
-# AUTH_USER_MODEL = 'allauth.User'
-# ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_UNIQUE_EMAIL = True
-# ACCOUNT_USERNAME_REQUIRED = False
-
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
@@ -73,8 +65,20 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_UNIQUE_EMAIL = True
+# ACCOUNT_USERNAME_REQUIRED = False
 
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_UNIQUE_EMAIL = False
+ACCOUNT_USERNAME_REQUIRED = True
+
+ACCOUNT_FORMS = {
+    'signup': 'bookings.forms.CustomSignupForm',
+
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -3,12 +3,6 @@
 
 /* Layout */
 
-
-
-
-
-
-
 .container-fluid {
   position: fixed;
   top: 0;
@@ -25,18 +19,18 @@
 }
 
 .window {
-  /* width: 80%; */
   background: rgba(255, 255, 255, 0.85);
   height: auto;
   text-align: center;
   border-radius: 20px;
   position: relative;
   top: 15%;
-  padding: 2rem;
+  padding: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .row {
+  height: 100%;
   margin-right: 0px;
   margin-left: 0px;
 }
@@ -69,7 +63,7 @@
 .column-2 {
   height: 100%;
   position: relative;
-  padding: 4rem;
+  padding: 5%;
 }
 
 .column-3 {
@@ -174,6 +168,10 @@ ul {
 }
 
 /* Navbar */
+
+.nav {
+  margin-bottom: 15px;
+}
 
 .navbar-toggler {
   color: #CCA232;
@@ -335,6 +333,7 @@ input,
 select {
   width: 100%;
   border: none;
+  border-radius: 0.25rem;
   text-align: center;
 }
 
@@ -405,6 +404,7 @@ padding: 1rem;
 
 
 @media screen and (max-width: 767px) {
+
   .navbar-column {
     width: 100%;
     height: auto;
@@ -412,36 +412,9 @@ padding: 1rem;
     padding: 1rem;
   }
 
-}
-
-
-
-@media screen and (max-width: 600px) {
-
-  /* .horizontal-table {
-        display: none;
-      }
-
-      .vertical-table, .vertical-table-buttons {
-        display: table;
-      } */
-
-  .column-2 {
-    padding: 2rem;
+  .row {
+    height: 75%;
   }
-
-  h2 {
-    top: 5%;
-  }
-
-  .window {
-    top: 10%
-  }
-
-}
-
-
-@media screen and (max-width: 600px) {
 
   h2 {
     position: relative;

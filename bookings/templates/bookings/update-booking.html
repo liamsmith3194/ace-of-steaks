@@ -2,11 +2,9 @@
 
 {% block content %}
 
-<h2>Book a table</h2>
+<h2>Update Booking</h2>
 
 <div class="window">
-
-    {% if booking_count == 0 %}
 
     <form id="booking-form" action="" method="POST">
         <!-- onsubmit="return sendMail(this);"> -->
@@ -39,15 +37,7 @@
 
         </ul>
         
-        <button type="submit" class="btn btn-action" value="submit">Submit Booking</button>
-        {% else %}
-
-        <p>There is already a booking in your account.</p>
-        <p> Please manage your existing booking.</p>
-
-        <a href="{% url 'manage_booking' %}"><button class="btn btn-l mt-4 btn-action">Manage booking</button></h4>
-        </a>
-        {% endif %}
+        <button type="submit" class="btn btn-action" value="submit">Update Booking</button>
     </form>
 
 </div>
@@ -58,12 +48,6 @@
 
     var email = "{{ user.email }}";
     document.getElementById("user_email").value = email;
-
-    var fname = "{{ user.first_name }}";
-    document.getElementById("user_first_name").value = fname;
-    
-    var lname = "{{ user.last_name }}";
-    document.getElementById("user_last_name").value = lname;
 </script>
 
 {%endblock%}

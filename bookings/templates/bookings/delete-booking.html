@@ -16,7 +16,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a button type="submit" class="btn btn-dark" href="{% url 'manage_bookings' %}" >No, Cancel</button></a>
+        <a button type="submit" class="btn btn-dark" href="{% url 'manage_booking' %}" >No, Cancel</button></a>
         <button type="submit" class="btn btn-danger">Yes, Delete</button>
 
       </form>

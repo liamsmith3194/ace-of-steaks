@@ -23,6 +23,8 @@
 
 <h2>Sign In</h2>
 <div class="window">
+  <p>{% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
     <div class="tab-content">
         <div id="details" class="tab-pane fade in active show">
             <form id="register-form" method="POST" action="{% url 'account_login' %}">

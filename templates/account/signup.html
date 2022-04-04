@@ -15,20 +15,6 @@
             <form id="register-form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
-                {% if redirect_field_value %}
-                <label for="fname" class="form-label">First Name:</label>
-                <input type="text" class="form-input" id="fname" name="fname" required>
-
-                <label for="lname" class="form-label">Last Name:</label>
-                <input type="text" class="form-input" id="lname" name="lname" required>
-
-                <label for="email" class="form-label">Email Address:</label>
-                <input type="email" class="form-input" id="email" name="email" required>
-                <!-- {{ form.email }} -->
-
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" class="form-input" id="password" name="password" required>
-                {% endif %}
                 <button type="submit" class="btn btn-action" onclick="submit()"
                     value="Reset form">Create account</button>
             </form>
@@ -37,3 +23,6 @@
 </div>
 
 {%endblock%}
+
+
+

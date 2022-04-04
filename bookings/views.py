@@ -9,7 +9,8 @@ from django.utils import timezone
 
 
 def make_booking(request):
-
+    booking_count = Booking.objects.filter(
+        username=request.user, date__gte=timezone.now()).count()
     form = BookingForm
     if request.method == 'POST':
         # print('Printing POST:', request.POST)
@@ -17,9 +18,8 @@ def make_booking(request):
         if form.is_valid():
             form.save()
             return redirect('/bookings/manage/')
-
-    context = {'form': form}
-    return render(request, 'bookings/book.html', context)
+    return render(request, 'bookings/book.html',
+                  {'form': form, 'booking_count': booking_count})
 
 
 def manage_booking(request):
@@ -28,26 +28,13 @@ def manage_booking(request):
     bookings = Booking.objects.filter(
         username=request.user, date__gte=timezone.now())
 
-    return render(request, 'bookings/manage-bookings.html',
+    return render(request, 'bookings/manage-booking.html',
                   {'bookings': bookings,
                    'booking_count': booking_count})
 
 
-# def test_func(self):
-#     yesterday = datetime.now() - timedelta(day=1)
-#     # print to see which time is correct.
-#     print('this is yesterday...', yesterday)
-#     print('this is timezone.now()...', timezone.now())
-#     print('this is daytime.now()...', datetime.now())
-#     if Post.objects.filter(poster=self.request.user, post_date__gt=yesterday).exists():
-#         raise PermissionDenied("You have made your post today, Please come back later")
-#         return False
-#     else:
-#         return True
-
-
 # def restrict(self, request):
-#     if Booking.objects.filter(id=request.user.id, date> current fate).count() == 1:
+#     if Booking.objects.filter(id=request.user.id, date> current date).count() == 1:
 #         return HttpResponse('booking exists, please delete or edit previously made booking')
 #         return render(request, 'bookings/manage-bookings.html')
 #     else:
@@ -66,7 +53,7 @@ def update_booking(request, pk):
             return redirect('/bookings/manage/')
 
     context = {'form': form, 'date': date}
-    return render(request, 'bookings/book.html', context)
+    return render(request, 'bookings/update-booking.html', context)
 
 
 def delete_booking(request, pk):

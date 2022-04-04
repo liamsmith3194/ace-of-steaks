@@ -24,8 +24,6 @@ class Booking(models.Model):
     quantity = models.CharField(
         'Number of Guests', max_length=50, choices=NUMBER_OF_GUESTS,)
 
-    USERNAME_FIELD = 'email'
-
     # prepopulated_fields = {'reference': ('fname', 'lname','location')}
 
     class Meta:

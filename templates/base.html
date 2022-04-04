@@ -78,8 +78,8 @@
                                         href="{% url 'add_booking' %}">Book A Table</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {% if url_name == 'manage_bookings' %} nav-link current {% endif %}"
-                                        href="{% url 'manage_bookings' %}">Manage Booking</a>
+                                    <a class="nav-link {% if url_name == 'manage_booking' %} nav-link current {% endif %}"
+                                        href="{% url 'manage_booking' %}">Manage Booking</a>
                                 </li>
                                 {% else %}
                                 <li class="nav-item">
@@ -151,7 +151,7 @@
                 let messages = document.getElementById('msg');
                 let alert = new bootstrap.Alert(messages);
                 alert.close();
-            }, 2500);
+            }, 100000000);
         </script>
 
 
