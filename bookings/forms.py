@@ -10,14 +10,14 @@ class CustomSignupForm(SignupForm):
         widget=forms.TextInput(attrs={"placeholder": "Enter your first name"}))
     last_name = forms.CharField(widget=forms.TextInput(
         attrs={"placeholder": "Enter your last name"}))
-    # id_email = forms.EmailField(label='Email', widget=forms.TextInput(
-    #     attrs={"placeholder": "Enter your email address"}))
+    id_email = forms.EmailField(label='Email', widget=forms.TextInput(
+        attrs={"placeholder": "Enter your email address"}))
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
-        # user.email = self.cleaned_data['id_email']
+        user.email = self.cleaned_data['id_email']
         user.save()
         return user
 
@@ -27,8 +27,8 @@ class DateTimeInput(forms.DateTimeInput):
 
 
 today = datetime.datetime.today()
-min_date = (today + datetime.timedelta(days=1)).strftime("%d/%m/%Y T11:00")
-max_date = (today + datetime.timedelta(days=30)).strftime("%d/%m/%Y T23:00")
+min_date = (today + datetime.timedelta(days=1)).strftime("%Y-%m-%dT11:00:00")
+max_date = (today + datetime.timedelta(days=30)).strftime("%Y-%m-%dT22:00:00")
 
 
 class BookingForm(forms.ModelForm):

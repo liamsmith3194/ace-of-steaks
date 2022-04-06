@@ -65,15 +65,13 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-# ACCOUNT_AUTHENTICATION_METHOD = 'email'
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_UNIQUE_EMAIL = True
-# ACCOUNT_USERNAME_REQUIRED = False
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_UNIQUE_EMAIL = False
 ACCOUNT_USERNAME_REQUIRED = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 ACCOUNT_FORMS = {
     'signup': 'bookings.forms.CustomSignupForm',

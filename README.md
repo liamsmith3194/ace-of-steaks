@@ -1,6 +1,6 @@
 # Ace Of Steaks
 
-IMAGE OF INDEX PAGE
+![Booking Page](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/booking-page.PNG)
 
 ## User Experience (UX)
 
@@ -10,14 +10,13 @@ IMAGE OF INDEX PAGE
 2. As a site visitor, I want booking a table to be a painless experience with as little input as possible to make my reservation.
 3. As a site visitor, I want some sort of confirmation of my booking.
 4. As a site visitor, I want access to my booking should I need to cancel my table.
-5. As a site visitor, I want to be able to contact the restaurant either via an email form or a telephone number.
-6. As a site visitor, I want to be able to use my location to find the restaurant closest to me, especially if it is part of a chain with hundreds of sites.
-7. As a site visitor, I want the menu or sample menu to be easily available.
+5. As a site visitor, I want to be able to amend my booking, whether that is by changing the date and/or time or number of guests.
+6. As a site visitor, I want the menu or sample menu to be easily available.
 
 ### Admin User/Owner Goals
 
 1. As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
-2. Ensure a table can not be booked for the same time (double booked).
+2. Ensure a table can not be booked for the same date and time (double booked).
 
 ### Design
 
@@ -25,49 +24,87 @@ IMAGE OF INDEX PAGE
     - #CCA232 - Gold
     - #C0C0C0 - Silver
     - #000000 - Black
-
+    - #FFFFFF - White
 
 - #### Typography
     Bebas Neue 
     Montserrat
 
 - #### Imagery
-    dark, detailed images
+    One image used throughout the site which sits behind the transparent body content window.
 
 ### Wireframes
 
 - Figma Desktop Wireframe - [View](https://www.figma.com/file/JePmpqBjAyO6VrkuiHi4Fp/Ace-Of-Steaks---Desktop?node-id=0%3A1)
 
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/desktop-wireframe.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-1.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-2.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-3.PNG)
 
 - Figma Mobile Wireframe - [View](https://www.figma.com/file/tF92jalVcQwe1qMrQD85GQ/Ace-Of-Steaks---Mobile?node-id=0%3A1)
 
-![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/mobile-wireframe.PNG)
+![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/mobile-wireframe.PNG)
 
 ### Flowchart
 
 - Lucidchart - [View](https://lucid.app/lucidchart/05f9c042-a9a0-4282-a11f-2fcfde94bfee/edit?invitationId=inv_335d6257-282e-4923-848d-2f21a828f50e)
 
-![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lucid-flowchart.PNG)
-
-# TO COMPLETE WHEN/AFTER BUILD
+![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lucid-flowchart.PNG)
 
 ## Features
 Below is a brief overview showing the main features of the site.
 
-### Feature1
-- Sign in model
-- manage booking - Cancel table.
-- book table - form (self populating when signed in)
-- menu sample
-- contact form
-- google map with pin markers for restuarant locations
-- show/hide menu button
+#### Layout
+- Using the grid set up from Bootstrap, 12 columns split into 3 for the navigation and 9 for the content.
+- The hero image covers the "content" side of the screen and lays behind the transparent window.
+- All the page titles use a consistent theme.
+- All page content including forms, buttons and text is presented inside the window.
 
+### Navigation Bar
+- Located on the left side of screen, which includes the logo, menu items, opening times information and social media links.
+![Navigation Bar - Standard](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-new-user.PNG)
+
+- The navigation bar automatically collapses at a screen width of 767px. This produces the "Hamburger button" to open and close the nav bar on a click.
+![Navigation Bar - Hamburger button](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-hamburger-button.PNG)
+
+- More menu items are available and shown after a user has signed in or registers for the first time. For example 'Book A Table' and 'Manage Booking'.
+![Navigation Bar - User logged in](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-existing-user.PNG)
+
+### Allauth
+- Allauth has been installed to enable users to create, login and sign out of their accounts.
+- The register form has amended to include first and last name.
+- All the user details are submitted and saved to the database.
+
+### Boostrap Alerts
+- When the user logins an alert appears in the navigation bar to show the user they have sucessfully signed in.
+- The alert is also triggered when the user logs outs.
+
+### Boostrap Nav Pills
+- The menu page uses the bootstrap component nav pills.
+- By default it shows the starters but choices span across the window showing the mains, sides and desserts. Clicking on any of these options changes the data correspondingly.
+![Menu Page - Nav pills](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/menu-page.PNG)
+
+### Book A Table
+- The booking form self populates with the users first name, last name and email address, taken from the registration form.
+![Booking Page - Form](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/booking-page.PNG)
+- Bookings must be submitted one day in advance and maximum 30 days prior.?????
+- On a sucessful submission the user will receive an automated email confirmation, showing the location, date and time and the number of guests.
+- Also on a sucessful submission the user will be redirectted to the 'Manage Bookings' page.
+- If the date and time isn't available on submit the user is greated with a validation error "Date and/or time not available, please try again."
+- If the user already has a booking that hasn't expired, they will be forced to either amend or delete their reservation.
+
+### Manage Booking
+- The booking data is presented in showing only the critical details such as location, date and time and number of guests.
+- The user has two clear buttons to amend or delete the booking.
+- Clicking the amend button produces the booking form again with the previously entered booking data.
+- If the user clicks the delete button, they are asked to confirm this "Are you sure you want to delete your booking?". This is displayed alongside two options "No, Cancel" and "Yes, Delete"
+- Clicking on either of the buttons reddirects the user back to the 'Manage Booking' Page, whether the booking is still seen is determined by which button the user clicked.
+- If the user doesn't have a booking in the database they are notified by a simple paragraph "There is no booking currently in the database" and shown a button linking them to the 'Book A Table'.
 
 ## Future Features
 
-- text
+- Social media sign in and register
+
 ## Technologies
 
 ### Created by using:
@@ -80,18 +117,15 @@ Below is a brief overview showing the main features of the site.
 
 ### Programs including:
 
-- [Heroku:](https://www.Heroku.com/)
-- Heroku was used to share the app online.
-- [Cloudinary](https://www.cloudinary.com/)
-- Cloudinary was used to store all imagery for the site.
-- [Google Fonts:](https://fonts.google.com/)
-- Google fonts were used to import the 'Bebas Neue' into the style.css file.
-- [GitPod:](https://gitpod.io/)
-- GitPod was used to create and update the website throughout via the terminal to push changes to GitHub.
-- [GitHub:](https://github.com/)
-- GitHub was used to commit changes during development and ensure no work was lost.
-- [Figma:](https://figma.com/)
-- Figma was used to create the wireframes during the design process.
+- [Heroku](https://www.Heroku.com/) was used to share the app online.
+- [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site including the grid set up and other components such as buttons and alerts.
+- [Font Awesome](https://fontawesome.com/) was used for the social media icons within the collapsable navigation bar.
+- [Google Fonts](https://fonts.google.com/) was used to import the 'Bebas Neue' and 'Montserrat' into the style.css file.
+- [GitPod](https://gitpod.io/) was used to create and update the website throughout via the terminal to push changes to GitHub.
+- [GitHub](https://github.com/) was used to commit changes during development and ensure no work was lost.
+- [EmailJS](https://www.emailjs.com/) was used to send email booking confirmations to the user.
+- [Figma](https://figma.com/) was used to create the wireframes during the design process.
+- [Lucidchart](https://lucidchart.com/) was used to create the step by step workflow to visualise how the user can book and manage their reservation.
 
 ## Testing
 
@@ -119,11 +153,29 @@ These have now all be rectified and the link to the results text document is bel
 
 - Desktop Results
 
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lighthouse-desktop.PNG)
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lighthouse-desktop.PNG)
+
+98
+Performance
+92
+Accessibility
+92
+Best Practices
+89
+SEO
 
 - Mobile Results
 
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/lighthouse-mobile.PNG)
+![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lighthouse-mobile.PNG)
+
+85
+Performance
+97
+Accessibility
+92
+Best Practices
+91
+SEO
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -153,6 +205,9 @@ Q4. As a site visitor, I want to enjoy the game and come back again and again.
 
 ### Glitches
 #### Computers
+- Whitenoise - CSS styles not showing in Heroku [Heroku Dev Center](https://devcenter.heroku.com/articles/django-assets)
+
+- Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
 
 - Internet Explorer - The website doesn't display any images or button labels. This leads to no functionality.
 
@@ -162,8 +217,6 @@ Q4. As a site visitor, I want to enjoy the game and come back again and again.
 - The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
 
 ## Deployment
-Whitenoise
-https://devcenter.heroku.com/articles/django-assets
 
 ### Heroku
 
@@ -174,28 +227,28 @@ Heroku was the program used to share the game, it was accomplished by using the 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app"
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-new-app.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-new-app.PNG)
 
 3. In the "Settings" tab, scroll down to "Buildpacks" and click "Add buildpack".
     -   Select "python" and click "Save changes"
     -   Select "node.js" and click "Save changes"
 
-![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-add-buildpack.PNG)
+![Heroku - Add buildpack](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-add-buildpack.PNG)
 
 4. Scroll back and click the tab "Deploy"
     - Choose "GitHub" as the Deployment method
     - Enter the GitHub repository name and click "Search"
     - The repository should appear below, then click "Connect"
 
-![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-deployment-method.PNG)
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-deployment-method.PNG)
 
 5. Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
 
-![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-manual-deploy.PNG)
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-manual-deploy.PNG)
 
 6. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/readme-images/heroku-deployed-successfully.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-deployed-successfully.PNG)
 
 ## References
 
@@ -214,7 +267,6 @@ Heroku was the program used to share the game, it was accomplished by using the 
 - Count post by user [stackoverflow](https://stackoverflow.com/questions/50393455/count-the-number-of-posts-by-a-user-django)
 
 - Avoid duplicate records [poopcode.com](https://poopcode.com/python-code-snippet-how-to-avoid-inserting-duplicate-records-in-orm-django/)
-
 
 - Filter on date and time today [stackoverflow](https://stackoverflow.com/questions/11245483/django-filter-events-occurring-today)
 
@@ -244,50 +296,7 @@ Heroku was the program used to share the game, it was accomplished by using the 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome liamsmith3194,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
 ## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
 To log into the Heroku toolbelt CLI:
 
@@ -300,74 +309,3 @@ To log into the Heroku toolbelt CLI:
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
 ------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
