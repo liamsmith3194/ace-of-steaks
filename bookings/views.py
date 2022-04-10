@@ -1,26 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm, DateTimeInput
-from django.conf import settings
 from django.utils import timezone
-from django.core.mail import send_mail
 
 # Create your views here.
-
-
-# def email(request):
-#     subject = 'Ace of Steaks - Booking Confirmation',
-#     from_email = 'booking.aceofsteaks@gmail.com',
-#     to_email = ['smith.liam1994@gmail.com'],
-#     message = 'Hi Thank you for booking with Ace of Steaks! We can confirm your reservation as been received. Best wishes, Ace of Steaks.',
-
-#     send_mail(
-#         subject=subject,
-#         message=message,
-#         from_email=from_email,
-#         recipient_list=to_email,
-#         fail_silently=False),
-#     print(subject, message)
 
 
 def make_booking(request):
@@ -32,18 +15,6 @@ def make_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            subject = 'Ace of Steaks - Booking Confirmation',
-            from_email = 'booking.aceofsteaks@gmail.com',
-            to_email = ['smith.liam1994@gmail.com'],
-            message = 'Hi Thank you for booking with Ace of Steaks! We can confirm your reservation as been received. Best wishes, Ace of Steaks.',
-
-            send_mail(
-                subject = subject,
-                message = message,
-                from_email = from_email,
-                recipient_list = to_email,
-                fail_silently = False ),
-            print(subject, message)
             return redirect('/bookings/manage/')
         else:
             print(form.errors.as_data())  # here you print errors to terminal
