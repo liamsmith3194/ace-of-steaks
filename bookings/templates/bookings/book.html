@@ -8,8 +8,7 @@
 
     {% if booking_count == 0 %}
 
-    <form id="booking-form" action="" method="POST">
-        <!-- onsubmit="return sendMail(this);"> -->
+    <form id="booking-form" onsubmit="return sendMail(this);">
         {% csrf_token %}
         <ul class="booking-list">
 
@@ -38,8 +37,8 @@
             <li id="email" class="form-input">{{ form.email }}</li>
 
         </ul>
-        
-        <button type="submit" class="btn btn-action" value="submit">Submit Booking</button>
+
+        <button type="submit" class="btn btn-action">Submit Booking</button>
         {% else %}
 
         <p>There is already a booking in your account.</p>
@@ -52,7 +51,15 @@
 
 </div>
 
+<script src="/static/scripts/SendEmail.js"></script>
+
+
 <script>
+
+function sendMail() {
+
+}
+
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
 
@@ -61,9 +68,27 @@
 
     var fname = "{{ user.first_name }}";
     document.getElementById("user_first_name").value = fname;
-    
+
     var lname = "{{ user.last_name }}";
     document.getElementById("user_last_name").value = lname;
+
+    var templateParams = {
+    fname: fname,
+    email: email,
+    location: location,
+    // date: date,
+    guests: guests,
+};
+
+console.log('SUCCESS!', fname, lname, email);
+
+    emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text, fname, lname, email);
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
 </script>
+
 
 {%endblock%}
