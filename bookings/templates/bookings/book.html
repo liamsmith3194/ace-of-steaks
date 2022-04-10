@@ -51,15 +51,9 @@
 
 </div>
 
-<script src="/static/scripts/SendEmail.js"></script>
-
+<!-- <script src="/static/scripts/SendEmail.js"></script> -->
 
 <script>
-
-function sendMail() {
-
-}
-
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
 
@@ -72,10 +66,16 @@ function sendMail() {
     var lname = "{{ user.last_name }}";
     document.getElementById("user_last_name").value = lname;
 
+
+
+function sendMail() {
+
+
+
     var templateParams = {
     fname: fname,
     email: email,
-    location: location,
+    // location: location,
     // date: date,
     guests: guests,
 };
@@ -88,6 +88,7 @@ console.log('SUCCESS!', fname, lname, email);
         }, function (error) {
             console.log('FAILED...', error);
         });
+}
 </script>
 
 
