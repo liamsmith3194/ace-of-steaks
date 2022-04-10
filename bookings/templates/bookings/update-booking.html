@@ -16,6 +16,10 @@
             <label for="location" class="form-label">Location:</label>
             <li id="location" class="form-input">{{ form.location }}</li>
 
+            {% for error in form.location.errors %}
+            <p>{{ error }}</p>
+            {% endfor %}
+
             <label for="date_time" class="form-label">Date & Time:</label>
             <li id="date_time" class="form-input">{{ form.date }}</li>
 

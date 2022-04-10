@@ -3,6 +3,8 @@ from django import forms
 from django.forms import ModelForm
 import datetime
 from allauth.account.forms import SignupForm
+from django.core.mail import send_mail
+
 
 
 class CustomSignupForm(SignupForm):
@@ -57,7 +59,6 @@ class BookingForm(forms.ModelForm):
         date = self.cleaned_data.get('date')
         if (date == ""):
             raise forms.ValidationError("This field can not be left blank")
-
         for instance in Booking.objects.all():
             if instance.date == date:
                 raise forms.ValidationError(

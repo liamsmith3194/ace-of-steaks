@@ -54,9 +54,9 @@
 
 -   Figma Desktop Wireframe - [View](https://www.figma.com/file/JePmpqBjAyO6VrkuiHi4Fp/Ace-Of-Steaks---Desktop?node-id=0%3A1)
 
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-1.PNG)
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-2.PNG)
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframe-3.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframes-1.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframes-2.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/desktop-wireframes-3.PNG)
 
 -   Figma Mobile Wireframe - [View](https://www.figma.com/file/tF92jalVcQwe1qMrQD85GQ/Ace-Of-Steaks---Mobile?node-id=0%3A1)
 
@@ -79,12 +79,15 @@ Below is a brief overview showing the main features of the site.
 
 ### Navigation Bar
 -   Located on the left side of screen, which includes the logo, menu items, opening times information and social media links.
+
 ![Navigation Bar - Standard](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-new-user.PNG)
 
 -   The navigation bar automatically collapses at a screen width of 767px. This produces the "Hamburger button" to open and close the nav bar on a click.
+
 ![Navigation Bar - Hamburger button](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-hamburger-button.PNG)
 
 -   More menu items are available and shown after a user has signed in or registers for the first time. For example 'Book A Table' and 'Manage Booking'.
+
 ![Navigation Bar - User logged in](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/nav-bar-existing-user.PNG)
 
 ### Allauth
@@ -96,14 +99,19 @@ Below is a brief overview showing the main features of the site.
 -   When the user logins an alert appears in the navigation bar to show the user they have sucessfully signed in.
 -   The alert is also triggered when the user logs outs.
 
+![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/bootstrap-alert.PNG)
+
 ### Boostrap Nav Pills
 -   The menu page uses the bootstrap component nav pills.
 -   By default it shows the starters but choices span across the window showing the mains, sides and desserts. Clicking on any of these options changes the data correspondingly.
+
 ![Menu Page - Nav pills](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/menu-page.PNG)
 
 ### Book A Table
 -   The booking form self populates with the users first name, last name and email address, taken from the registration form.
+
 ![Booking Page - Form](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/booking-page.PNG)
+
 -   Bookings must be submitted one day in advance and maximum 30 days prior.?????
 -   On a sucessful submission the user will receive an automated email confirmation, showing the location, date and time and the number of guests.
 -   Also on a sucessful submission the user will be redirectted to the 'Manage Bookings' page.
@@ -117,6 +125,8 @@ Below is a brief overview showing the main features of the site.
 -   If the user clicks the delete button, they are asked to confirm this "Are you sure you want to delete your booking?". This is displayed alongside two options "No, Cancel" and "Yes, Delete"
 -   Clicking on either of the buttons reddirects the user back to the 'Manage Booking' Page, whether the booking is still seen is determined by which button the user clicked.
 -   If the user doesn't have a booking in the database they are notified by a simple paragraph "There is no booking currently in the database" and shown a button linking them to the 'Book A Table'.
+
+![Manage Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/manage-booking-page.PNG)
 
 ## Future Features
 
@@ -329,26 +339,3 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 -   My Mentor for answering my questions throughout.
 
 -   Slack users for constructive feedback, suggestions for improvements and video calls.
-
-
-
-
-
-
-
-
-
-
-## Gitpod Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------

@@ -1,11 +1,26 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm, DateTimeInput
-import datetime
+from django.conf import settings
 from django.utils import timezone
-
+from django.core.mail import send_mail
 
 # Create your views here.
+
+
+# def email(request):
+#     subject = 'Ace of Steaks - Booking Confirmation',
+#     from_email = 'booking.aceofsteaks@gmail.com',
+#     to_email = ['smith.liam1994@gmail.com'],
+#     message = 'Hi Thank you for booking with Ace of Steaks! We can confirm your reservation as been received. Best wishes, Ace of Steaks.',
+
+#     send_mail(
+#         subject=subject,
+#         message=message,
+#         from_email=from_email,
+#         recipient_list=to_email,
+#         fail_silently=False),
+#     print(subject, message)
 
 
 def make_booking(request):
@@ -17,9 +32,22 @@ def make_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
+            subject = 'Ace of Steaks - Booking Confirmation',
+            from_email = 'booking.aceofsteaks@gmail.com',
+            to_email = ['smith.liam1994@gmail.com'],
+            message = 'Hi Thank you for booking with Ace of Steaks! We can confirm your reservation as been received. Best wishes, Ace of Steaks.',
+
+            send_mail(
+                subject = subject,
+                message = message,
+                from_email = from_email,
+                recipient_list = to_email,
+                fail_silently = False ),
+            print(subject, message)
             return redirect('/bookings/manage/')
-    return render(request, 'bookings/book.html',
-                  {'form': form, 'booking_count': booking_count})
+        else:
+            print(form.errors.as_data())  # here you print errors to terminal
+    return render(request, 'bookings/book.html', {'form': form, 'booking_count': booking_count})
 
 
 def manage_booking(request):
@@ -31,14 +59,6 @@ def manage_booking(request):
     return render(request, 'bookings/manage-booking.html',
                   {'bookings': bookings,
                    'booking_count': booking_count})
-
-
-# def restrict(self, request):
-#     if Booking.objects.filter(id=request.user.id, date> current date).count() == 1:
-#         return HttpResponse('booking exists, please delete or edit previously made booking')
-#         return render(request, 'bookings/manage-bookings.html')
-#     else:
-#         return HttpResponse('booking DOESNT exists')
 
 
 def update_booking(request, pk):

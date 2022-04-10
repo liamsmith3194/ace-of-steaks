@@ -1,11 +1,14 @@
+console.log('hi')
+
 function sendMail(bookingForm) {
     emailjs.send("service_hc7jbil", "template_kh3yzfz", {
         "location": bookingForm.location.value,
         "date": bookingForm.date_time.value,
         "guests": bookingForm.guests.value,
-        "fname": bookingForm.fname.value,
-        "lname": bookingForm.lname.value,
-        "email": bookingForm.email.value,
+        "to_fname": bookingForm.fname.value,
+        "to_lname": bookingForm.lname.value,
+        "to_email": bookingForm.email.value,
+
     })
     .then(
         function(response) {
@@ -17,4 +20,3 @@ function sendMail(bookingForm) {
     );
     return false;  // To block from loading a new page
 }
-
