@@ -10,10 +10,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  /* background: url('/static/images/Wholesale-Steak-Wagyu-Black-Angus-Miami-Beef.jpg'); */
-  background: url('/static/images/Adelaides-9-Best-Steak-Restaurants-to-visit-in-2021.-Photographed-by-stockcreations.-Image-via-Shutterstock.jpg');
-
-
+  background: url('/static/images/hero-image.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -42,8 +39,6 @@
   padding-right: 0;
   padding-left: 0;
 }
-
-.col-lg-9 {}
 
 .navbar-column {
   /* height: 100%; */
@@ -105,8 +100,6 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5rem 0.5rem;
-  /* border-top: 5px solid #C0C0C0;
-  border-bottom: 5px solid #C0C0C0; */
 }
 
 h3 {
@@ -325,6 +318,7 @@ select {
   border: none;
   border-radius: 0.25rem;
   text-align: center;
+  background-color: #fff;
 }
 
 input:focus {

@@ -16,7 +16,7 @@
 ### Admin User/Owner Goals
 
 1.  As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
-2.  Ensure a table can not be booked for the same date and time (double booked).
+2.  As the site owner/admin user, I want to ensure a table can not be booked for the same date and time (double booked).
 
 ### Design
 
@@ -92,8 +92,10 @@ Below is a brief overview showing the main features of the site.
 
 ### Allauth
 -   Allauth has been installed to enable users to create, login and sign out of their accounts.
--   The register form has amended to include first and last name.
+-   The register form has been amended to include first and last name.
 -   All the user details are submitted and saved to the database.
+
+![Allauth - Register Form](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/allauth-register-page.PNG)
 
 ### Boostrap Alerts
 -   When the user logins an alert appears in the navigation bar to show the user they have sucessfully signed in.
@@ -114,9 +116,11 @@ Below is a brief overview showing the main features of the site.
 
 -   Bookings must be submitted one day in advance and maximum 30 days prior.?????
 -   On a sucessful submission the user will receive an automated email confirmation, showing the location, date and time and the number of guests.
--   Also on a sucessful submission the user will be redirectted to the 'Manage Bookings' page.
+-   Also on a sucessful submission the user will be redirectted to the 'Manage Booking' page.
 -   If the date and time isn't available on submit the user is greated with a validation error "Date and/or time not available, please try again."
--   If the user already has a booking that hasn't expired, they will be forced to either amend or delete their reservation.
+-   If the user already has a booking that hasn't expired, they will be forced to either amend or delete their reservation by clicking on the 'Manage Booking' button.
+
+![Existing Booking Page](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/existing-booking-page.PNG)
 
 ### Manage Booking
 -   The booking data is presented in showing only the critical details such as location, date and time and number of guests.

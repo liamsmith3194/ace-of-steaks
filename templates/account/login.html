@@ -1,25 +1,11 @@
 {% extends "base.html" %}
-
+{% block title %}Ace of Steaks - Login{% endblock %}
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-
-<!-- <h1>{% trans "Sign In" %}</h1>
-
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form> -->
 
 <h2>Sign In</h2>
 <div class="window">
@@ -32,18 +18,11 @@
               {{ form.as_p }}
               {% if redirect_field_value %}
 
-                <label for="email" class="form-label">Email Address:</label>
-                <input type="email" class="form-input" id="email" name="email" required>
-
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" class="form-input" id="password" name="password" required>
                 {% endif %}
                 <button type="submit" class="btn btn-action" onclick="submit()"
                     value="Reset form">Log In</button>
             </form>
         </div>
-
-
     </div>
 </div>
 
