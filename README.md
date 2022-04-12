@@ -7,16 +7,21 @@
 ### Site Visitor Goals
 
 1.  As a site visitor, I want the theme of the restaurant to be immediately clear, for example: Fast food, Thai, Sushi, Steakhouse etc.
-2.  As a site visitor, I want booking a table to be a painless experience with as little input as possible to make my reservation.
-3.  As a site visitor, I want some sort of confirmation of my booking.
-4.  As a site visitor, I want access to my booking should I need to cancel my table.
-5.  As a site visitor, I want to be able to amend my booking, whether that is by changing the date and/or time or number of guests.
-6.  As a site visitor, I want the menu or sample menu to be easily available.
+2.  As a site visitor, I want some sort of confirmation of my booking.
+3.  As a site visitor, I want access to my booking should I need to cancel my table.
+4.  As a site visitor, I want to be able to amend my booking, whether that is by changing the date and/or time or number of guests.
+5.  As a site visitor, I want the menu or sample menu to be easily available.
 
 ### Admin User/Owner Goals
 
 1.  As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
 2.  As the site owner/admin user, I want to ensure a table can not be booked for the same date and time (double booked).
+
+### Agile Planning
+
+-   Github Agile Planning - [View](https://github.com/liamsmith3194/ace-of-steaks/projects/1)
+![Github Issues](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/github-issues.PNG)
+
 
 ### Design
 
@@ -178,6 +183,53 @@ On the first use my code produced over 45 warnings and/or errors including:
 These have now all be rectified and the link to the results text document is below.
 - [Final results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/pep8-results.txt)
 
+### Manual Testing
+
+- Index Page
+    -   Ace of Steaks logo link
+    -   Individual page links
+    -   Social media links open in new tab.
+    -   Window link to menu page
+
+- Register Page
+    -   Username taken
+    -   All fields required
+    -   Not a recognised email address
+    -   Passwords don't match
+    -   Sign in link
+
+- Login Page
+    -   Invalid credientials
+    -   Remember me
+    -   Register link
+
+- Logout Page
+    -   Logout link
+
+- Booking Page
+    -   All fields required
+    -   Date unavailable before or on the day of booking
+    -   No bookings will be taken after 30 days in advance.
+    -   Double booking
+    -   All account details coming through
+
+- Manage Booking Page (Overview)
+    -   All data matches user input
+
+- Manage Booking Page (Update)
+    -   Form loads user entry
+    -   Date unavailable before or on the day of booking
+    -   No bookings will be taken after 30 days in advance.
+    -   Double booking
+    -   Booking change saved and updated in overview and database.
+
+- Manage Booking Page (Delete)
+    -   Cancel button keeps booking and returns user the manage page.
+    -   Delete button removes booking from users view and from the database.
+
+- Menu Page
+    -   All links show correct data
+        
 ### Lighthouse Testing
 
 - text
