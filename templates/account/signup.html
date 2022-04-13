@@ -11,7 +11,7 @@
         <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
                         in</a>.{% endblocktrans %}
         </p>
-        <form id="register-form" method="post" action="/accounts/signup/" required>
+        <form id="register-form" method="post" action="/accounts/signup/">
                 {% csrf_token %}
                 <p><label for="id_username">Username:</label>
                         <input type="text" name="username" placeholder="Enter a username" autocomplete="username"
