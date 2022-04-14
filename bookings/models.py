@@ -1,8 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.utils import timezone
+# from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
-from cloudinary.models import CloudinaryField
 
 
 LOCATIONS = [('London', 'London'),
@@ -13,6 +11,7 @@ NUMBER_OF_GUESTS = [('1', '1'), ('2', '2'), ('3', '3'),
 
 
 class Booking(models.Model):
+    """Booking model for customer booking form and user registration"""
     date = models.DateTimeField(unique=True)
     username = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, default=None,)
@@ -24,11 +23,6 @@ class Booking(models.Model):
     quantity = models.CharField(
         'Number of Guests', max_length=50, choices=NUMBER_OF_GUESTS,)
 
-    # prepopulated_fields = {'reference': ('fname', 'lname','location')}
-
     class Meta:
+        """Orders the database by table reservation date"""
         ordering = ["date"]
-        
-
-    # def __str__(self):
-    #     return self.id

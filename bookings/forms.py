@@ -1,10 +1,9 @@
-from .models import Booking
-from django import forms
-from django.forms import ModelForm
 import datetime
+from django import forms
+# from django.forms import ModelForm
 from allauth.account.forms import SignupForm
-from django.core.mail import send_mail
-
+# from django.core.mail import send_mail
+from .models import Booking
 
 
 class CustomSignupForm(SignupForm):
@@ -39,11 +38,13 @@ class BookingForm(forms.ModelForm):
         fields = ['username', 'date', 'fname',
                   'lname', 'email', 'location', 'quantity']
         widgets = {
-            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id', 'type': 'hidden'}),
+            'username': forms.TextInput(attrs={'value': '', 'id': 'user_id',
+                                               'type': 'hidden'}),
             'email': forms.EmailInput(attrs={'value': '', 'id': 'user_email'}),
-            'fname': forms.TextInput(attrs={'value': '', 'id': 'user_first_name'}),
-            'lname': forms.TextInput(attrs={'value': '', 'id': 'user_last_name'}),
-
+            'fname': forms.TextInput(attrs={'value': '',
+                                            'id': 'user_first_name'}),
+            'lname': forms.TextInput(attrs={'value': '',
+                                            'id': 'user_last_name'}),
             'date': DateTimeInput(
                 format=('%d/%m/%Y %H:%M'),
                 attrs={

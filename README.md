@@ -136,6 +136,7 @@ Below is a brief overview showing the main features of the site.
 -   The booking data is presented in showing only the critical details such as location, date and time and number of guests.
 -   The user has two clear buttons to amend or delete the booking.
 -   Clicking the amend button produces the booking form again with the previously entered booking data.
+-   When the user amends the booking and saves, the database is updated and when redirected, the manage booking page is updated to show the change(s).
 -   If the user clicks the delete button, they are asked to confirm this, "Are you sure you want to delete your booking?". This is displayed alongside two options "No, Cancel" and "Yes, Delete"
 -   Clicking on either of the buttons redirects the user back to the 'Manage Booking' Page, whether the booking is still seen is determined by which button the user clicked.
 -   If the user doesn't have a booking in the database, they are notified by a simple paragraph "There is no booking currently in the database" and shown a button linking them to the 'Book A Table'.
@@ -187,8 +188,10 @@ These have now all be rectified and the link to the results text document is bel
 
 ### Manual Testing
 
-- Index Page
+- Responsive Testing
+    -   d
 
+- Index Page
     -   Ace of Steaks logo link
     -   Individual page links
     -   Social media links open in new tab.

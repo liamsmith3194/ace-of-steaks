@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
+from django.utils import timezone
 from .models import Booking
 from .forms import BookingForm, DateTimeInput
-from django.utils import timezone
 
 
 def make_booking(request):
@@ -11,13 +11,13 @@ def make_booking(request):
         username=request.user, date__gte=timezone.now()).count()
     form = BookingForm
     if request.method == 'POST':
+        # print('Printing POST:', request.POST)
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/bookings/manage/')
-        else:
-            return render(request, 'bookings/book.html',
-                          {'form': form, 'booking_count': booking_count})
+    return render(request, 'bookings/book.html',
+                  {'form': form, 'booking_count': booking_count})
 
 
 def manage_booking(request):

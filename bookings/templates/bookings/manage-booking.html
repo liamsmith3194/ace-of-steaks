@@ -9,8 +9,7 @@
         {% if booking_count == 0 %}
         <p>There is no booking currently in the database</p>
 
-        <button class="btn btn-action">
-                <a href="{% url 'add_booking' %}">Book a Table</a></button>
+        <button a href="{% url 'add_booking' %}" class="btn btn-action">Book a Table</button></a>
         {% endif %}
 
         <table class="table table-md vertical-table">
