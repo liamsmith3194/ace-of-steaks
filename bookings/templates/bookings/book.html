@@ -66,6 +66,8 @@
     var lname = "{{ user.last_name }}";
     document.getElementById("user_last_name").value = lname;
 
+    var booking_date = document.getElementById("date_id")
+
 </script>
 
 <script>
@@ -77,16 +79,16 @@ function sendMail() {
     var templateParams = {
     fname: fname,
     email: email,
-    location: location,
-    // date: date,
-    guests: guests,
+    booking_location: document.getElementById('id_location').value,
+    booking_date: booking_date.value,
+    guests: document.getElementById("id_quantity").value,
 };
 
-console.log('SUCCESS!', fname, lname, email);
+console.log('SUCCESS!', fname, lname, email, booking_location, guests);
 
     emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
         .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text, fname, lname, email);
+            console.log('SUCCESS!', response.status, response.text, fname, lname, email, guests);
         }, function (error) {
             console.log('FAILED...', error);
         });
