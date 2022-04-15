@@ -36,6 +36,9 @@
             <label for="email" class="form-label">Email Address:</label>
             <li id="email" class="form-input">{{ form.email }}</li>
 
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date">
+            
         </ul>
 
         <button type="submit" class="btn btn-action">Submit Booking</button>
@@ -54,6 +57,10 @@
 <!-- <script src="/static/scripts/SendEmail.js"></script> -->
 
 <script>
+    let today = document.getElementById("date");
+    let gb = new Intl.DateTimeFormat('en-GB').format(today);
+    console.log(gb)
+
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
 
