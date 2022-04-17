@@ -396,11 +396,9 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 -   All content was written by the developer.
 
-#### Import
-    ???
-
 ### Mentions
 
--   My Mentor for answering my questions throughout.
-
--   Slack users for constructive feedback, suggestions for improvements and video calls.
+-   My Mentor
+    -   Numerous video calls
+    -   A lot of questions via Slack.
+    -   Introduced me to Pylint and Pytest.

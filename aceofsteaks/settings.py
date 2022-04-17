@@ -88,6 +88,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+HTMLVALIDATOR_ENABLED = True
+
 ROOT_URLCONF = 'aceofsteaks.urls'
 
 TEMPLATES = [

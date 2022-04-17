@@ -36,9 +36,6 @@
             <label for="email" class="form-label">Email Address:</label>
             <li id="email" class="form-input">{{ form.email }}</li>
 
-            <label for="date">Date: </label>
-            <input type="date" name="date" id="date">
-            
         </ul>
 
         <button type="submit" class="btn btn-action">Submit Booking</button>
@@ -57,10 +54,6 @@
 <!-- <script src="/static/scripts/SendEmail.js"></script> -->
 
 <script>
-    let today = document.getElementById("date");
-    let gb = new Intl.DateTimeFormat('en-GB').format(today);
-    console.log(gb)
-
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
 
@@ -73,29 +66,26 @@
     var lname = "{{ user.last_name }}";
     document.getElementById("user_last_name").value = lname;
 
-    var booking_date = document.getElementById("date_id")
+    var booking_date = document.getElementById("date_id").value;
 
 </script>
 
 <script>
 
 function sendMail() {
-
-
-
     var templateParams = {
     fname: fname,
     email: email,
     booking_location: document.getElementById('id_location').value,
-    booking_date: booking_date.value,
+    booking_date: booking_date,
     guests: document.getElementById("id_quantity").value,
 };
 
-console.log('SUCCESS!', fname, lname, email, booking_location, guests);
+console.log('SUCCESS!', fname, lname, email,);
 
     emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
         .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text, fname, lname, email, guests);
+            console.log('SUCCESS!', response.status, response.text, fname, lname, email);
         }, function (error) {
             console.log('FAILED...', error);
         });

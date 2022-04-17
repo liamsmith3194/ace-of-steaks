@@ -247,6 +247,7 @@ ul {
 }
 
 .btn-action:hover {
+  font-weight: normal;
   background-color: #000000;
   color: #CCA232;
 }

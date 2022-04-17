@@ -1,47 +1,34 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ace of Steaks - Located in just three cities">
     <meta name="keywords" content="ace, steaks, steakhouse, london, cardiff, glasgow, dinner, restuarant, grill">
     <title>{% block title %}Ace of Steaks{% endblock title %}</title>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
     <script src="https://kit.fontawesome.com/5507f4abfd.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_7sfb2Kx6So2zrBYpxlZXY");
         })();
     </script>
-
 </head>
 
 <body>
     <div class="container-fluid">
-
-
         <!--Nav-->
-
         <div class="row">
-
-
             <div class="col-12 col-md-3 col-lg-3">
                 <section class="navbar-column">
                     {% for message in messages %}
@@ -53,7 +40,6 @@
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="fa-solid fa-bars d-md-none"></span></button>
-
                     <div class="collapse nav-collapse d-md-block" id="navbarNavDropdown">
                         <div>
                             <hr class="logo-bar">
@@ -62,11 +48,8 @@
                             </a>
                             <hr class="logo-bar">
                         </div>
-
-
                         <!--collapsable Nav-->
                         <div class="navbar navbar-light navbar-expand-sm">
-
                             <ul class="nav flex-column">
                                 {% with url_name=request.resolver_match.url_name %}
                                 <li class="nav-item">
@@ -95,7 +78,6 @@
                                     <!-- <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign In</a> -->
                                     <a class="nav-link {% if url_name == 'account_login' %} nav-link current {% endif %}"
                                         href="{% url 'account_login' %}">Sign In</a>
-
                                 </li>
                                 {% endif %}
                                 <li class="nav-item">
@@ -105,9 +87,8 @@
                                 {% endwith %}
                             </ul>
                         </div>
-
                         <section class="opening-times">
-                                <h3>Opening Times</h3>
+                            <h3>Opening Times</h3>
                             <div class="opening-times-text">
                                 Mon - Sat - 11.00am - 11.00pm
                                 <br>
@@ -126,25 +107,20 @@
                                         aria-label="Visit our Instagram page (opens in new tab)"><i
                                             class="fab fa-instagram"></i></a>
                                 </li>
-
                             </ul>
-
-
                         </section>
                     </div>
                 </section>
             </div>
-
-
             <div class="col-12 col-md-9 col-lg-9">
                 <section class="column-2">
                     {% block content %}
                     <!-- Content Goes here -->
                     {% endblock content %}
+                </section>
             </div>
         </div>
     </div>
-
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
@@ -152,8 +128,6 @@
             alert.close();
         }, 3000);
     </script>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -163,7 +137,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>
