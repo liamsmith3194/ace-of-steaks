@@ -184,19 +184,27 @@ On the first use my code produced over 45 warnings and/or errors including:
 - "indentation is not a multiple of four"
 - "line too long (93 > 79 characters)"
 
-These have now all be rectified and the link to the results text document is below.
-- [Final results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/assets/pep8-results.txt)
+- [Bookings App - URLS](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/pep8/booking_urls_result.txt)
+
+- [Bookings App - Models](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/pep8/booking_models_result.txt)
+
+- [Bookings App - Views](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/pep8/booking_views_result.txt)
 
 ### Manual Testing
+- [x] Mockups
 
 - Responsive Testing
     -   d
 
 - Index Page
-    -   Ace of Steaks logo link
+    -   Ace of Steaks logo link 
+        - [x] Links to from every page successfully.
     -   Individual page links
+        - [x] All pages link to one another from any page.
     -   Social media links open in new tab.
+        - [x] All three social media sites are linked to open new tabs, this can be done from any web page.
     -   Window link to menu page
+        - [x] See menu button successfully links to the menu page showing the default data; starters.
     
 - Register Page
     -   Username taken

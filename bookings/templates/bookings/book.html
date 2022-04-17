@@ -8,7 +8,7 @@
 
     {% if booking_count == 0 %}
 
-    <form id="booking-form" action="" method="POST" onsubmit="return sendMail(this);">
+    <form id="booking-form" action="" method="POST" onsubmit="sendMail(this);">
         {% csrf_token %}
         <ul class="booking-list">
 
@@ -76,12 +76,12 @@ function sendMail() {
     var templateParams = {
     fname: fname,
     email: email,
-    booking_location: document.getElementById('id_location').value,
+    booking_location: document.getElementById("id_location").value,
     booking_date: booking_date,
     guests: document.getElementById("id_quantity").value,
 };
 
-console.log('SUCCESS!', fname, lname, email,);
+console.log('SUCCESS!', fname, lname, email);
 
     emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
         .then(function (response) {
