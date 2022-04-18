@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-/* Layout */
-
 .container-fluid {
   position: fixed;
   top: 0;
@@ -41,8 +39,6 @@
 }
 
 .navbar-column {
-  /* height: 100%; */
-  /* position: relative; */
   position: fixed;
   width: 25%;
   padding: 1rem;
@@ -52,25 +48,11 @@
   bottom: 0;
 }
 
-.column-1 {
-  height: 100%;
-  position: relative;
-  padding: 6rem 1rem 1rem 1rem;
-}
-
-.column-2 {
+.main-body {
   height: 100%;
   position: relative;
   padding: 5%;
 }
-
-.column-3 {
-  height: 100%;
-  position: relative;
-  padding: 4rem 1rem 1rem 1rem;
-}
-
-/* Generic headings */
 
 body {
   font-size: 12px;
@@ -102,26 +84,6 @@ h2 {
   padding: 0.5rem 0.5rem;
 }
 
-h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 5px;
-  color: #CCA232;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  font-size: 23px;
-  margin: 0;
-  padding: 0.5rem 0.5rem;
-}
-
-h4 {
-  font-size: 15px;
-  padding: 2rem 2rem;
-  color: black;
-}
-
-/* Horizontal Rules */
-
 hr {
   margin-top: 0;
   margin-bottom: 0;
@@ -131,18 +93,6 @@ hr.logo-bar {
   border: 3px solid #C0C0C0;
   width: 80%;
 }
-
-hr.times-bar {
-  border: 3px solid #C0C0C0;
-  width: 80%;
-}
-
-hr.welcome-bar {
-  border: 3px solid #C0C0C0;
-  width: 50%;
-}
-
-/* Links */
 
 a {
   color: #000000;
@@ -161,8 +111,6 @@ li {
 ul {
   padding: 0;
 }
-
-/* Navbar */
 
 .nav {
   margin-bottom: 15px;
@@ -195,12 +143,28 @@ ul {
   font-weight: 900;
 }
 
+.opening-times-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 5px;
+  color: #CCA232;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  font-size: 23px;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+
 .opening-times-text {
   text-align: center;
   padding: 1rem 1rem;
 }
 
-/* social media */
+.index-message {
+  font-size: 15px;
+  padding: 2rem 2rem;
+  color: black;
+}
 
 .social ul {
   padding-left: 0;
@@ -219,8 +183,6 @@ ul {
   border: none;
 }
 
-/* alerts */
-
 .alert {
   color: #CCA232;
   border: none;
@@ -231,8 +193,6 @@ ul {
   padding: 12px;
 }
 
-/* buttons */
-
 .btn-action {
   background-color: #CCA232;
   color: #000000;
@@ -241,8 +201,6 @@ ul {
   font-size: 20px;
   letter-spacing: 5px;
   width: auto;
-  /* bottom: 25%;
-  position: relative; */
   padding: 1% 4%;
 }
 
@@ -257,7 +215,6 @@ ul {
   font-size: 12px;
 }
 
-
 table {
   width: 100%;
 }
@@ -265,7 +222,6 @@ table {
 .table {
   width: 100%;
   margin: 0;
-
 }
 
 .table th,
@@ -282,11 +238,8 @@ th {
   color: #CCA232;
 }
 
-/* Form */
-
 form {
   width: 100%;
-  /* margin-top: 1rem; */
 }
 
 label {
@@ -328,8 +281,6 @@ input:focus {
   text-align: center;
 }
 
-/* Menu Page */
-
 .menu-item {
   text-align: left;
   font-family: 'Bebas Neue', sans-serif;
@@ -358,12 +309,6 @@ input:focus {
   font-weight: 900;
 }
 
-
-.actioning-list {
-  padding-left: 0;
-}
-
-
 @media screen and (max-width: 767px) {
 
   .navbar-column {
@@ -380,5 +325,4 @@ input:focus {
   h2 {
     position: relative;
   }
-
 }

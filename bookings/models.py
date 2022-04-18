@@ -14,7 +14,7 @@ class Booking(models.Model):
     date = models.DateTimeField(unique=True)
     username = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, default=None,)
-    fname = models.CharField('First Name', max_length=50, blank=True)
+    fname = models.CharField('First Name', max_length=50)
     lname = models.CharField('Last Name', max_length=50)
     email = models.EmailField('Email')
     location = models.CharField(

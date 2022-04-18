@@ -11,14 +11,14 @@ class CustomSignupForm(SignupForm):
         widget=forms.TextInput(attrs={"placeholder": "Enter your first name"}))
     last_name = forms.CharField(widget=forms.TextInput(
         attrs={"placeholder": "Enter your last name"}))
-    id_email = forms.EmailField(label='Email', widget=forms.TextInput(
-        attrs={"placeholder": "Enter your email address"}))
+    # id_email = forms.EmailField(label='Email', widget=forms.TextInput(
+    #     attrs={"placeholder": "Enter your email address"}))
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
-        user.email = self.cleaned_data['id_email']
+        # user.email = self.cleaned_data['id_email']
         user.save()
         return user
 

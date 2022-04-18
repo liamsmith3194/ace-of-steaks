@@ -179,7 +179,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
     -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
 - [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
-On the first use my code produced over 45 warnings and/or errors including:
+Checking all individual files separately produced numerous errors. On the first use my code produced over 30 warnings and/or errors including:
 - "blank line contains whitespace"
 - "indentation is not a multiple of four"
 - "line too long (93 > 79 characters)"
@@ -191,76 +191,103 @@ On the first use my code produced over 45 warnings and/or errors including:
 - [Bookings App - Views](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/pep8/booking_views_result.txt)
 
 ### Manual Testing
-- [x] Mockups
 
 - Responsive Testing
-    -   d
+    - The site has been tested on an iMac, PC, Laptop, iPad and iPhone 12.
+    - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
 
 - Index Page
-    -   Ace of Steaks logo link 
-        - [x] Links to from every page successfully.
-    -   Individual page links
-        - [x] All pages link to one another from any page.
-    -   Social media links open in new tab.
-        - [x] All three social media sites are linked to open new tabs, this can be done from any web page.
-    -   Window link to menu page
-        - [x] See menu button successfully links to the menu page showing the default data; starters.
-    
+    - [x] Ace of Steaks logo link 
+        - Links to from every page successfully.
+    - [x] Individual page links
+        - All pages link to one another from any page.
+    - [x] Social media links open in new tab.
+        - All three social media sites are linked to open new tabs, this can be done from any web page.
+    - [x] Window link to menu page
+        - See menu button successfully links to the menu page showing the default data; starters.
+
 - Register Page
-    -   Username taken
-    -   All fields required
-    -   Not a recognised email address
-    -   Passwords don't match
-    -   Sign in link
+    - [x]  Username already exists
+        - Attempting to create a user with the same username produces a validation error "A user with that username already exists."
+        ![User exists](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/user-exists.PNG)
+    - [x] All fields required except email address (optional)
+        - The form does not submit unless all the fields have been completed with valid data.
+    - [x] Not a recognised email address
+    - [x]  Passwords don't match
+        - When creating a user and the passwords don't match a validation error is presented. "You must type the same password each time."
+        ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-dont-match.PNG)
+    - [x]  Password not secure
+        - If the password isn't strong enough another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
+        ![Passowrd not strong enough](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-too-short.PNG)
+
+    - [x] Sign in link
+        - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
 
 - Login Page
-    -   Invalid credientials
-    -   Remember me
-    -   Register link
+    - [x] Invalid credentials
+        - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
+        ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/invalid-user.PNG)
+    - [x] Remember me
+        - The 'remember me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
+    - [x] Register link "sign up"
+        - The link redirects the user to the register form as expected.
 
 - Logout Page
-    -   Logout link
+    - [x] Logout link
+        - The logout button works from any page on the site.
 
 - Booking Page
-    -   All fields required
-    -   Date unavailable before or on the day of booking
-    -   No bookings will be taken after 30 days in advance.
-    -   Double booking
-    -   All account details coming through
+    - [x] All fields required
+        - The booking will not submit unless all the fields have been completed with valid input.
+    - [x] Date unavailable before or on the day of booking
+        - The calendar ensure the invalid dates can not be selected.
+        ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/todays-date-unavailable.PNG)
+    - [x] No bookings will be taken after 30 days in advance.
+        - The calendar ensure the user is unable to select a date 30 days in advance of today's' date.
+    - [x] Double booking
+        - The booking will not submit if the date and time is the same as an existing booking in the database.
+        ![Date unavailable](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/date-unavailable.PNG)
+    - [x] All account details coming through
+        - Tested 3 different users and all pulled through user credentials (first name, last name & email address) when going to book a table.
 
 - Manage Booking Page (Overview)
-    -   All data matches user input
+    - [x] All data matches user input
+        - Made numerous bookings under different users and all the data synced correctly.
+    - [x] Old bookings are removed from view
+        - Bookings passed the date of reservation are being deleted from the user's manage booking page. Giving them the ability to book a new table.
 
 - Manage Booking Page (Update)
-    -   Form loads user entry
-    -   Date unavailable before or on the day of booking
-    -   No bookings will be taken after 30 days in advance.
-    -   Double booking
-    -   Booking change saved and updated in overview and database.
+    - [x] Form loads user entry
+        - The form autopopulates with the data taken from the booking made.
+        - The date and time field does not autopopulate. [See below](##issues)
+    - [x] Date unavailable before or on the day of booking
+        - The same restriction remains on the calendar to ensure the invalid dates can not be selected.
+    - [x] No bookings will be taken after 30 days in advance.
+        - The same checks are in place to ensure the user is unable to select a date 30 days in advance of today's' date.
+    - [x] Double booking
+        - The new booking still checks to ensure the date and time doesn't clash with any other booking in the database.
+    - [x] Booking change saved and updated in overview and database.
+        - After saving the changes to the booking, the manage booking page is updated.
+        - Whether one field or multiple are changed, the view from the user is updated along with the database.
+![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/edit-booking.PNG)
 
 - Manage Booking Page (Delete)
-    -   Cancel button keeps booking and returns user the manage page.
-    -   Delete button removes booking from users view and from the database.
+    - [x] Cancel button keeps booking and returns the user to the manage booking page.
+        - When clicking the cancel button, the user is redirected to the manage booking page with the booking intact and editable.
+    - [x] Delete button removes booking from user's view and from the database.
+        - After clicking the delete button the user is redirected to the manage booking page, the booking has been removed from view and removed from the system.
+        - As there is no booking in the database for the user, they are able to book a table. 
+![Manage booking - Delete](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/delete-booking.PNG)
 
 - Menu Page
-    -   All links show correct data
-        
-### Lighthouse Testing
+    - [x] All links show correct data
+        - All four navigation tabs open the correct information, and it doesn't matter what order the tabs are clicked in.
 
-- text
+### Lighthouse Testing
 
 - Desktop Results
 
 ![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lighthouse-desktop.PNG)
-
-98
-Performance
-92
-Accessibility
-92
-Best Practices
-89
-SEO
 
 - Mobile Results
 
@@ -288,12 +315,18 @@ SEO
 
 -   Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
 
--   Internet Explorer - The website doesn't display any images or button labels. This leads to no functionality.
-
 #### Mobile (iPhone X)
 -   The hover pseudo has been removed on smaller devices (tablet-phone) to ensure the user the game has been reset, as the button were not returning to original style after selection.
 -   The button images appear stretched. However, there were no issues via inspect mode in a browser.
 -   The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
+
+## Issues
+
+-   Make email field required on registration form.
+-   Restrict booking time to opening hours.
+-   Deactivate confirmation email alert.
+-   Edit booking date not pulling through.
+-   Date format on emailjs booking confirmation.
 
 ## Deployment
 
@@ -304,48 +337,48 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 1. Log in to Heroku. On your dashboard, click "New" and then click "Create new app".
 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
-    -   Then select the region of Europe and click "Create app"
+    -   Then select the region of Europe and click "Create app"
 
 ![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-create-app.PNG)
 
 3. In the "Resources" tab, scroll down to "Add-ons" and search for "Heroku Postgres".
-    -   Once selected and saved in the "Settings" tab click "Reveal Config Vars", this produces a database url
+    -   Once selected and saved in the "Settings" tab click "Reveal Config Vars", this produces a database url
 
 ![Heroku - Add Heroku Postgres](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-resources.PNG)
 
 4. In GitPod set up a env.py file in the repository.
-    -   Create an environment variable for "DATABASE_URL" and paste the value from Heroku.
-    -   Create an environment variable for "SECRET_KEY" and create your key using any characters available.
+    -   Create an environment variable for "DATABASE_URL" and paste the value from Heroku.
+    -   Create an environment variable for "SECRET_KEY" and create your key using any characters available.
 
 5.  Copy the secret key to Heroku by adding the variable in the "Config Vars" section.
 
 6.  In the settings.py file import:
-    -   os
-    -   dj_database_url
+    -   os
+    -   dj_database_url
 -   Add the if statement:
-    -   if os.path.isfile('env.py'): import env
+    -   if os.path.isfile('env.py'): import env
 
 7.  Amend the secret key variable to the secure key created earlier:
-    -   "SECRET_KEY = os.environ.get('SECRET_KEY')
+    -   "SECRET_KEY = os.environ.get('SECRET_KEY')
 
 8.  Add our Heroku host name into the allowed hosts, this is your Heroku app name followed by herokuapp.com.
-    -   Add "localhost" too, so the app can be ran locally.
+    -   Add "localhost" too, so the app can be ran locally.
 
 9.  Scroll down the "DATABASES" section
-    -   Comment out the default code and add the "DATABASE_URL" variable created earlier:
-    -   DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    -   Comment out the default code and add the "DATABASE_URL" variable created earlier:
+    -   DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 10. Create a procfile
-    -   It must be named like so; "Procfile" and sit in the root directory.
-    -   Inside the file add "web: gunicorn" followed by the app name .wsgi
-    -   For example: "web: gunicorn aceofsteaks.wsgi"
+    -   It must be named like so; "Procfile" and sit in the root directory.
+    -   Inside the file add "web: gunicorn" followed by the app name .wsgi
+    -   For example: "web: gunicorn aceofsteaks.wsgi"
 
 11. Scroll back and click the tab "Deploy"
-    -   Choose "GitHub" as the Deployment method
-    -   Enter the GitHub repository name and click "Search"
-    -   The repository should appear below, then click "Connect"
+    -   Choose "GitHub" as the Deployment method
+    -   Enter the GitHub repository name and click "Search"
+    -   The repository should appear below, then click "Connect"
 
 ![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-deploy-section.PNG)
 

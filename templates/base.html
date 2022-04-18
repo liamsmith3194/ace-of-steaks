@@ -75,7 +75,6 @@
                                         aria-current="page" href="{% url 'account_signup' %}">Register</a>
                                 </li>
                                 <li class="nav-item">
-                                    <!-- <a href class="nav-link" data-toggle="modal" data-target="#signInModal">Sign In</a> -->
                                     <a class="nav-link {% if url_name == 'account_login' %} nav-link current {% endif %}"
                                         href="{% url 'account_login' %}">Sign In</a>
                                 </li>
@@ -88,7 +87,7 @@
                             </ul>
                         </div>
                         <section class="opening-times">
-                            <h3>Opening Times</h3>
+                            <p class="opening-times-heading">Opening Times</p>
                             <div class="opening-times-text">
                                 Mon - Sat - 11.00am - 11.00pm
                                 <br>
@@ -113,9 +112,8 @@
                 </section>
             </div>
             <div class="col-12 col-md-9 col-lg-9">
-                <section class="column-2">
+                <section class="main-body">
                     {% block content %}
-                    <!-- Content Goes here -->
                     {% endblock content %}
                 </section>
             </div>
