@@ -24,8 +24,12 @@
 2.  As the site owner/admin user, I want to ensure a table can not be booked for the same date and time (double booked).
 
 ### Django Admin Site
--   fjdsfgjd 
-
+-   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
+-   Recent actions
+-   They have the ability to add and amend users, including changing their names, email address, username and even their permissions.
+-   It also shows the user's activity in terms of their last login and when they registered.
+-   Users
+-   Bookings
 
 ### Wireframes
 
@@ -180,9 +184,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
     -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
 - [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
 Checking all individual files separately produced numerous errors. On the first use my code produced over 30 warnings and/or errors including:
+- "line too long (127 > 79 characters)"
 - "blank line contains whitespace"
 - "indentation is not a multiple of four"
-- "line too long (93 > 79 characters)"
+
+These have now all be rectified.
 
 - [Bookings App - URLS](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/pep8/booking_urls_result.txt)
 
@@ -193,7 +199,7 @@ Checking all individual files separately produced numerous errors. On the first 
 ### Manual Testing
 
 - Responsive Testing
-    - The site has been tested on an iMac, PC, Laptop, iPad and iPhone 12.
+    - The site has been tested on an iMac, PC, Laptop, iPad and iPhone X.
     - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
 
 - Index Page
@@ -207,17 +213,22 @@ Checking all individual files separately produced numerous errors. On the first 
         - See menu button successfully links to the menu page showing the default data; starters.
 
 - Register Page
-    - [x]  Username already exists
+    - [x] Username already exists
         - Attempting to create a user with the same username produces a validation error "A user with that username already exists."
+
         ![User exists](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/user-exists.PNG)
+
     - [x] All fields required except email address (optional)
         - The form does not submit unless all the fields have been completed with valid data.
     - [x] Not a recognised email address
-    - [x]  Passwords don't match
+    - [x] Passwords don't match
         - When creating a user and the passwords don't match a validation error is presented. "You must type the same password each time."
+
         ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-dont-match.PNG)
-    - [x]  Password not secure
+
+    - [x] Password not secure
         - If the password isn't strong enough another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
+
         ![Passowrd not strong enough](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-too-short.PNG)
 
     - [x] Sign in link
@@ -226,7 +237,9 @@ Checking all individual files separately produced numerous errors. On the first 
 - Login Page
     - [x] Invalid credentials
         - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
+
         ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/invalid-user.PNG)
+
     - [x] Remember me
         - The 'remember me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
     - [x] Register link "sign up"
@@ -241,12 +254,16 @@ Checking all individual files separately produced numerous errors. On the first 
         - The booking will not submit unless all the fields have been completed with valid input.
     - [x] Date unavailable before or on the day of booking
         - The calendar ensure the invalid dates can not be selected.
+
         ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/todays-date-unavailable.PNG)
+
     - [x] No bookings will be taken after 30 days in advance.
         - The calendar ensure the user is unable to select a date 30 days in advance of today's' date.
     - [x] Double booking
         - The booking will not submit if the date and time is the same as an existing booking in the database.
+
         ![Date unavailable](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/date-unavailable.PNG)
+
     - [x] All account details coming through
         - Tested 3 different users and all pulled through user credentials (first name, last name & email address) when going to book a table.
 
@@ -259,7 +276,7 @@ Checking all individual files separately produced numerous errors. On the first 
 - Manage Booking Page (Update)
     - [x] Form loads user entry
         - The form autopopulates with the data taken from the booking made.
-        - The date and time field does not autopopulate. [See below](##issues)
+        - The date and time field does not autopopulate. [See below](#issues)
     - [x] Date unavailable before or on the day of booking
         - The same restriction remains on the calendar to ensure the invalid dates can not be selected.
     - [x] No bookings will be taken after 30 days in advance.
@@ -269,6 +286,7 @@ Checking all individual files separately produced numerous errors. On the first 
     - [x] Booking change saved and updated in overview and database.
         - After saving the changes to the booking, the manage booking page is updated.
         - Whether one field or multiple are changed, the view from the user is updated along with the database.
+
 ![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/edit-booking.PNG)
 
 - Manage Booking Page (Delete)
@@ -277,6 +295,7 @@ Checking all individual files separately produced numerous errors. On the first 
     - [x] Delete button removes booking from user's view and from the database.
         - After clicking the delete button the user is redirected to the manage booking page, the booking has been removed from view and removed from the system.
         - As there is no booking in the database for the user, they are able to book a table. 
+
 ![Manage booking - Delete](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/delete-booking.PNG)
 
 - Menu Page
@@ -305,26 +324,21 @@ SEO
 
 ### Continued Testing
 
-- The Website was tested on Google Chrome, Internet Explorer (see glitches), Microsoft Edge and Safari browsers.
+- The Website was tested on Google Chrome and Microsoft Edge.
 - The website has been displayed on various devices such as Desktop PC, iMac, Laptop, iPhone X & iPad Pro
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ### Glitches
-#### Computers
+
 -   Whitenoise - CSS styles not showing in Heroku [Heroku Dev Center](https://devcenter.heroku.com/articles/django-assets)
 
 -   Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
-
-#### Mobile (iPhone X)
--   The hover pseudo has been removed on smaller devices (tablet-phone) to ensure the user the game has been reset, as the button were not returning to original style after selection.
--   The button images appear stretched. However, there were no issues via inspect mode in a browser.
--   The button labels don't line up centrally beneath the buttons. Again, there were no issues via inspect mode in a browser.
 
 ## Issues
 
 -   Make email field required on registration form.
 -   Restrict booking time to opening hours.
--   Deactivate confirmation email alert.
+-   Deactivate confirmation email alert when user registers.
 -   Edit booking date not pulling through.
 -   Date format on emailjs booking confirmation.
 
@@ -395,19 +409,40 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 ### Site Visitor Goals
 
 1.  As a site visitor, I want the theme of the restaurant to be immediately clear, for example: Fast food, Thai, Sushi, Steakhouse etc.
+    - The consistent content of the hero image and side nav bar across all pages make it abundantly clear regarding the theme of the restaurant. 
+    - Not only is the theme obvious because of the name of the restaurant, but the image used increase the clarity of the type of restaurant. 
 2.  As a site visitor, I want some sort of confirmation of my booking.
+    - After making my booking, I received an email automated confirmation outlining the important details, giving me peace of mind that my booking had been successfully processed.
+    - The way the date and time are presented at in UK format. [As mentioned above](#issues)
 3.  As a site visitor, I want access to my booking should I need to cancel my table.
+    - Managing my booking is really easy, clearly presented and functional.
+    - The use of the red for the button stands out from everything else on the page, which makes it easy for the user to see how to cancel/remove the booking.
+    - The use of the confirmation page is good to ensure the delete button wasn't clicked by mistake.
+    - The cancel button which take you back to the manage page is useful to recheck the booking details.
 4.  As a site visitor, I want to be able to amend my booking, whether that is by changing the date and/or time or number of guests.
+    - The edit function located on the manage booking page is cleverly presented and labelled.
+    - After clicking the 'Update' button, the way the booking form retrieves my booking makes it easier to amend, rather than populating all the fields again from scratch.
+    - A great feature of the site is when after making the change(s) to the booking you are sent back to the manage booking page and data shown has been updated.
+    - An additional up-to-date confirmation email is a great way to ensure me that my amend(s) had been successful.
 5.  As a site visitor, I want the menu or sample menu to be easily available.
-
+    - The use of the section tabs on this page is a clever way of presenting the menu.
+    - Showing a sample of each course gives me an idea of what will be on the menu when I visit, but not too much to be overwhelmed.
+    - The subtle transition between tabs is a nice effect.
+    - The use of the gold for dish name presents a clear contrast between the description.
 ### Admin User/Owner Goals
 
 1.  As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
+    - Going through the admin site is really easy, with the bookings panel on the left side of the screen.
+    - This opens up a list of all bookings created, clicking on the booking ID presents a form with the booking details.
+    - From there you have the ability to change any field, when saved it updates the database.
 2.  As the site owner/admin user, I want to ensure a table can not be booked for the same date and time (double booked).
+    - There are two filters on the right side of the site used for the restaurant location and date.
+    - Using the date filter, the owner can double-check the site validation is working correctly (stopping users booking a table at the same time).
 
 ### Future Features
 
 -   Social media sign in and register
+-   Customisation of email confirmation (requires paid subsription)
 
 ## References
 
