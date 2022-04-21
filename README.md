@@ -23,14 +23,6 @@
 1.  As the site owner/admin user, I want the ability to amend and delete reservations, updating the site to allow the table to be replaced by a new booking.
 2.  As the site owner/admin user, I want to ensure a table can not be booked for the same date and time (double booked).
 
-### Django Admin Site
--   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
--   Recent actions
--   They have the ability to add and amend users, including changing their names, email address, username and even their permissions.
--   It also shows the user's activity in terms of their last login and when they registered.
--   Users
--   Bookings
-
 ### Wireframes
 
 -   Figma Desktop Wireframe - [View](https://www.figma.com/file/JePmpqBjAyO6VrkuiHi4Fp/Ace-Of-Steaks---Desktop?node-id=0%3A1)
@@ -147,6 +139,40 @@ Below is a brief overview showing the main features of the site.
 
 ![Manage Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/manage-booking-page.PNG)
 
+### Django Admin Site
+
+![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-overview.PNG)
+
+-   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
+
+![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-login.PNG)
+
+-   The recent actions panel shows the last 10 changes to users or bookings.
+-   The pencil icon indicates a change.
+-   The cross icon indicates a deletion.
+
+![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-actions.PNG)
+
+-   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
+
+![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-amend-user.PNG)
+
+-   It also shows the user's activity in terms of their last login and when they registered.
+
+-   Finally users can bve deleted by an admin user.
+
+![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-user-dates.PNG)
+
+-   As an admin user you have the ability create manual bookings "ADD BOOKING"
+-   The form uses a dropdown menu to select the username, ensure the user has created an account in order to make a reservation.
+-   The location and number guests using the same options as the site, keeping it consistent.
+
+![Django Admin - Add Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-add-booking.PNG)
+
+-   An admin user is also able to amend any booking and any piece of information from that booking for example, location, number of guest and date and time.
+-   A booking can also be deleted singlely or in batch.
+
+![Django Admin - Edit Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-edit-booking.PNG)
 
 ## Agile Methodology - Implementation
 
@@ -221,12 +247,12 @@ These have now all be rectified.
     - [x] All fields required except email address (optional)
         - The form does not submit unless all the fields have been completed with valid data.
     - [x] Not a recognised email address
-    - [x] Passwords don't match
+    - [x] Passwords don't match
         - When creating a user and the passwords don't match a validation error is presented. "You must type the same password each time."
 
         ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-dont-match.PNG)
 
-    - [x] Password not secure
+    - [x] Password not secure
         - If the password isn't strong enough another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
 
         ![Passowrd not strong enough](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-too-short.PNG)
