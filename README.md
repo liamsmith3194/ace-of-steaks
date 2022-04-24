@@ -1,6 +1,57 @@
 # Ace Of Steaks
 
-![Booking Page](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/booking-page.PNG)
+![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/am-i-responsive)
+
+## Links
+
+### Live Site
+[Heroku Project](https://ace-of-steaks.herokuapp.com/)
+
+### Repository
+[GitHub Repository](https://github.com/liamsmith3194/ace-of-steaks)
+
+# Table of Contents
+
+1.  [Planning & Requirements](#agile-methodology---planning--requirements)
+    -   [Site Visitor Goals](#site-visitor-goals)
+    -   [Admin User/Owner Goals](#admin-userowner-goals)
+    -   [Wireframes](#wireframes)
+    -   [Flowchart](#flowchart)
+2.  [Design](#agile-methodology---design)
+    -   [Colour Scheme](#colour-scheme)
+    -   [Typography](#typography)
+    -   [Imagery](#imagery)
+3.  [Features](#features)
+    -   [Layout](#layout)
+    -   [Navigation Bar](#navigation-bary)
+    -   [Allauth](#allauth)   
+    -   [Boostrap Alerts](#boostrap-alerts)
+    -   [Bootstrap Nav Pills](#boostrap-nav-pills)
+    -   [Book a Table](#book-a-table)
+    -   [Manage Booking](#manage-booking)
+    -   [Django Admin Site](#django-admin-site)
+4.  [Implementation](#agile-methodology---implementation)
+    -   [Programs](#layout)
+5.  [Testing](#agile-methodology---testing)
+    -   [Validation Testing](#layout)
+    -   [Manual Testing](#manual-testing)
+    -   [Continued Testing](#continued-testing)   
+    -   [Glitches](#glitches)
+    -   [Issues](#issues)
+6.  [Deployment](#deployment)
+    -   [Heroku & Gitpod](#heroku--gitpod)
+7.  [Evaluation](#agile-methodology---evaluation)
+    -   [Site Visitor Goals](#site-visitor-goals-1)
+    -   [Admin User/Owner Goals](#admin-userowner-goals-1)
+    -   [Future Features](#future-features)   
+8.  [References](#references)
+    -   [Code](#code)
+9.  [Conclusion](#conclusion)
+    -   [Content](#content)
+    -   [Mentions](#mentions)
+ 
+
+
 
 
 ## Agile Methodology - Planning & Requirements
@@ -120,7 +171,7 @@ Below is a brief overview showing the main features of the site.
 
 ![Booking Page - Form](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/booking-page.PNG)
 
--   Bookings must be submitted one day in advance and maximum 30 days prior.?????
+-   Bookings must be submitted one day in advance and maximum 30 days prior.
 -   On a successful submission, the user will receive an automated email confirmation, showing the location, date and time and the number of guests.
 -   Also on a successful submission, the user will be redirected to the 'Manage Booking' page.
 -   If the date and time isn't available on submit, the user is greeted with a validation error "Date and/or time not available, please try again."
@@ -143,39 +194,40 @@ Below is a brief overview showing the main features of the site.
 
 ![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-overview.PNG)
 
--   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
+-   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
 
 ![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-login.PNG)
 
--   The recent actions panel shows the last 10 changes to users or bookings.
--   The pencil icon indicates a change.
--   The cross icon indicates a deletion.
+-   The "recent actions" panel shows the last 10 changes to users or bookings.
+-   The pencil icon indicates a change.
+-   The cross icon indicates a deletion.
 
-![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-actions.PNG)
+![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-recent-actions.PNG)
 
--   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
+-   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
 
 ![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-amend-user.PNG)
 
--   It also shows the user's activity in terms of their last login and when they registered.
+-   It also shows the user's activity in terms of their last login and when they registered.
 
--   Finally users can bve deleted by an admin user.
+-   Finally, users can be deleted by an admin user.
 
 ![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-user-dates.PNG)
 
--   As an admin user you have the ability create manual bookings "ADD BOOKING"
--   The form uses a dropdown menu to select the username, ensure the user has created an account in order to make a reservation.
--   The location and number guests using the same options as the site, keeping it consistent.
+-   As an admin user you have the ability to create manual bookings "ADD BOOKING"
+-   The form uses a dropdown menu to select the username, ensure the user has created an account in order to make a reservation.
+-   The location and number of guests use the same options as the site, keeping it consistent.
 
 ![Django Admin - Add Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-add-booking.PNG)
 
--   An admin user is also able to amend any booking and any piece of information from that booking for example, location, number of guest and date and time.
--   A booking can also be deleted singlely or in batch.
+-   An admin user is also able to amend any booking and any piece of information from that booking, for example; location, number of guest and date and time.
+-   A booking can also be deleted singly or in batch.
 
 ![Django Admin - Edit Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-edit-booking.PNG)
 
 ## Agile Methodology - Implementation
 
+### Programs
 ### Created by using:
 
 -   HTML5
@@ -190,7 +242,7 @@ Below is a brief overview showing the main features of the site.
 -   [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site, including the grid set up and other components such as buttons and alerts.
 -   [Font Awesome](https://fontawesome.com/) was used for the social media icons within the collapsable navigation bar.
 -   [Google Fonts](https://fonts.google.com/) was used to import the 'Bebas Neue' and 'Montserrat' into the style.css file.
--   [GitPod](https://gitpod.io/) was used to create and update the website throughout via the terminal to push changes to GitHub.
+-   [GitPod](https://gitpod.io/) was used to create and update the website throughout, via the terminal to push changes to GitHub.
 -   [GitHub](https://github.com/) was used to commit changes during development and ensure no work was lost.
 -   [EmailJS](https://www.emailjs.com/) was used to send email booking confirmations to the user.
 -   [Figma](https://figma.com/) was used to create the wireframes during the design process.
@@ -202,17 +254,15 @@ Below is a brief overview showing the main features of the site.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fliamsmith3194.github.io%2Face-of-steaks%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fliamsmith3194.github.io%2Face-of-steaks)
-    -   The only errors from the validation were seen in Bootstrap styles not the developer's css.
-- [Jshint JavaScript linter](https://jshint.com/) - 26 warnings, the mast majority:
-    -   'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-    -   'template literal syntax' is only available in ES6 (use 'esversion: 6'.
+- [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Face-of-steaks.herokuapp.com%2F)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Face-of-steaks.herokuapp.com)
+    -   The only errors/warnings from the validation were seen in Bootstrap styles, not the developer's css.
+- [Jshint JavaScript linter](https://jshint.com/) - No errors were found
 - [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
 Checking all individual files separately produced numerous errors. On the first use my code produced over 30 warnings and/or errors including:
-- "line too long (127 > 79 characters)"
-- "blank line contains whitespace"
-- "indentation is not a multiple of four"
+    - "line too long (127 > 79 characters)"
+    - "blank line contains whitespace"
+    - "indentation is not a multiple of four"
 
 These have now all be rectified.
 
@@ -240,7 +290,7 @@ These have now all be rectified.
 
 - Register Page
     - [x] Username already exists
-        - Attempting to create a user with the same username produces a validation error "A user with that username already exists."
+        - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
         ![User exists](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/user-exists.PNG)
 
@@ -248,14 +298,14 @@ These have now all be rectified.
         - The form does not submit unless all the fields have been completed with valid data.
     - [x] Not a recognised email address
     - [x] Passwords don't match
-        - When creating a user and the passwords don't match a validation error is presented. "You must type the same password each time."
+        - When creating a user and the passwords don't match, a validation error is presented. "You must type the same password each time."
 
         ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-dont-match.PNG)
 
     - [x] Password not secure
-        - If the password isn't strong enough another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
+        - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
 
-        ![Passowrd not strong enough](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-too-short.PNG)
+        ![Password not strong enough](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/password-too-short.PNG)
 
     - [x] Sign in link
         - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
@@ -338,16 +388,6 @@ These have now all be rectified.
 
 ![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lighthouse-mobile.PNG)
 
-85
-Performance
-97
-Accessibility
-92
-Best Practices
-91
-SEO
-
-
 ### Continued Testing
 
 - The Website was tested on Google Chrome and Microsoft Edge.
@@ -377,16 +417,16 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 1. Log in to Heroku. On your dashboard, click "New" and then click "Create new app".
 
 2. Fill in the field for App name - It must be a unique name to Heroku. 
-    -   Then select the region of Europe and click "Create app"
+    -   Then select the region of Europe and click "Create app".
 
 ![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-create-app.PNG)
 
 3. In the "Resources" tab, scroll down to "Add-ons" and search for "Heroku Postgres".
-    -   Once selected and saved in the "Settings" tab click "Reveal Config Vars", this produces a database url
+    -   Once selected and saved in the "Settings" tab click "Reveal Config Vars", this produces a database url.
 
 ![Heroku - Add Heroku Postgres](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-resources.PNG)
 
-4. In GitPod set up a env.py file in the repository.
+4. In GitPod set up an env.py file in the repository.
     -   Create an environment variable for "DATABASE_URL" and paste the value from Heroku.
     -   Create an environment variable for "SECRET_KEY" and create your key using any characters available.
 
@@ -412,13 +452,13 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 10. Create a procfile
     -   It must be named like so; "Procfile" and sit in the root directory.
-    -   Inside the file add "web: gunicorn" followed by the app name .wsgi
-    -   For example: "web: gunicorn aceofsteaks.wsgi"
+    -   Inside the file add "web: gunicorn" followed by the app name .wsgi.
+    -   For example: "web: gunicorn aceofsteaks.wsgi".
 
-11. Scroll back and click the tab "Deploy"
-    -   Choose "GitHub" as the Deployment method
-    -   Enter the GitHub repository name and click "Search"
-    -   The repository should appear below, then click "Connect"
+11. Scroll back and click the tab "Deploy".
+    -   Choose "GitHub" as the Deployment method.
+    -   Enter the GitHub repository name and click "Search".
+    -   The repository should appear below, then click "Connect".
 
 ![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-deploy-section.PNG)
 
@@ -429,6 +469,10 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 13. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
 ![Heroku - Successfully Deployed](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/heroku-deployed-successfully.PNG)
+
+-   On final deployment the project must be set up in the following way:
+    -   DEBUG is set to false in settings.py file
+    -   staticcollect=1 from Config Vars in Heroku deleted.
 
 ## Agile Methodology - Evaluation
 
@@ -468,7 +512,7 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 ### Future Features
 
 -   Social media sign in and register
--   Customisation of email confirmation (requires paid subsription)
+-   Customisation of email confirmation (requires paid subscription)
 
 ## References
 
@@ -480,9 +524,9 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 -   Create a datepicker [stackoverflow](https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django/35968816#35968816)
 
--   Display data based on logged in user [stackoverflow](https://stackoverflow.com/questions/53453746/django-displaying-appointment-linked-to-a-particular-user-on-their-profile-only)
+-   Display data based on logged-in user [stackoverflow](https://stackoverflow.com/questions/53453746/django-displaying-appointment-linked-to-a-particular-user-on-their-profile-only)
 
--   Bring through user id automatically [Youtube - Codemy.com](https://www.youtube.com/watch?v=TAH01Iy5AuE)
+-   Bring through user ID automatically [Youtube - Codemy.com](https://www.youtube.com/watch?v=TAH01Iy5AuE)
 
 -   Count post by user [stackoverflow](https://stackoverflow.com/questions/50393455/count-the-number-of-posts-by-a-user-django)
 
@@ -500,7 +544,7 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 ### Mentions
 
--   My Mentor
+-   My Mentor Narender
     -   Numerous video calls
     -   A lot of questions via Slack.
     -   Introduced me to Pylint and Pytest.
