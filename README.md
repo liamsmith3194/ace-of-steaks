@@ -1,6 +1,6 @@
 # Ace Of Steaks
 
-![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/am-i-responsive)
+![Am I Responsive](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/am-i-responsive.PNG)
 
 ## Links
 
@@ -255,6 +255,7 @@ Below is a brief overview showing the main features of the site.
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
 - [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Face-of-steaks.herokuapp.com%2F)
+    -   Script type warnings, however suggested code from Bootstrap and EmailJS included script type="text/javascript".
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Face-of-steaks.herokuapp.com)
     -   The only errors/warnings from the validation were seen in Bootstrap styles, not the developer's css.
 - [Jshint JavaScript linter](https://jshint.com/) - No errors were found
@@ -289,7 +290,7 @@ These have now all be rectified.
         - See menu button successfully links to the menu page showing the default data; starters.
 
 - Register Page
-    - [x] Username already exists
+    - [x] Username already exists
         - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
         ![User exists](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/user-exists.PNG)

@@ -6,8 +6,7 @@
 
 <div class="window">
 
-    <form id="booking-form" action="" method="POST">
-        <!-- onsubmit="return sendMail(this);"> -->
+    <form id="booking-form" action="" method="POST" onsubmit="sendMail(this);">
         {% csrf_token %}
         <ul class="booking-list">
 
@@ -52,6 +51,37 @@
 
     var email = "{{ user.email }}";
     document.getElementById("user_email").value = email;
+
+    var fname = "{{ user.first_name }}";
+    document.getElementById("user_first_name").value = fname;
+
+    var lname = "{{ user.last_name }}";
+    document.getElementById("user_last_name").value = lname;
+
+    var booking_date = document.getElementById("date_id").value;
+
+</script>
+
+<script>
+
+function sendMail() {
+    var templateParams = {
+    fname: fname,
+    email: email,
+    booking_location: document.getElementById("id_location").value,
+    booking_date: booking_date,
+    guests: document.getElementById("id_quantity").value,
+};
+
+
+    emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text, fname, lname, email);
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+}
+
 </script>
 
 {%endblock%}

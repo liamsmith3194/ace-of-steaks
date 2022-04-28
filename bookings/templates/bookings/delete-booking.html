@@ -11,14 +11,12 @@
   <div class="tab-content">
     <div id="details" class="tab-pane fade in active show">
       <form id="register-form" method="post">
-        <!-- action removed causing error -->
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a button type="submit" class="btn btn-dark" href="{% url 'manage_booking' %}" >No, Cancel</button></a>
+        <a button type="submit" class="btn btn-dark" href="{% url 'manage_booking' %}">No, Cancel</button></a>
         <button type="submit" class="btn btn-danger">Yes, Delete</button>
-
       </form>
     </div>
   </div>
