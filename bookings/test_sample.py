@@ -16,9 +16,7 @@ class TestClass:
         
     def test_set_up_user(self):
         self.assertEqual(response.status_code, 200)
-        
-    # def set_up_user(self):
-    #     User.objects.create_user(username = 'user1', password = 'testpassword')        
+             
         
     def test_one(self):
         x = "this"
