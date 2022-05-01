@@ -45,6 +45,7 @@
 
 </div>
 
+
 <script>
     var username = "{{ user.id }}";
     document.getElementById("user_id").value = username;
@@ -59,11 +60,9 @@
     document.getElementById("user_last_name").value = lname;
 
     var booking_date = document.getElementById("date_id").value;
-
 </script>
 
 <script>
-
 function sendMail() {
     var templateParams = {
     fname: fname,
@@ -73,15 +72,10 @@ function sendMail() {
     guests: document.getElementById("id_quantity").value,
 };
 
-
     emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
         .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text, fname, lname, email);
         }, function (error) {
-            console.log('FAILED...', error);
         });
 }
-
 </script>
-
 {%endblock%}

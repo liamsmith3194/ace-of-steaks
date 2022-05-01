@@ -401,6 +401,10 @@ These have now all be rectified.
 
 -   Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
 
+-   EmailJS - Very inconsistent in terms of sending the confirmation emails.
+    -   action="" needed in the form tag to process sendMail function.
+    -   Certain indentation breaks the function
+
 ## Issues
 
 -   Make email field required on registration form.
@@ -408,6 +412,7 @@ These have now all be rectified.
 -   Deactivate confirmation email alert when user registers.
 -   Edit booking date not pulling through.
 -   Date format on emailjs booking confirmation.
+-   Date not displaying on amend booking email.
 
 ## Deployment
 
