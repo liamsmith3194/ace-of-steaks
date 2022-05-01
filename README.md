@@ -408,7 +408,6 @@ These have now all be rectified.
 -   Deactivate confirmation email alert when users register.
 -   Edit booking date not pulling through.
 -   Date format on EmailJS booking confirmation.
--   Date not displaying on amended booking email.
 
 ## Deployment
 
