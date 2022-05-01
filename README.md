@@ -23,7 +23,7 @@
     -   [Imagery](#imagery)
 3.  [Features](#features)
     -   [Layout](#layout)
-    -   [Navigation Bar](#navigation-bary)
+    -   [Navigation Bar](#navigation-bar)
     -   [Allauth](#allauth)   
     -   [Boostrap Alerts](#boostrap-alerts)
     -   [Bootstrap Nav Pills](#boostrap-nav-pills)
@@ -40,6 +40,7 @@
     -   [Issues](#issues)
 6.  [Deployment](#deployment)
     -   [Heroku & Gitpod](#heroku--gitpod)
+    -   [Updated Heroku Deployment Via Terminal](#updated-heroku-deployment-via-terminal)
 7.  [Evaluation](#agile-methodology---evaluation)
     -   [Site Visitor Goals](#site-visitor-goals-1)
     -   [Admin User/Owner Goals](#admin-userowner-goals-1)
@@ -49,10 +50,6 @@
 9.  [Conclusion](#conclusion)
     -   [Content](#content)
     -   [Mentions](#mentions)
- 
-
-
-
 
 ## Agile Methodology - Planning & Requirements
 
@@ -92,7 +89,6 @@
 
 ![Lucid Snake Flowchart](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/lucid-flowchart.PNG)
 
-
 ## Agile Methodology - Design
 
 ### Colour Scheme
@@ -110,8 +106,8 @@
 -   All main buttons in their native form are gold and black text.
 -   When hovered over the buttons, they reverse in style, black background and gold text.
 
--   The navigation menu items are black, when hovered over the links change colour to gold and the font weight is raised to the thickest possible to ensure the user is certain where the cursor is positioned.
--   The active class is styled using the hover classes attributes but underlined with a silver bar similar to the logo design. This make it even more clear for the user to know which page they are on.
+-   The navigation menu items are black, when hovered over, the links change colour to gold and the font weight is raised to the thickest possible to ensure the user is certain where the cursor is positioned.
+-   The active class is styled using the hover classes attributes but underlined with a silver bar similar to the logo design. This makes it even more apparent for the user to know which page they are on.
 
 -   The only other colours to mention are taken from the Bootstrap button classes (dark & danger).
 -   The grey is used for the 'Update' button.
@@ -180,7 +176,7 @@ Below is a brief overview showing the main features of the site.
 ![Existing Booking Page](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/existing-booking-page.PNG)
 
 ### Manage Booking
--   The booking data is presented in showing only the critical details such as location, date and time and number of guests.
+-   The booking data is presented only showing the critical details such as date and time, location  and number of guests.
 -   The user has two clear buttons to amend or delete the booking.
 -   Clicking the amend button produces the booking form again with the previously entered booking data.
 -   When the user amends the booking and saves, the database is updated and when redirected, the manage booking page is updated to show the change(s).
@@ -220,8 +216,8 @@ Below is a brief overview showing the main features of the site.
 
 ![Django Admin - Add Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-add-booking.PNG)
 
--   An admin user is also able to amend any booking and any piece of information from that booking, for example; location, number of guest and date and time.
--   A booking can also be deleted singly or in batch.
+-   An admin user is also able to amend any booking and any piece of information from that booking, for example; date and time, location and number of guests.
+-   A booking can also be deleted as a batch or individually.
 
 ![Django Admin - Edit Booking](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/django-admin-edit-booking.PNG)
 
@@ -244,7 +240,7 @@ Below is a brief overview showing the main features of the site.
 -   [Google Fonts](https://fonts.google.com/) was used to import the 'Bebas Neue' and 'Montserrat' into the style.css file.
 -   [GitPod](https://gitpod.io/) was used to create and update the website throughout, via the terminal to push changes to GitHub.
 -   [GitHub](https://github.com/) was used to commit changes during development and ensure no work was lost.
--   [EmailJS](https://www.emailjs.com/) was used to send email booking confirmations to the user.
+-   [EmailJS](https://www.EmailJS.com/) was used to send email booking confirmations to the user.
 -   [Figma](https://figma.com/) was used to create the wireframes during the design process.
 -   [Lucidchart](https://lucidchart.com/) was used to create the step by step workflow to visualise how the user can book and manage their reservation.
 
@@ -255,7 +251,7 @@ Below is a brief overview showing the main features of the site.
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
 - [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Face-of-steaks.herokuapp.com%2F)
-    -   Script type warnings, however suggested code from Bootstrap and EmailJS included script type="text/javascript".
+    -   Script type warnings - The suggested code from Bootstrap and EmailJS included script type="text/javascript".
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Face-of-steaks.herokuapp.com)
     -   The only errors/warnings from the validation were seen in Bootstrap styles, not the developer's css.
 - [Jshint JavaScript linter](https://jshint.com/) - No errors were found
@@ -409,10 +405,10 @@ These have now all be rectified.
 
 -   Make email field required on registration form.
 -   Restrict booking time to opening hours.
--   Deactivate confirmation email alert when user registers.
+-   Deactivate confirmation email alert when users register.
 -   Edit booking date not pulling through.
--   Date format on emailjs booking confirmation.
--   Date not displaying on amend booking email.
+-   Date format on EmailJS booking confirmation.
+-   Date not displaying on amended booking email.
 
 ## Deployment
 
@@ -450,15 +446,15 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 8.  Add our Heroku host name into the allowed hosts, this is your Heroku app name followed by herokuapp.com.
     -   Add "localhost" too, so the app can be ran locally.
 
-9.  Scroll down the "DATABASES" section
-    -   Comment out the default code and add the "DATABASE_URL" variable created earlier:
+9.  Scroll down to the "DATABASES" section
+    -   'Comment out' the default code and add the "DATABASE_URL" variable created earlier:
     -   DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-10. Create a procfile
-    -   It must be named like so; "Procfile" and sit in the root directory.
-    -   Inside the file add "web: gunicorn" followed by the app name .wsgi.
+10. Create a Procfile
+    -   It must be named like so; "Procfile" and sit inside the root directory.
+    -   Within the file add "web: gunicorn" followed by the app name .wsgi.
     -   For example: "web: gunicorn aceofsteaks.wsgi".
 
 11. Scroll back and click the tab "Deploy".
@@ -480,13 +476,24 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
     -   DEBUG is set to false in settings.py file
     -   staticcollect=1 from Config Vars in Heroku deleted.
 
+### Updated Heroku Deployment Via Terminal
+
+During the timeframe of this project Heroku had to change security settings internally which meant disabling automatic deployment. Therefore deployment to Heroku had to be completed in the following way:
+1.  Via the terminal in GitPod, login in to Heroku using the command: "heroku login -i"
+2.  Enter the email address linked the Heroku user.
+3.  Enter your password, if your password doesn't work use the API key which is found in Heruko under the account settings towards the bottom of the page.
+4.  The terminal prints "Logged in as (email address)"
+5.  You then select the applicaion you want to deploy with the command: "heroku git:remote -a (app name)"
+6.  Successfully identifying the app, the terminal will show this message "set git remote heroku to `https://git.heroku.com/(app name).git`"
+7.  The final command: "git push heroku main".
+
 ## Agile Methodology - Evaluation
 
 ### Site Visitor Goals
 
 1.  As a site visitor, I want the theme of the restaurant to be immediately clear, for example: Fast food, Thai, Sushi, Steakhouse etc.
     - The consistent content of the hero image and side nav bar across all pages make it abundantly clear regarding the theme of the restaurant. 
-    - Not only is the theme obvious because of the name of the restaurant, but the image used increase the clarity of the type of restaurant. 
+    - Not only is the theme obvious because of the name of the restaurant, but the image used increases the clarity of the type of restaurant. 
 2.  As a site visitor, I want some sort of confirmation of my booking.
     - After making my booking, I received an email automated confirmation outlining the important details, giving me peace of mind that my booking had been successfully processed.
     - The way the date and time are presented at in UK format. [As mentioned above](#issues)
@@ -494,7 +501,7 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
     - Managing my booking is really easy, clearly presented and functional.
     - The use of the red for the button stands out from everything else on the page, which makes it easy for the user to see how to cancel/remove the booking.
     - The use of the confirmation page is good to ensure the delete button wasn't clicked by mistake.
-    - The cancel button which take you back to the manage page is useful to recheck the booking details.
+    - The cancel button reddirects you back to the manage page, which is useful to recheck the booking details.
 4.  As a site visitor, I want to be able to amend my booking, whether that is by changing the date and/or time or number of guests.
     - The edit function located on the manage booking page is cleverly presented and labelled.
     - After clicking the 'Update' button, the way the booking form retrieves my booking makes it easier to amend, rather than populating all the fields again from scratch.
@@ -524,7 +531,7 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 ### Code
 
--   Extending and customizing django-allauth [GeeksforGeeks](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
+-   Extending and customizing Django-Allauth [GeeksforGeeks](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
 
 -   How To Add Database Forms To A Web Page [Youtube - Codemy.com](https://www.youtube.com/watch?v=CVEKe39VFu8&t=357s)
 
@@ -540,8 +547,6 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 -   Filter on date and time today [stackoverflow](https://stackoverflow.com/questions/11245483/django-filter-events-occurring-today)
 
--   Remove username from allauth [stackoverflow](https://stackoverflow.com/questions/19683179/remove-username-field-from-django-allauth)
-
 ## Conclusion
 
 ### Content
@@ -553,4 +558,4 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 -   My Mentor Narender
     -   Numerous video calls
     -   A lot of questions via Slack.
-    -   Introduced me to Pylint and Pytest.
+    -   Introduced me to Pylint.

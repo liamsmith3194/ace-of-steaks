@@ -18,7 +18,7 @@ class Booking(models.Model):
     lname = models.CharField('Last Name', max_length=50)
     email = models.EmailField('Email')
     location = models.CharField(
-        'Restuarant Location', max_length=50, choices=LOCATIONS)
+        'Restaurant Location', max_length=50, choices=LOCATIONS)
     quantity = models.CharField(
         'Number of Guests', max_length=50, choices=NUMBER_OF_GUESTS,)
 
