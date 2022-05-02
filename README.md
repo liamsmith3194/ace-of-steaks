@@ -235,6 +235,8 @@ Below is a brief overview showing the main features of the site.
 ### Programs including:
 
 -   [Heroku](https://www.Heroku.com/) was used to share the app online.
+-   [WhiteNoise](http://whitenoise.evans.io/en/stable/) was used to store static files. 
+    -   Cloudinary wouldn't seem to display the hero image in Heroku.
 -   [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site, including the grid set up and other components such as buttons and alerts.
 -   [Font Awesome](https://fontawesome.com/) was used for the social media icons within the collapsable navigation bar.
 -   [Google Fonts](https://fonts.google.com/) was used to import the 'Bebas Neue' and 'Montserrat' into the style.css file.
