@@ -396,6 +396,7 @@ These have now all be rectified.
 -   Whitenoise - CSS styles not showing in Heroku [Heroku Dev Center](https://devcenter.heroku.com/articles/django-assets)
     -   When setting 'DEBUG' to False for final deployment this error was produced: `/workspace/.pip-modules/lib/python3.8/site-packages/whitenoise/base.py:115: UserWarning: No directory at: /workspace/ace-of-steaks/staticfiles/
   warnings.warn(f"No directory at: {root}")`
+        -   While testing in Heroku it appears all functionality remains intact.
 
 -   Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
 
