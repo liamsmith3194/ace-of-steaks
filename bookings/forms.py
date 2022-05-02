@@ -41,7 +41,6 @@ class BookingForm(forms.ModelForm):
             'lname': forms.TextInput(attrs={'value': '',
                                             'id': 'user_last_name'}),
             'date': DateTimeInput(
-                format=('%d/%m/%Y %H:%M'),
                 attrs={
                     "id": "date_id",
                     "value": min_date,

@@ -11,7 +11,6 @@ def make_booking(request):
         username=request.user, date__gte=timezone.now()).count()
     form = BookingForm
     if request.method == 'POST':
-        # print('Printing POST:', request.POST)
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()

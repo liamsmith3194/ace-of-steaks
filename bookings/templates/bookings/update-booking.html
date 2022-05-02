@@ -6,7 +6,7 @@
 
 <div class="window">
 
-    <form id="booking-form" action="" method="POST" onsubmit="sendMail(this);">
+    <form id="booking-form" method="POST" onsubmit="sendMail(this);">
         {% csrf_token %}
         <ul class="booking-list">
 
@@ -39,7 +39,7 @@
             <li id="email" class="form-input">{{ form.email }}</li>
 
         </ul>
-        
+
         <button type="submit" class="btn btn-action" value="submit">Update Booking</button>
     </form>
 
@@ -58,23 +58,20 @@
 
     var lname = "{{ user.last_name }}";
     document.getElementById("user_last_name").value = lname;
-
 </script>
 
 <script>
-function sendMail() {
-    var templateParams = {
-    fname: fname,
-    email: email,
-    booking_location: document.getElementById("id_location").value,
-    booking_date: document.getElementById("date_id").value,
-    guests: document.getElementById("id_quantity").value,
-};
+    function sendMail() {
+        var templateParams = {
+            fname: fname,
+            email: email,
+            booking_location: document.getElementById("id_location").value,
+            booking_date: document.getElementById("date_id").value,
+            guests: document.getElementById("id_quantity").value,
+        };
 
-    emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
-        .then(function (response) {
-        }, function (error) {
-        });
-}
+        emailjs.send("service_hc7jbil", "template_kh3yzfz", templateParams)
+            .then(function (response) {}, function (error) {});
+    }
 </script>
 {%endblock%}

@@ -280,7 +280,7 @@ These have now all be rectified.
         - Links to from every page successfully.
     - [x] Individual page links
         - All pages link to one another from any page.
-    - [x] Social media links open in new tab.
+    - [x] Social media links open in new tab
         - All three social media sites are linked to open new tabs, this can be done from any web page.
     - [x] Window link to menu page
         - See menu button successfully links to the menu page showing the default data; starters.
@@ -330,7 +330,7 @@ These have now all be rectified.
 
         ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/todays-date-unavailable.PNG)
 
-    - [x] No bookings will be taken after 30 days in advance.
+    - [x] No bookings will be taken after 30 days in advance
         - The calendar ensure the user is unable to select a date 30 days in advance of today's' date.
     - [x] Double booking
         - The booking will not submit if the date and time is the same as an existing booking in the database.
@@ -352,20 +352,20 @@ These have now all be rectified.
         - The date and time field does not autopopulate. [See below](#issues)
     - [x] Date unavailable before or on the day of booking
         - The same restriction remains on the calendar to ensure the invalid dates can not be selected.
-    - [x] No bookings will be taken after 30 days in advance.
+    - [x] No bookings will be taken after 30 days in advance
         - The same checks are in place to ensure the user is unable to select a date 30 days in advance of today's' date.
     - [x] Double booking
         - The new booking still checks to ensure the date and time doesn't clash with any other booking in the database.
-    - [x] Booking change saved and updated in overview and database.
+    - [x] Booking change saved and updated in overview and database
         - After saving the changes to the booking, the manage booking page is updated.
         - Whether one field or multiple are changed, the view from the user is updated along with the database.
 
 ![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/ace-of-steaks/main/static/images/readme-images/edit-booking.PNG)
 
 - Manage Booking Page (Delete)
-    - [x] Cancel button keeps booking and returns the user to the manage booking page.
+    - [x] Cancel button keeps booking and returns the user to the manage booking page
         - When clicking the cancel button, the user is redirected to the manage booking page with the booking intact and editable.
-    - [x] Delete button removes booking from user's view and from the database.
+    - [x] Delete button removes booking from user's view and from the database
         - After clicking the delete button the user is redirected to the manage booking page, the booking has been removed from view and removed from the system.
         - As there is no booking in the database for the user, they are able to book a table. 
 
@@ -394,18 +394,18 @@ These have now all be rectified.
 ### Glitches
 
 -   Whitenoise - CSS styles not showing in Heroku [Heroku Dev Center](https://devcenter.heroku.com/articles/django-assets)
+    -   When setting 'DEBUG' to False for final deployment this error was produced: `/workspace/.pip-modules/lib/python3.8/site-packages/whitenoise/base.py:115: UserWarning: No directory at: /workspace/ace-of-steaks/staticfiles/
+  warnings.warn(f"No directory at: {root}")`
 
 -   Django - [Errno 111] Connection refused [Stackoverflow](https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused)
 
--   EmailJS - Very inconsistent in terms of sending the confirmation emails.
-    -   action="" needed in the form tag to process sendMail function.
-    -   Certain indentation breaks the function
+-   EmailJS - Very inconsistent in terms of sending the confirmation emails. (Sometimes needs to be submitted twice.)
 
 ## Issues
 
--   Make email field required on registration form.
--   Restrict booking time to opening hours.
--   Deactivate confirmation email alert when users register.
+-   Making email field required on registration form.
+-   Restricting booking time to opening hours.
+-   Deactivating confirmation email alert when users register.
 -   Edit booking date not pulling through.
 -   Date format on EmailJS booking confirmation.
 
